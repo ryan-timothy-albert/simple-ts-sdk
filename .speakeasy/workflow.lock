@@ -1,0 +1,27 @@
+speakeasyVersion: 1.377.1
+sources:
+    petstore-oas:
+        sourceNamespace: petstore-oas
+        sourceRevisionDigest: sha256:abe4d607314c14d6333841cbea0330eff071bad11ec57f5d6798d6b15cec9862
+        sourceBlobDigest: sha256:d7d6b7c28768f75d518d0b325cf2e0746c6a8464d7b71719c72b3ec09d73ebcc
+        tags:
+            - latest
+targets:
+    petstore:
+        source: petstore-oas
+        sourceNamespace: petstore-oas
+        sourceRevisionDigest: sha256:abe4d607314c14d6333841cbea0330eff071bad11ec57f5d6798d6b15cec9862
+        sourceBlobDigest: sha256:d7d6b7c28768f75d518d0b325cf2e0746c6a8464d7b71719c72b3ec09d73ebcc
+        outLocation: /Users/ryanalbert/speakeasy/simple-ts-repo
+workflow:
+    workflowVersion: 1.0.0
+    sources:
+        petstore-oas:
+            inputs:
+                - location: openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas
+    targets:
+        petstore:
+            target: typescript
+            source: petstore-oas
