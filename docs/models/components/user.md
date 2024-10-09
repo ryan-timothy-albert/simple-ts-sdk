@@ -6,14 +6,14 @@
 import { User } from "petstore/models/components";
 
 let value: User = {
-    id: 10,
-    username: "theUser",
-    firstName: "John",
-    lastName: "James",
-    email: "john@email.com",
-    password: "12345",
-    phone: "12345",
-    userStatus: 1,
+  id: 10,
+  username: "theUser",
+  firstName: "John",
+  lastName: "James",
+  email: "john@email.com",
+  password: "12345",
+  phone: "12345",
+  userStatus: 1,
 };
 ```
 

@@ -12,19 +12,19 @@ import { Params, pathToFunc } from "./url.js";
  * Contains the list of servers available to the SDK
  */
 export const ServerList = [
-    /**
-     * A per-environment API.
-     */
-    "https://{environment}.petstore.io",
+  /**
+   * A per-environment API.
+   */
+  "https://{environment}.petstore.io",
 ] as const;
 
 /**
  * The environment name. Defaults to the production environment.
  */
 export const ServerEnvironment = {
-    Prod: "prod",
-    Staging: "staging",
-    Dev: "dev",
+  Prod: "prod",
+  Staging: "staging",
+  Dev: "dev",
 } as const;
 /**
  * The environment name. Defaults to the production environment.
@@ -32,56 +32,56 @@ export const ServerEnvironment = {
 export type ServerEnvironment = ClosedEnum<typeof ServerEnvironment>;
 
 export type SDKOptions = {
-    apiKey?: string | (() => Promise<string>);
+  apiKey?: string | (() => Promise<string>);
 
-    httpClient?: HTTPClient;
-    /**
-     * Allows overriding the default server used by the SDK
-     */
-    serverIdx?: number;
-    /**
-     * Sets the environment variable for url substitution
-     */
-    environment?: ServerEnvironment;
-    /**
-     * Allows overriding the default server URL used by the SDK
-     */
-    serverURL?: string;
-    /**
-     * Allows overriding the default retry config used by the SDK
-     */
-    retryConfig?: RetryConfig;
-    timeoutMs?: number;
-    debugLogger?: Logger;
+  httpClient?: HTTPClient;
+  /**
+   * Allows overriding the default server used by the SDK
+   */
+  serverIdx?: number;
+  /**
+   * Sets the environment variable for url substitution
+   */
+  environment?: ServerEnvironment;
+  /**
+   * Allows overriding the default server URL used by the SDK
+   */
+  serverURL?: string;
+  /**
+   * Allows overriding the default retry config used by the SDK
+   */
+  retryConfig?: RetryConfig;
+  timeoutMs?: number;
+  debugLogger?: Logger;
 };
 
 export function serverURLFromOptions(options: SDKOptions): URL | null {
-    let serverURL = options.serverURL;
+  let serverURL = options.serverURL;
 
-    const serverParams: Params[] = [
-        {
-            environment: options.environment ?? "prod",
-        },
-    ];
-    let params: Params = {};
+  const serverParams: Params[] = [
+    {
+      "environment": options.environment ?? "prod",
+    },
+  ];
+  let params: Params = {};
 
-    if (!serverURL) {
-        const serverIdx = options.serverIdx ?? 0;
-        if (serverIdx < 0 || serverIdx >= ServerList.length) {
-            throw new Error(`Invalid server index ${serverIdx}`);
-        }
-        serverURL = ServerList[serverIdx] || "";
-        params = serverParams[serverIdx] || {};
+  if (!serverURL) {
+    const serverIdx = options.serverIdx ?? 0;
+    if (serverIdx < 0 || serverIdx >= ServerList.length) {
+      throw new Error(`Invalid server index ${serverIdx}`);
     }
+    serverURL = ServerList[serverIdx] || "";
+    params = serverParams[serverIdx] || {};
+  }
 
-    const u = pathToFunc(serverURL)(params);
-    return new URL(u);
+  const u = pathToFunc(serverURL)(params);
+  return new URL(u);
 }
 
 export const SDK_METADATA = {
-    language: "typescript",
-    openapiDocVersion: "1.0.0",
-    sdkVersion: "0.0.3",
-    genVersion: "2.404.3",
-    userAgent: "speakeasy-sdk/typescript 0.0.3 2.404.3 1.0.0 petstore",
+  language: "typescript",
+  openapiDocVersion: "1.0.0",
+  sdkVersion: "0.1.0",
+  genVersion: "2.436.3",
+  userAgent: "speakeasy-sdk/typescript 0.1.0 2.436.3 1.0.0 petstore",
 } as const;

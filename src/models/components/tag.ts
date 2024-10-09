@@ -5,37 +5,39 @@
 import * as z from "zod";
 
 export type Tag = {
-    id?: number | undefined;
-    name?: string | undefined;
+  id?: number | undefined;
+  name?: string | undefined;
 };
 
 /** @internal */
-export const Tag$inboundSchema: z.ZodType<Tag, z.ZodTypeDef, unknown> = z.object({
+export const Tag$inboundSchema: z.ZodType<Tag, z.ZodTypeDef, unknown> = z
+  .object({
     id: z.number().int().optional(),
     name: z.string().optional(),
-});
+  });
 
 /** @internal */
 export type Tag$Outbound = {
-    id?: number | undefined;
-    name?: string | undefined;
+  id?: number | undefined;
+  name?: string | undefined;
 };
 
 /** @internal */
-export const Tag$outboundSchema: z.ZodType<Tag$Outbound, z.ZodTypeDef, Tag> = z.object({
+export const Tag$outboundSchema: z.ZodType<Tag$Outbound, z.ZodTypeDef, Tag> = z
+  .object({
     id: z.number().int().optional(),
     name: z.string().optional(),
-});
+  });
 
 /**
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace Tag$ {
-    /** @deprecated use `Tag$inboundSchema` instead. */
-    export const inboundSchema = Tag$inboundSchema;
-    /** @deprecated use `Tag$outboundSchema` instead. */
-    export const outboundSchema = Tag$outboundSchema;
-    /** @deprecated use `Tag$Outbound` instead. */
-    export type Outbound = Tag$Outbound;
+  /** @deprecated use `Tag$inboundSchema` instead. */
+  export const inboundSchema = Tag$inboundSchema;
+  /** @deprecated use `Tag$outboundSchema` instead. */
+  export const outboundSchema = Tag$outboundSchema;
+  /** @deprecated use `Tag$Outbound` instead. */
+  export type Outbound = Tag$Outbound;
 }

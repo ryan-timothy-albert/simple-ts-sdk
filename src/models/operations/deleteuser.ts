@@ -5,30 +5,33 @@
 import * as z from "zod";
 
 export type DeleteUserRequest = {
-    /**
-     * The name that needs to be deleted
-     */
-    username: string;
+  /**
+   * The name that needs to be deleted
+   */
+  username: string;
 };
 
 /** @internal */
-export const DeleteUserRequest$inboundSchema: z.ZodType<DeleteUserRequest, z.ZodTypeDef, unknown> =
-    z.object({
-        username: z.string(),
-    });
+export const DeleteUserRequest$inboundSchema: z.ZodType<
+  DeleteUserRequest,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  username: z.string(),
+});
 
 /** @internal */
 export type DeleteUserRequest$Outbound = {
-    username: string;
+  username: string;
 };
 
 /** @internal */
 export const DeleteUserRequest$outboundSchema: z.ZodType<
-    DeleteUserRequest$Outbound,
-    z.ZodTypeDef,
-    DeleteUserRequest
+  DeleteUserRequest$Outbound,
+  z.ZodTypeDef,
+  DeleteUserRequest
 > = z.object({
-    username: z.string(),
+  username: z.string(),
 });
 
 /**
@@ -36,10 +39,10 @@ export const DeleteUserRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace DeleteUserRequest$ {
-    /** @deprecated use `DeleteUserRequest$inboundSchema` instead. */
-    export const inboundSchema = DeleteUserRequest$inboundSchema;
-    /** @deprecated use `DeleteUserRequest$outboundSchema` instead. */
-    export const outboundSchema = DeleteUserRequest$outboundSchema;
-    /** @deprecated use `DeleteUserRequest$Outbound` instead. */
-    export type Outbound = DeleteUserRequest$Outbound;
+  /** @deprecated use `DeleteUserRequest$inboundSchema` instead. */
+  export const inboundSchema = DeleteUserRequest$inboundSchema;
+  /** @deprecated use `DeleteUserRequest$outboundSchema` instead. */
+  export const outboundSchema = DeleteUserRequest$outboundSchema;
+  /** @deprecated use `DeleteUserRequest$Outbound` instead. */
+  export type Outbound = DeleteUserRequest$Outbound;
 }

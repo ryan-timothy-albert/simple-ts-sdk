@@ -6,7 +6,7 @@
 import { Security } from "petstore/models/components";
 
 let value: Security = {
-    apiKey: "<value>",
+  apiKey: "<value>",
 };
 ```
 

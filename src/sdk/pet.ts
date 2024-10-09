@@ -15,82 +15,116 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Pet extends ClientSDK {
-    /**
-     * Update an existing pet
-     *
-     * @remarks
-     * Update an existing pet by Id
-     */
-    async updatePet(request: components.Pet, options?: RequestOptions): Promise<components.Pet> {
-        return unwrapAsync(petUpdatePet(this, request, options));
-    }
+  /**
+   * Update an existing pet
+   *
+   * @remarks
+   * Update an existing pet by Id
+   */
+  async updatePet(
+    request: components.Pet,
+    options?: RequestOptions,
+  ): Promise<components.Pet> {
+    return unwrapAsync(petUpdatePet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Add a new pet to the store
-     *
-     * @remarks
-     * Add a new pet to the store
-     */
-    async addPet(request: components.Pet, options?: RequestOptions): Promise<components.Pet> {
-        return unwrapAsync(petAddPet(this, request, options));
-    }
+  /**
+   * Add a new pet to the store
+   *
+   * @remarks
+   * Add a new pet to the store
+   */
+  async addPet(
+    request: components.Pet,
+    options?: RequestOptions,
+  ): Promise<components.Pet> {
+    return unwrapAsync(petAddPet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Finds Pets by status
-     *
-     * @remarks
-     * Multiple status values can be provided with comma separated strings
-     */
-    async findPetsByStatus(
-        request: operations.FindPetsByStatusRequest,
-        options?: RequestOptions
-    ): Promise<Array<components.Pet>> {
-        return unwrapAsync(petFindPetsByStatus(this, request, options));
-    }
+  /**
+   * Finds Pets by status
+   *
+   * @remarks
+   * Multiple status values can be provided with comma separated strings
+   */
+  async findPetsByStatus(
+    request: operations.FindPetsByStatusRequest,
+    options?: RequestOptions,
+  ): Promise<Array<components.Pet>> {
+    return unwrapAsync(petFindPetsByStatus(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Finds Pets by tags
-     *
-     * @remarks
-     * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
-     */
-    async findPetsByTags(
-        request: operations.FindPetsByTagsRequest,
-        options?: RequestOptions
-    ): Promise<Array<components.Pet>> {
-        return unwrapAsync(petFindPetsByTags(this, request, options));
-    }
+  /**
+   * Finds Pets by tags
+   *
+   * @remarks
+   * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+   */
+  async findPetsByTags(
+    request: operations.FindPetsByTagsRequest,
+    options?: RequestOptions,
+  ): Promise<Array<components.Pet>> {
+    return unwrapAsync(petFindPetsByTags(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Find pet by ID
-     *
-     * @remarks
-     * Returns a single pet
-     */
-    async getPetById(
-        request: operations.GetPetByIdRequest,
-        options?: RequestOptions
-    ): Promise<components.Pet> {
-        return unwrapAsync(petGetPetById(this, request, options));
-    }
+  /**
+   * Find pet by ID
+   *
+   * @remarks
+   * Returns a single pet
+   */
+  async getPetById(
+    request: operations.GetPetByIdRequest,
+    options?: RequestOptions,
+  ): Promise<components.Pet> {
+    return unwrapAsync(petGetPetById(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Deletes a pet
-     */
-    async deletePet(
-        request: operations.DeletePetRequest,
-        options?: RequestOptions
-    ): Promise<components.Pet> {
-        return unwrapAsync(petDeletePet(this, request, options));
-    }
+  /**
+   * Deletes a pet
+   */
+  async deletePet(
+    request: operations.DeletePetRequest,
+    options?: RequestOptions,
+  ): Promise<components.Pet> {
+    return unwrapAsync(petDeletePet(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * uploads an image
-     */
-    async uploadFile(
-        request: operations.UploadFileRequest,
-        options?: RequestOptions
-    ): Promise<components.ApiResponse> {
-        return unwrapAsync(petUploadFile(this, request, options));
-    }
+  /**
+   * uploads an image
+   */
+  async uploadFile(
+    request: operations.UploadFileRequest,
+    options?: RequestOptions,
+  ): Promise<components.ApiResponse> {
+    return unwrapAsync(petUploadFile(
+      this,
+      request,
+      options,
+    ));
+  }
 }

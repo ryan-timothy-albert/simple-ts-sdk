@@ -39,6 +39,7 @@ async function run() {
     },
     photoUrls: [
       "<value>",
+      "<value>",
     ],
   });
 
@@ -62,7 +63,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();

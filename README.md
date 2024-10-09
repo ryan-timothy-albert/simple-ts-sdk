@@ -16,8 +16,40 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 - [ ] 🎁 Publish your SDK to package managers by [configuring automatic publishing](https://www.speakeasy.com/docs/advanced-setup/publish-sdks)
 - [ ] ✨ When ready to productionize, delete this section from the README
 
+<!-- Start Summary [summary] -->
+## Summary
+
+Petstore - OpenAPI 3.1: This is a sample Pet Store Server based on the OpenAPI 3.1 specification.
+
+Some useful links:
+- [OpenAPI Reference](https://www.speakeasyapi.dev/openapi)
+- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
+- [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+
+For more information about the API: [Find out more about Swagger](http://swagger.io)
+<!-- End Summary [summary] -->
+
+<!-- Start Table of Contents [toc] -->
+## Table of Contents
+
+* [SDK Installation](#sdk-installation)
+* [Requirements](#requirements)
+* [SDK Example Usage](#sdk-example-usage)
+* [Available Resources and Operations](#available-resources-and-operations)
+* [Standalone functions](#standalone-functions)
+* [File uploads](#file-uploads)
+* [Retries](#retries)
+* [Error Handling](#error-handling)
+* [Server Selection](#server-selection)
+* [Custom HTTP Client](#custom-http-client)
+* [Authentication](#authentication)
+* [Debugging](#debugging)
+<!-- End Table of Contents [toc] -->
+
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
+
+The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), [bun](https://bun.sh/) or [yarn](https://classic.yarnpkg.com/en/) package managers.
 
 ### NPM
 
@@ -62,22 +94,25 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 import { Petstore } from "petstore";
 
 const petstore = new Petstore({
-    apiKey: "<YOUR_API_KEY_HERE>",
+  apiKey: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await petstore.pet.updatePet({
-        id: 10,
-        name: "doggie",
-        category: {
-            id: 1,
-            name: "Dogs",
-        },
-        photoUrls: ["<value>"],
-    });
+  const result = await petstore.pet.updatePet({
+    id: 10,
+    name: "doggie",
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    photoUrls: [
+      "<value>",
+      "<value>",
+    ],
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -88,6 +123,9 @@ run();
 <!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
 
+<details open>
+<summary>Available methods</summary>
+
 ### [pet](docs/sdks/pet/README.md)
 
 * [updatePet](docs/sdks/pet/README.md#updatepet) - Update an existing pet
@@ -97,6 +135,7 @@ run();
 * [getPetById](docs/sdks/pet/README.md#getpetbyid) - Find pet by ID
 * [deletePet](docs/sdks/pet/README.md#deletepet) - Deletes a pet
 * [uploadFile](docs/sdks/pet/README.md#uploadfile) - uploads an image
+
 
 ### [store](docs/sdks/store/README.md)
 
@@ -114,6 +153,8 @@ run();
 * [getUserByName](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 * [updateUser](docs/sdks/user/README.md#updateuser) - Update user
 * [deleteUser](docs/sdks/user/README.md#deleteuser) - Delete user
+
+</details>
 <!-- End Available Resources and Operations [operations] -->
 
 <!-- Start Standalone functions [standalone-funcs] -->
@@ -131,25 +172,24 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
-- [petAddPet](docs/sdks/pet/README.md#addpet)
-- [petDeletePet](docs/sdks/pet/README.md#deletepet)
-- [petFindPetsByStatus](docs/sdks/pet/README.md#findpetsbystatus)
-- [petFindPetsByTags](docs/sdks/pet/README.md#findpetsbytags)
-- [petGetPetById](docs/sdks/pet/README.md#getpetbyid)
-- [petUpdatePet](docs/sdks/pet/README.md#updatepet)
-- [petUploadFile](docs/sdks/pet/README.md#uploadfile)
-- [storeDeleteOrder](docs/sdks/store/README.md#deleteorder)
-- [storeGetInventory](docs/sdks/store/README.md#getinventory)
-- [storeGetOrderById](docs/sdks/store/README.md#getorderbyid)
-- [storePlaceOrder](docs/sdks/store/README.md#placeorder)
-- [userCreateUser](docs/sdks/user/README.md#createuser)
-- [userCreateUsersWithListInput](docs/sdks/user/README.md#createuserswithlistinput)
-- [userDeleteUser](docs/sdks/user/README.md#deleteuser)
-- [userGetUserByName](docs/sdks/user/README.md#getuserbyname)
-- [userLoginUser](docs/sdks/user/README.md#loginuser)
-- [userLogoutUser](docs/sdks/user/README.md#logoutuser)
-- [userUpdateUser](docs/sdks/user/README.md#updateuser)
-
+- [`petAddPet`](docs/sdks/pet/README.md#addpet) - Add a new pet to the store
+- [`petDeletePet`](docs/sdks/pet/README.md#deletepet) - Deletes a pet
+- [`petFindPetsByStatus`](docs/sdks/pet/README.md#findpetsbystatus) - Finds Pets by status
+- [`petFindPetsByTags`](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
+- [`petGetPetById`](docs/sdks/pet/README.md#getpetbyid) - Find pet by ID
+- [`petUpdatePet`](docs/sdks/pet/README.md#updatepet) - Update an existing pet
+- [`petUploadFile`](docs/sdks/pet/README.md#uploadfile) - uploads an image
+- [`storeDeleteOrder`](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
+- [`storeGetInventory`](docs/sdks/store/README.md#getinventory) - Returns pet inventories by status
+- [`storeGetOrderById`](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
+- [`storePlaceOrder`](docs/sdks/store/README.md#placeorder) - Place an order for a pet
+- [`userCreateUser`](docs/sdks/user/README.md#createuser) - Create user
+- [`userCreateUsersWithListInput`](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
+- [`userDeleteUser`](docs/sdks/user/README.md#deleteuser) - Delete user
+- [`userGetUserByName`](docs/sdks/user/README.md#getuserbyname) - Get user by user name
+- [`userLoginUser`](docs/sdks/user/README.md#loginuser) - Logs user into the system
+- [`userLogoutUser`](docs/sdks/user/README.md#logoutuser) - Logs out current logged in user session
+- [`userUpdateUser`](docs/sdks/user/README.md#updateuser) - Update user
 
 </details>
 <!-- End Standalone functions [standalone-funcs] -->
@@ -172,16 +212,16 @@ Certain SDK methods accept files as part of a multi-part request. It is possible
 import { Petstore } from "petstore";
 
 const petstore = new Petstore({
-    apiKey: "<YOUR_API_KEY_HERE>",
+  apiKey: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await petstore.pet.uploadFile({
-        petId: 565380,
-    });
+  const result = await petstore.pet.uploadFile({
+    petId: 565380,
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -199,36 +239,36 @@ To change the default retry strategy for a single API call, simply provide a ret
 import { Petstore } from "petstore";
 
 const petstore = new Petstore({
-    apiKey: "<YOUR_API_KEY_HERE>",
+  apiKey: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await petstore.pet.updatePet(
-        {
-            id: 10,
-            name: "doggie",
-            category: {
-                id: 1,
-                name: "Dogs",
-            },
-            photoUrls: ["<value>"],
-        },
-        {
-            retries: {
-                strategy: "backoff",
-                backoff: {
-                    initialInterval: 1,
-                    maxInterval: 50,
-                    exponent: 1.1,
-                    maxElapsedTime: 100,
-                },
-                retryConnectionErrors: false,
-            },
-        }
-    );
+  const result = await petstore.pet.updatePet({
+    id: 10,
+    name: "doggie",
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    photoUrls: [
+      "<value>",
+      "<value>",
+    ],
+  }, {
+    retries: {
+      strategy: "backoff",
+      backoff: {
+        initialInterval: 1,
+        maxInterval: 50,
+        exponent: 1.1,
+        maxElapsedTime: 100,
+      },
+      retryConnectionErrors: false,
+    },
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -240,32 +280,35 @@ If you'd like to override the default retry strategy for all operations that sup
 import { Petstore } from "petstore";
 
 const petstore = new Petstore({
-    retryConfig: {
-        strategy: "backoff",
-        backoff: {
-            initialInterval: 1,
-            maxInterval: 50,
-            exponent: 1.1,
-            maxElapsedTime: 100,
-        },
-        retryConnectionErrors: false,
+  retryConfig: {
+    strategy: "backoff",
+    backoff: {
+      initialInterval: 1,
+      maxInterval: 50,
+      exponent: 1.1,
+      maxElapsedTime: 100,
     },
-    apiKey: "<YOUR_API_KEY_HERE>",
+    retryConnectionErrors: false,
+  },
+  apiKey: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await petstore.pet.updatePet({
-        id: 10,
-        name: "doggie",
-        category: {
-            id: 1,
-            name: "Dogs",
-        },
-        photoUrls: ["<value>"],
-    });
+  const result = await petstore.pet.updatePet({
+    id: 10,
+    name: "doggie",
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    photoUrls: [
+      "<value>",
+      "<value>",
+    ],
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -276,72 +319,94 @@ run();
 <!-- Start Error Handling [errors] -->
 ## Error Handling
 
-All SDK methods return a response object or throw an error. If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+All SDK methods return a response object or throw an error. By default, an API error will throw a `errors.SDKError`.
 
-| Error Object                | Status Code                 | Content Type                |
+If a HTTP request fails, an operation my also throw an error from the `models/errors/httpclienterrors.ts` module:
+
+| HTTP Client Error                                    | Description                                          |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| RequestAbortedError                                  | HTTP request was aborted by the client               |
+| RequestTimeoutError                                  | HTTP request timed out due to an AbortSignal signal  |
+| ConnectionError                                      | HTTP client was unable to make a request to a server |
+| InvalidRequestError                                  | Any input used to create a request is invalid        |
+| UnexpectedClientError                                | Unrecognised or unexpected error                     |
+
+In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `updatePet` method may throw the following errors:
+
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
-Validation errors can also occur when either method arguments or data returned from the server do not match the expected format. The `SDKValidationError` that is thrown as a result will capture the raw value that failed validation in an attribute called `rawValue`. Additionally, a `pretty()` method is available on this error that can be used to log a nicely formatted string since validation errors can list many issues and the plain error string may be difficult read when debugging. 
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ```typescript
 import { Petstore } from "petstore";
-import { SDKValidationError } from "petstore/models/errors";
+import {
+  ApiErrorInvalidInput,
+  ApiErrorNotFound,
+  ApiErrorUnauthorized,
+  SDKValidationError,
+} from "petstore/models/errors";
 
 const petstore = new Petstore({
-    apiKey: "<YOUR_API_KEY_HERE>",
+  apiKey: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    let result;
-    try {
-        result = await petstore.pet.updatePet({
-            id: 10,
-            name: "doggie",
-            category: {
-                id: 1,
-                name: "Dogs",
-            },
-            photoUrls: ["<value>"],
-        });
-    } catch (err) {
-        switch (true) {
-            case err instanceof SDKValidationError: {
-                // Validation errors can be pretty-printed
-                console.error(err.pretty());
-                // Raw value may also be inspected
-                console.error(err.rawValue);
-                return;
-            }
-            case err instanceof errors.ApiErrorInvalidInput: {
-                console.error(err); // handle exception
-                return;
-            }
-            case err instanceof errors.ApiErrorUnauthorized: {
-                console.error(err); // handle exception
-                return;
-            }
-            case err instanceof errors.ApiErrorNotFound: {
-                console.error(err); // handle exception
-                return;
-            }
-            default: {
-                throw err;
-            }
-        }
-    }
+  let result;
+  try {
+    result = await petstore.pet.updatePet({
+      id: 10,
+      name: "doggie",
+      category: {
+        id: 1,
+        name: "Dogs",
+      },
+      photoUrls: [
+        "<value>",
+        "<value>",
+      ],
+    });
 
     // Handle the result
     console.log(result);
+  } catch (err) {
+    switch (true) {
+      case (err instanceof SDKValidationError): {
+        // Validation errors can be pretty-printed
+        console.error(err.pretty());
+        // Raw value may also be inspected
+        console.error(err.rawValue);
+        return;
+      }
+      case (err instanceof ApiErrorInvalidInput): {
+        // Handle err.data$: ApiErrorInvalidInputData
+        console.error(err);
+        return;
+      }
+      case (err instanceof ApiErrorUnauthorized): {
+        // Handle err.data$: ApiErrorUnauthorizedData
+        console.error(err);
+        return;
+      }
+      case (err instanceof ApiErrorNotFound): {
+        // Handle err.data$: ApiErrorNotFoundData
+        console.error(err);
+        return;
+      }
+      default: {
+        throw err;
+      }
+    }
+  }
 }
 
 run();
 
 ```
+
+Validation errors can also occur when either method arguments or data returned from the server do not match the expected format. The `SDKValidationError` that is thrown as a result will capture the raw value that failed validation in an attribute called `rawValue`. Additionally, a `pretty()` method is available on this error that can be used to log a nicely formatted string since validation errors can list many issues and the plain error string may be difficult read when debugging.
 <!-- End Error Handling [errors] -->
 
 <!-- Start Server Selection [server] -->
@@ -359,23 +424,26 @@ You can override the default server globally by passing a server index to the `s
 import { Petstore } from "petstore";
 
 const petstore = new Petstore({
-    serverIdx: 0,
-    apiKey: "<YOUR_API_KEY_HERE>",
+  serverIdx: 0,
+  apiKey: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await petstore.pet.updatePet({
-        id: 10,
-        name: "doggie",
-        category: {
-            id: 1,
-            name: "Dogs",
-        },
-        photoUrls: ["<value>"],
-    });
+  const result = await petstore.pet.updatePet({
+    id: 10,
+    name: "doggie",
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    photoUrls: [
+      "<value>",
+      "<value>",
+    ],
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -395,23 +463,26 @@ The default server can also be overridden globally by passing a URL to the `serv
 import { Petstore } from "petstore";
 
 const petstore = new Petstore({
-    serverURL: "https://{environment}.petstore.io",
-    apiKey: "<YOUR_API_KEY_HERE>",
+  serverURL: "https://{environment}.petstore.io",
+  apiKey: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await petstore.pet.updatePet({
-        id: 10,
-        name: "doggie",
-        category: {
-            id: 1,
-            name: "Dogs",
-        },
-        photoUrls: ["<value>"],
-    });
+  const result = await petstore.pet.updatePet({
+    id: 10,
+    name: "doggie",
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    photoUrls: [
+      "<value>",
+      "<value>",
+    ],
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();
@@ -484,22 +555,25 @@ To authenticate with the API the `apiKey` parameter must be set when initializin
 import { Petstore } from "petstore";
 
 const petstore = new Petstore({
-    apiKey: "<YOUR_API_KEY_HERE>",
+  apiKey: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-    const result = await petstore.pet.updatePet({
-        id: 10,
-        name: "doggie",
-        category: {
-            id: 1,
-            name: "Dogs",
-        },
-        photoUrls: ["<value>"],
-    });
+  const result = await petstore.pet.updatePet({
+    id: 10,
+    name: "doggie",
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    photoUrls: [
+      "<value>",
+      "<value>",
+    ],
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 run();

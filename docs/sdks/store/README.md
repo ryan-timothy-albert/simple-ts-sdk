@@ -32,7 +32,7 @@ async function run() {
   const result = await petstore.store.getInventory();
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -62,7 +62,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -82,12 +82,11 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## placeOrder
 
@@ -111,7 +110,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -146,7 +145,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -167,12 +166,11 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## getOrderById
 
@@ -193,7 +191,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -215,7 +213,7 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await storeGetOrderById(petstore, {
-    orderId: 248986,
+    orderId: 614993,
   });
 
   if (!res.ok) {
@@ -225,7 +223,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -246,13 +244,12 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## deleteOrder
 
@@ -273,7 +270,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -295,7 +292,7 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await storeDeleteOrder(petstore, {
-    orderId: 327709,
+    orderId: 127902,
   });
 
   if (!res.ok) {
@@ -305,7 +302,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -326,9 +323,9 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |

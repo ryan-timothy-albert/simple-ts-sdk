@@ -12,52 +12,69 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Store extends ClientSDK {
-    /**
-     * Returns pet inventories by status
-     *
-     * @remarks
-     * Returns a map of status codes to quantities
-     */
-    async getInventory(options?: RequestOptions): Promise<{ [k: string]: number }> {
-        return unwrapAsync(storeGetInventory(this, options));
-    }
+  /**
+   * Returns pet inventories by status
+   *
+   * @remarks
+   * Returns a map of status codes to quantities
+   */
+  async getInventory(
+    options?: RequestOptions,
+  ): Promise<{ [k: string]: number }> {
+    return unwrapAsync(storeGetInventory(
+      this,
+      options,
+    ));
+  }
 
-    /**
-     * Place an order for a pet
-     *
-     * @remarks
-     * Place a new order in the store
-     */
-    async placeOrder(
-        request?: components.Order | undefined,
-        options?: RequestOptions
-    ): Promise<components.Order> {
-        return unwrapAsync(storePlaceOrder(this, request, options));
-    }
+  /**
+   * Place an order for a pet
+   *
+   * @remarks
+   * Place a new order in the store
+   */
+  async placeOrder(
+    request?: components.Order | undefined,
+    options?: RequestOptions,
+  ): Promise<components.Order> {
+    return unwrapAsync(storePlaceOrder(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Find purchase order by ID
-     *
-     * @remarks
-     * For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
-     */
-    async getOrderById(
-        request: operations.GetOrderByIdRequest,
-        options?: RequestOptions
-    ): Promise<components.Order> {
-        return unwrapAsync(storeGetOrderById(this, request, options));
-    }
+  /**
+   * Find purchase order by ID
+   *
+   * @remarks
+   * For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
+   */
+  async getOrderById(
+    request: operations.GetOrderByIdRequest,
+    options?: RequestOptions,
+  ): Promise<components.Order> {
+    return unwrapAsync(storeGetOrderById(
+      this,
+      request,
+      options,
+    ));
+  }
 
-    /**
-     * Delete purchase order by ID
-     *
-     * @remarks
-     * For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors
-     */
-    async deleteOrder(
-        request: operations.DeleteOrderRequest,
-        options?: RequestOptions
-    ): Promise<components.Order> {
-        return unwrapAsync(storeDeleteOrder(this, request, options));
-    }
+  /**
+   * Delete purchase order by ID
+   *
+   * @remarks
+   * For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors
+   */
+  async deleteOrder(
+    request: operations.DeleteOrderRequest,
+    options?: RequestOptions,
+  ): Promise<components.Order> {
+    return unwrapAsync(storeDeleteOrder(
+      this,
+      request,
+      options,
+    ));
+  }
 }

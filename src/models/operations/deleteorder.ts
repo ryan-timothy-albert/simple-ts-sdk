@@ -5,33 +5,33 @@
 import * as z from "zod";
 
 export type DeleteOrderRequest = {
-    /**
-     * ID of the order that needs to be deleted
-     */
-    orderId: number;
+  /**
+   * ID of the order that needs to be deleted
+   */
+  orderId: number;
 };
 
 /** @internal */
 export const DeleteOrderRequest$inboundSchema: z.ZodType<
-    DeleteOrderRequest,
-    z.ZodTypeDef,
-    unknown
+  DeleteOrderRequest,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    orderId: z.number().int(),
+  orderId: z.number().int(),
 });
 
 /** @internal */
 export type DeleteOrderRequest$Outbound = {
-    orderId: number;
+  orderId: number;
 };
 
 /** @internal */
 export const DeleteOrderRequest$outboundSchema: z.ZodType<
-    DeleteOrderRequest$Outbound,
-    z.ZodTypeDef,
-    DeleteOrderRequest
+  DeleteOrderRequest$Outbound,
+  z.ZodTypeDef,
+  DeleteOrderRequest
 > = z.object({
-    orderId: z.number().int(),
+  orderId: z.number().int(),
 });
 
 /**
@@ -39,10 +39,10 @@ export const DeleteOrderRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace DeleteOrderRequest$ {
-    /** @deprecated use `DeleteOrderRequest$inboundSchema` instead. */
-    export const inboundSchema = DeleteOrderRequest$inboundSchema;
-    /** @deprecated use `DeleteOrderRequest$outboundSchema` instead. */
-    export const outboundSchema = DeleteOrderRequest$outboundSchema;
-    /** @deprecated use `DeleteOrderRequest$Outbound` instead. */
-    export type Outbound = DeleteOrderRequest$Outbound;
+  /** @deprecated use `DeleteOrderRequest$inboundSchema` instead. */
+  export const inboundSchema = DeleteOrderRequest$inboundSchema;
+  /** @deprecated use `DeleteOrderRequest$outboundSchema` instead. */
+  export const outboundSchema = DeleteOrderRequest$outboundSchema;
+  /** @deprecated use `DeleteOrderRequest$Outbound` instead. */
+  export type Outbound = DeleteOrderRequest$Outbound;
 }

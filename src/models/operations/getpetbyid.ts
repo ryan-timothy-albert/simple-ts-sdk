@@ -5,30 +5,33 @@
 import * as z from "zod";
 
 export type GetPetByIdRequest = {
-    /**
-     * ID of pet to return
-     */
-    petId: number;
+  /**
+   * ID of pet to return
+   */
+  petId: number;
 };
 
 /** @internal */
-export const GetPetByIdRequest$inboundSchema: z.ZodType<GetPetByIdRequest, z.ZodTypeDef, unknown> =
-    z.object({
-        petId: z.number().int(),
-    });
+export const GetPetByIdRequest$inboundSchema: z.ZodType<
+  GetPetByIdRequest,
+  z.ZodTypeDef,
+  unknown
+> = z.object({
+  petId: z.number().int(),
+});
 
 /** @internal */
 export type GetPetByIdRequest$Outbound = {
-    petId: number;
+  petId: number;
 };
 
 /** @internal */
 export const GetPetByIdRequest$outboundSchema: z.ZodType<
-    GetPetByIdRequest$Outbound,
-    z.ZodTypeDef,
-    GetPetByIdRequest
+  GetPetByIdRequest$Outbound,
+  z.ZodTypeDef,
+  GetPetByIdRequest
 > = z.object({
-    petId: z.number().int(),
+  petId: z.number().int(),
 });
 
 /**
@@ -36,10 +39,10 @@ export const GetPetByIdRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace GetPetByIdRequest$ {
-    /** @deprecated use `GetPetByIdRequest$inboundSchema` instead. */
-    export const inboundSchema = GetPetByIdRequest$inboundSchema;
-    /** @deprecated use `GetPetByIdRequest$outboundSchema` instead. */
-    export const outboundSchema = GetPetByIdRequest$outboundSchema;
-    /** @deprecated use `GetPetByIdRequest$Outbound` instead. */
-    export type Outbound = GetPetByIdRequest$Outbound;
+  /** @deprecated use `GetPetByIdRequest$inboundSchema` instead. */
+  export const inboundSchema = GetPetByIdRequest$inboundSchema;
+  /** @deprecated use `GetPetByIdRequest$outboundSchema` instead. */
+  export const outboundSchema = GetPetByIdRequest$outboundSchema;
+  /** @deprecated use `GetPetByIdRequest$Outbound` instead. */
+  export type Outbound = GetPetByIdRequest$Outbound;
 }

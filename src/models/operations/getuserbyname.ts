@@ -5,33 +5,33 @@
 import * as z from "zod";
 
 export type GetUserByNameRequest = {
-    /**
-     * The name that needs to be fetched. Use user1 for testing.
-     */
-    username: string;
+  /**
+   * The name that needs to be fetched. Use user1 for testing.
+   */
+  username: string;
 };
 
 /** @internal */
 export const GetUserByNameRequest$inboundSchema: z.ZodType<
-    GetUserByNameRequest,
-    z.ZodTypeDef,
-    unknown
+  GetUserByNameRequest,
+  z.ZodTypeDef,
+  unknown
 > = z.object({
-    username: z.string(),
+  username: z.string(),
 });
 
 /** @internal */
 export type GetUserByNameRequest$Outbound = {
-    username: string;
+  username: string;
 };
 
 /** @internal */
 export const GetUserByNameRequest$outboundSchema: z.ZodType<
-    GetUserByNameRequest$Outbound,
-    z.ZodTypeDef,
-    GetUserByNameRequest
+  GetUserByNameRequest$Outbound,
+  z.ZodTypeDef,
+  GetUserByNameRequest
 > = z.object({
-    username: z.string(),
+  username: z.string(),
 });
 
 /**
@@ -39,10 +39,10 @@ export const GetUserByNameRequest$outboundSchema: z.ZodType<
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
 export namespace GetUserByNameRequest$ {
-    /** @deprecated use `GetUserByNameRequest$inboundSchema` instead. */
-    export const inboundSchema = GetUserByNameRequest$inboundSchema;
-    /** @deprecated use `GetUserByNameRequest$outboundSchema` instead. */
-    export const outboundSchema = GetUserByNameRequest$outboundSchema;
-    /** @deprecated use `GetUserByNameRequest$Outbound` instead. */
-    export type Outbound = GetUserByNameRequest$Outbound;
+  /** @deprecated use `GetUserByNameRequest$inboundSchema` instead. */
+  export const inboundSchema = GetUserByNameRequest$inboundSchema;
+  /** @deprecated use `GetUserByNameRequest$outboundSchema` instead. */
+  export const outboundSchema = GetUserByNameRequest$outboundSchema;
+  /** @deprecated use `GetUserByNameRequest$Outbound` instead. */
+  export type Outbound = GetUserByNameRequest$Outbound;
 }

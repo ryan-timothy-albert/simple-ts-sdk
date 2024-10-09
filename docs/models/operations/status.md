@@ -7,7 +7,7 @@ Status values that need to be considered for filter
 ```typescript
 import { Status } from "petstore/models/operations";
 
-let value: Status = "pending";
+let value: Status = "sold";
 ```
 
 ## Values

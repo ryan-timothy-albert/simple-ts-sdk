@@ -6,10 +6,10 @@
 import { Order } from "petstore/models/components";
 
 let value: Order = {
-    id: 10,
-    petId: 198772,
-    quantity: 7,
-    status: "approved",
+  id: 10,
+  petId: 198772,
+  quantity: 7,
+  status: "approved",
 };
 ```
 

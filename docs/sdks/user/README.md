@@ -41,7 +41,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -80,7 +80,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -101,10 +101,9 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## createUsersWithListInput
 
@@ -134,7 +133,7 @@ async function run() {
   ]);
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -175,7 +174,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -196,10 +195,9 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## loginUser
 
@@ -218,7 +216,7 @@ async function run() {
   const result = await petstore.user.loginUser({});
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -248,7 +246,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -269,13 +267,12 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## logoutUser
 
@@ -293,7 +290,7 @@ const petstore = new Petstore({
 async function run() {
   await petstore.user.logoutUser();
 
-  
+
 }
 
 run();
@@ -342,10 +339,9 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## getUserByName
 
@@ -362,11 +358,11 @@ const petstore = new Petstore({
 
 async function run() {
   const result = await petstore.user.getUserByName({
-    username: "Zachery_Schneider",
+    username: "Zachery_Lubowitz15",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -388,7 +384,7 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await userGetUserByName(petstore, {
-    username: "Carmel75",
+    username: "Zachery_Lubowitz15",
   });
 
   if (!res.ok) {
@@ -398,7 +394,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -419,13 +415,12 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## updateUser
 
@@ -442,7 +437,7 @@ const petstore = new Petstore({
 
 async function run() {
   await petstore.user.updateUser({
-    username: "Dandre.Jast32",
+    username: "Dandre_Hand41",
     user: {
       id: 10,
       username: "theUser",
@@ -455,7 +450,7 @@ async function run() {
     },
   });
 
-  
+
 }
 
 run();
@@ -477,7 +472,7 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await userUpdateUser(petstore, {
-    username: "Cora.Gislason",
+    username: "Dandre_Hand41",
     user: {
       id: 10,
       username: "theUser",
@@ -517,10 +512,9 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## deleteUser
 
@@ -537,11 +531,11 @@ const petstore = new Petstore({
 
 async function run() {
   const result = await petstore.user.deleteUser({
-    username: "Demetris_Torphy",
+    username: "Demetris_Schmitt",
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -563,7 +557,7 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await userDeleteUser(petstore, {
-    username: "Christina.Marks72",
+    username: "Demetris_Schmitt",
   });
 
   if (!res.ok) {
@@ -573,7 +567,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -594,9 +588,9 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |

@@ -6,13 +6,15 @@
 import { Pet } from "petstore/models/components";
 
 let value: Pet = {
-    id: 10,
-    name: "doggie",
-    category: {
-        id: 1,
-        name: "Dogs",
-    },
-    photoUrls: ["<value>"],
+  id: 10,
+  name: "doggie",
+  category: {
+    id: 1,
+    name: "Dogs",
+  },
+  photoUrls: [
+    "<value>",
+  ],
 };
 ```
 

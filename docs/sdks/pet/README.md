@@ -41,11 +41,12 @@ async function run() {
     },
     photoUrls: [
       "<value>",
+      "<value>",
     ],
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -75,6 +76,7 @@ async function run() {
     },
     photoUrls: [
       "<value>",
+      "<value>",
     ],
   });
 
@@ -85,7 +87,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -106,13 +108,12 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## addPet
 
@@ -141,7 +142,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -181,7 +182,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -202,10 +203,9 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## findPetsByStatus
 
@@ -224,7 +224,7 @@ async function run() {
   const result = await petstore.pet.findPetsByStatus({});
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -254,7 +254,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -275,13 +275,12 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## findPetsByTags
 
@@ -300,7 +299,7 @@ async function run() {
   const result = await petstore.pet.findPetsByTags({});
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -330,7 +329,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -351,13 +350,12 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## getPetById
 
@@ -378,7 +376,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -400,7 +398,7 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await petGetPetById(petstore, {
-    petId: 30806,
+    petId: 504151,
   });
 
   if (!res.ok) {
@@ -410,7 +408,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -431,13 +429,12 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## deletePet
 
@@ -458,7 +455,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -480,7 +477,7 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await petDeletePet(petstore, {
-    petId: 449384,
+    petId: 441876,
   });
 
   if (!res.ok) {
@@ -490,7 +487,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -511,13 +508,12 @@ run();
 
 ### Errors
 
-| Error Object                | Status Code                 | Content Type                |
+| Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.ApiErrorInvalidInput | 400                         | application/json            |
 | errors.ApiErrorUnauthorized | 401                         | application/json            |
 | errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4xx-5xx                     | */*                         |
-
+| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## uploadFile
 
@@ -538,7 +534,7 @@ async function run() {
   });
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -560,7 +556,7 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await petUploadFile(petstore, {
-    petId: 586600,
+    petId: 565380,
   });
 
   if (!res.ok) {
@@ -570,7 +566,7 @@ async function run() {
   const { value: result } = res;
 
   // Handle the result
-  console.log(result)
+  console.log(result);
 }
 
 run();
@@ -591,6 +587,6 @@ run();
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
