@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Category } from "petstore/models/components";
+import { Category } from "ryan-simple-test-act/models/components";
 
 let value: Category = {
   id: 1,

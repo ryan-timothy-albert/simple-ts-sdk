@@ -1,7 +1,7 @@
 {
-  "name": "petstore",
-  "version": "0.1.8",
-  "author": "Speakeasy",
+  "name": "ryan-simple-test-act",
+  "version": "0.1.9",
+  "author": "ryan-timothy-albert",
   "main": "./index.js",
   "sideEffects": false,
   "repository": {

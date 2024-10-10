@@ -22,7 +22,7 @@ Returns a map of status codes to quantities
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -43,8 +43,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { storeGetInventory } from "petstore/funcs/storeGetInventory.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { storeGetInventory } from "ryan-simple-test-act/funcs/storeGetInventory.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -95,7 +95,7 @@ Place a new order in the store
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -121,8 +121,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { storePlaceOrder } from "petstore/funcs/storePlaceOrder.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { storePlaceOrder } from "ryan-simple-test-act/funcs/storePlaceOrder.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -179,7 +179,7 @@ For valid response try integer IDs with value <= 5 or > 10. Other values will ge
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -202,8 +202,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { storeGetOrderById } from "petstore/funcs/storeGetOrderById.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { storeGetOrderById } from "ryan-simple-test-act/funcs/storeGetOrderById.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -258,7 +258,7 @@ For valid response try integer IDs with value < 1000. Anything above 1000 or non
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -281,8 +281,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { storeDeleteOrder } from "petstore/funcs/storeDeleteOrder.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { storeDeleteOrder } from "ryan-simple-test-act/funcs/storeDeleteOrder.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeleteUserRequest } from "petstore/models/operations";
+import { DeleteUserRequest } from "ryan-simple-test-act/models/operations";
 
 let value: DeleteUserRequest = {
   username: "Orlando46",

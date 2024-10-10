@@ -5,7 +5,7 @@ Order Status
 ## Example Usage
 
 ```typescript
-import { OrderStatus } from "petstore/models/components";
+import { OrderStatus } from "ryan-simple-test-act/models/components";
 
 let value: OrderStatus = "approved";
 ```

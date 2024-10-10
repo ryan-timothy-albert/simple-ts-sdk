@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Security } from "petstore/models/components";
+import { Security } from "ryan-simple-test-act/models/components";
 
 let value: Security = {
   apiKey: "<value>",
