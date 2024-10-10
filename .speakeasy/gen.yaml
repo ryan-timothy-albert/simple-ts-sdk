@@ -21,7 +21,7 @@ typescript:
     devDependencies: {}
     peerDependencies: {}
   additionalPackageJSON: {}
-  author: Speakeasy
+  author: ryan-timothy-albert
   clientServerStatusCodesAsErrors: true
   enumFormat: union
   flattenGlobalSecurity: true
@@ -39,7 +39,7 @@ typescript:
   methodArguments: require-security-and-request
   moduleFormat: commonjs
   outputModelSuffix: output
-  packageName: petstore
+  packageName: ryan-simple-test-act
   responseFormat: flat
   templateVersion: v2
   useIndexModules: true
