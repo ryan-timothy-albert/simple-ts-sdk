@@ -9,8 +9,7 @@ permissions:
     branches:
       - main
     paths:
-      - RELEASES.md
-      - "*/RELEASES.md"
+      - .speakeasy/gen.lock
 jobs:
   publish:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v15
