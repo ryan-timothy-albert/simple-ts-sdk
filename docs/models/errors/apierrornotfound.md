@@ -5,7 +5,7 @@ Not Found error
 ## Example Usage
 
 ```typescript
-import { ApiErrorNotFound } from "petstore/models/errors";
+import { ApiErrorNotFound } from "ryan-simple-test-act/models/errors";
 
 // No examples available for this model
 ```

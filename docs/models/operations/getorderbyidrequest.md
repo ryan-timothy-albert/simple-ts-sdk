@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetOrderByIdRequest } from "petstore/models/operations";
+import { GetOrderByIdRequest } from "ryan-simple-test-act/models/operations";
 
 let value: GetOrderByIdRequest = {
   orderId: 423655,

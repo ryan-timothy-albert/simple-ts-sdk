@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UploadFileRequest } from "petstore/models/operations";
+import { UploadFileRequest } from "ryan-simple-test-act/models/operations";
 
 // No examples available for this model
 ```

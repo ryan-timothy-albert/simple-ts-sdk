@@ -5,7 +5,7 @@ Unauthorized error
 ## Example Usage
 
 ```typescript
-import { ApiErrorUnauthorized } from "petstore/models/errors";
+import { ApiErrorUnauthorized } from "ryan-simple-test-act/models/errors";
 
 // No examples available for this model
 ```

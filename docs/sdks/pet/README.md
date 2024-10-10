@@ -25,7 +25,7 @@ Update an existing pet by Id
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -57,8 +57,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { petUpdatePet } from "petstore/funcs/petUpdatePet.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { petUpdatePet } from "ryan-simple-test-act/funcs/petUpdatePet.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -122,7 +122,7 @@ Add a new pet to the store
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -153,8 +153,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { petAddPet } from "petstore/funcs/petAddPet.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { petAddPet } from "ryan-simple-test-act/funcs/petAddPet.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -214,7 +214,7 @@ Multiple status values can be provided with comma separated strings
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -235,8 +235,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { petFindPetsByStatus } from "petstore/funcs/petFindPetsByStatus.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { petFindPetsByStatus } from "ryan-simple-test-act/funcs/petFindPetsByStatus.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -289,7 +289,7 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -310,8 +310,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { petFindPetsByTags } from "petstore/funcs/petFindPetsByTags.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { petFindPetsByTags } from "ryan-simple-test-act/funcs/petFindPetsByTags.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -364,7 +364,7 @@ Returns a single pet
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -387,8 +387,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { petGetPetById } from "petstore/funcs/petGetPetById.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { petGetPetById } from "ryan-simple-test-act/funcs/petGetPetById.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -443,7 +443,7 @@ Deletes a pet
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -466,8 +466,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { petDeletePet } from "petstore/funcs/petDeletePet.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { petDeletePet } from "ryan-simple-test-act/funcs/petDeletePet.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -522,7 +522,7 @@ uploads an image
 ### Example Usage
 
 ```typescript
-import { Petstore } from "petstore";
+import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -545,8 +545,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "petstore/core.js";
-import { petUploadFile } from "petstore/funcs/petUploadFile.js";
+import { PetstoreCore } from "ryan-simple-test-act/core.js";
+import { petUploadFile } from "ryan-simple-test-act/funcs/petUploadFile.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

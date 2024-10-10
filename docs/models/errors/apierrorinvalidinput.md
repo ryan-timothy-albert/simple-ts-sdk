@@ -5,7 +5,7 @@ Not Found error
 ## Example Usage
 
 ```typescript
-import { ApiErrorInvalidInput } from "petstore/models/errors";
+import { ApiErrorInvalidInput } from "ryan-simple-test-act/models/errors";
 
 // No examples available for this model
 ```
