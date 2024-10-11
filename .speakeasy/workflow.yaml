@@ -10,6 +10,6 @@ targets:
     petstore:
         target: typescript
         source: petstore-oas
-        # publish:
-        #     npm:
-        #         token: $npm_token
+        publish:
+            npm:
+                token: $npm_token
