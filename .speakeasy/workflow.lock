@@ -1,8 +1,8 @@
-speakeasyVersion: 1.418.1
+speakeasyVersion: 1.421.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:2fdc392c2c3183f483ffd7e0660bf5fbf9346b80d81023c0460326cb3d683b68
+        sourceRevisionDigest: sha256:eac28b81137298736a13600aaa0a7a4572716c27f0988afa32413308342b7217
         sourceBlobDigest: sha256:849ab95113a7a54b7944402c86e88af54754f8ef15f449005e30ca17bac3f5a0
         tags:
             - latest
@@ -11,7 +11,7 @@ targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:2fdc392c2c3183f483ffd7e0660bf5fbf9346b80d81023c0460326cb3d683b68
+        sourceRevisionDigest: sha256:eac28b81137298736a13600aaa0a7a4572716c27f0988afa32413308342b7217
         sourceBlobDigest: sha256:849ab95113a7a54b7944402c86e88af54754f8ef15f449005e30ca17bac3f5a0
 workflow:
     workflowVersion: 1.0.0
@@ -26,3 +26,6 @@ workflow:
         petstore:
             target: typescript
             source: petstore-oas
+            publish:
+                npm:
+                    token: $npm_token
