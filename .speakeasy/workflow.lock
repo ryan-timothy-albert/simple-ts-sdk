@@ -1,8 +1,8 @@
-speakeasyVersion: 1.421.0
+speakeasyVersion: 1.422.1
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:eac28b81137298736a13600aaa0a7a4572716c27f0988afa32413308342b7217
+        sourceRevisionDigest: sha256:878c81343178077646f535a5579df9cc60e0b38d4280661d8215c5078d4c38c8
         sourceBlobDigest: sha256:849ab95113a7a54b7944402c86e88af54754f8ef15f449005e30ca17bac3f5a0
         tags:
             - latest
@@ -11,8 +11,10 @@ targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:eac28b81137298736a13600aaa0a7a4572716c27f0988afa32413308342b7217
+        sourceRevisionDigest: sha256:878c81343178077646f535a5579df9cc60e0b38d4280661d8215c5078d4c38c8
         sourceBlobDigest: sha256:849ab95113a7a54b7944402c86e88af54754f8ef15f449005e30ca17bac3f5a0
+        codeSamplesNamespace: petstore-oas-code-samples
+        codeSamplesRevisionDigest: sha256:eea929cb49cdf1ec5c4417e9e3d31b780e834b66a7d02af608360f46bb71cb02
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -29,3 +31,7 @@ workflow:
             publish:
                 npm:
                     token: $npm_token
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas-code-samples
+                blocking: false
