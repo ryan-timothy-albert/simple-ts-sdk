@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 7c524b4be7afdadc4b2f448072865ac4
+  docChecksum: ad663a9a1829ad7aad87db01daf63b68
   docVersion: 1.0.0
-  speakeasyVersion: 1.424.0
-  generationVersion: 2.445.1
-  releaseVersion: 0.2.2
-  configChecksum: c24de5394103ea6e7f2d76a694d39599
+  speakeasyVersion: 1.431.0
+  generationVersion: 2.451.0
+  releaseVersion: 0.3.0
+  configChecksum: f0c7fad458f2041c21196566143ebe5c
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -14,18 +14,18 @@ features:
   typescript:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.11
-    core: 3.18.2
+    core: 3.18.3
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     enumUnions: 0.1.0
-    envVarSecurityUsage: 0.1.1
+    envVarSecurityUsage: 0.1.2
     globalSecurity: 2.82.11
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.4
     responseFormat: 0.2.3
     retries: 2.83.0
-    sdkHooks: 0.1.0
+    sdkHooks: 0.2.0
     tests: 0.7.0
     uploadStreams: 0.1.0
 generatedFiles:
@@ -72,11 +72,11 @@ generatedFiles:
   - jsr.json
   - package.json
   - src/core.ts
-  - src/funcs/petAddPet.ts
   - src/funcs/petDeletePet.ts
   - src/funcs/petFindPetsByStatus.ts
   - src/funcs/petFindPetsByTags.ts
   - src/funcs/petGetPetById.ts
+  - src/funcs/petMyPet.ts
   - src/funcs/petUpdatePet.ts
   - src/funcs/petUploadFile.ts
   - src/funcs/storeDeleteOrder.ts
@@ -337,3 +337,10 @@ examples:
           application/json: {"status": 401, "error": "Unauthorized"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
+  myPet:
+    speakeasy-default-my-pet:
+      requestBody:
+        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
+      responses:
+        "200":
+          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
