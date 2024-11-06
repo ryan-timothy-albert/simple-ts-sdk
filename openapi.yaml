@@ -14,7 +14,7 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  version: 1.0.0
+  version: 2.0.0
 externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
@@ -51,7 +51,7 @@ paths:
       - pet
       summary: Update an existing pet
       description: Update an existing pet by Id
-      operationId: myUpdateMe
+      operationId: dsfsdff
       requestBody:
         description: Update an existent pet in the store
         content:
