@@ -336,12 +336,12 @@ If a HTTP request fails, an operation my also throw an error from the `models/er
 
 In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `dsfsdff` method may throw the following errors:
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.ApiErrorInvalidInput | 400                         | application/json            |
-| errors.ApiErrorUnauthorized | 401                         | application/json            |
-| errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
+| Error Type                  | Status Code | Content Type     |
+| --------------------------- | ----------- | ---------------- |
+| errors.ApiErrorInvalidInput | 400         | application/json |
+| errors.ApiErrorUnauthorized | 401         | application/json |
+| errors.ApiErrorNotFound     | 404         | application/json |
+| errors.SDKError             | 4XX, 5XX    | \*/\*            |
 
 ```typescript
 import { Petstore } from "ryan-simple-test-act";
@@ -416,59 +416,19 @@ Validation errors can also occur when either method arguments or data returned f
 <!-- Start Server Selection [server] -->
 ## Server Selection
 
-### Select Server by Index
+### Server Variables
 
-You can override the default server globally by passing a server index to the `serverIdx` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
-
-| # | Server | Variables |
-| - | ------ | --------- |
-| 0 | `https://{environment}.petstore.io` | `environment` (default is `prod`) |
-
-```typescript
-import { Petstore } from "ryan-simple-test-act";
-
-const petstore = new Petstore({
-  serverIdx: 0,
-  apiKey: "<YOUR_API_KEY_HERE>",
-});
-
-async function run() {
-  const result = await petstore.pet.dsfsdff({
-    id: 10,
-    name: "doggie",
-    category: {
-      id: 1,
-      name: "Dogs",
-    },
-    photoUrls: [
-      "<value>",
-      "<value>",
-      "<value>",
-    ],
-  });
-
-  // Handle the result
-  console.log(result);
-}
-
-run();
-
-```
-
-#### Variables
-
-Some of the server options above contain variables. If you want to set the values of those variables, the following optional parameters are available when initializing the SDK client instance:
+The default server `https://{environment}.petstore.io` contains variables and is set to `https://prod.petstore.io` by default. To override default values, the following parameters are available when initializing the SDK client instance:
  * `environment: models.ServerEnvironment`
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
-
+The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
 ```typescript
 import { Petstore } from "ryan-simple-test-act";
 
 const petstore = new Petstore({
-  serverURL: "https://{environment}.petstore.io",
+  serverURL: "https://prod.petstore.io",
   apiKey: "<YOUR_API_KEY_HERE>",
 });
 
@@ -552,9 +512,9 @@ const sdk = new Petstore({ httpClient });
 
 This SDK supports the following security scheme globally:
 
-| Name     | Type     | Scheme   |
-| -------- | -------- | -------- |
-| `apiKey` | apiKey   | API key  |
+| Name     | Type   | Scheme  |
+| -------- | ------ | ------- |
+| `apiKey` | apiKey | API key |
 
 To authenticate with the API the `apiKey` parameter must be set when initializing the SDK client instance. For example:
 ```typescript
