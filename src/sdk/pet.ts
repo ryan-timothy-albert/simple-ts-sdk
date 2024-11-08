@@ -3,11 +3,11 @@
  */
 
 import { petDeletePet } from "../funcs/petDeletePet.js";
-import { petDsfsdff } from "../funcs/petDsfsdff.js";
 import { petFindPetsByStatus } from "../funcs/petFindPetsByStatus.js";
 import { petFindPetsByTags } from "../funcs/petFindPetsByTags.js";
 import { petGetPetById } from "../funcs/petGetPetById.js";
 import { petMyPet } from "../funcs/petMyPet.js";
+import { petPutPet } from "../funcs/petPutPet.js";
 import { petUploadFile } from "../funcs/petUploadFile.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
@@ -21,11 +21,11 @@ export class Pet extends ClientSDK {
    * @remarks
    * Update an existing pet by Id
    */
-  async dsfsdff(
+  async putPet(
     request: components.Pet,
     options?: RequestOptions,
   ): Promise<components.Pet> {
-    return unwrapAsync(petDsfsdff(
+    return unwrapAsync(petPutPet(
       this,
       request,
       options,

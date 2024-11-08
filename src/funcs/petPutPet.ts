@@ -28,7 +28,7 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Update an existing pet by Id
  */
-export async function petDsfsdff(
+export async function petPutPet(
   client: PetstoreCore,
   request: components.Pet,
   options?: RequestOptions,
@@ -70,7 +70,7 @@ export async function petDsfsdff(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "dsfsdff",
+    operationID: "putPet",
     oAuth2Scopes: [],
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
