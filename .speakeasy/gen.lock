@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: ad663a9a1829ad7aad87db01daf63b68
-  docVersion: 1.0.0
-  speakeasyVersion: 1.431.0
-  generationVersion: 2.451.0
-  releaseVersion: 0.3.0
-  configChecksum: f0c7fad458f2041c21196566143ebe5c
+  docChecksum: ad9cb329480ffb07cb9dd7fb995b32fe
+  docVersion: 2.0.0
+  speakeasyVersion: 1.434.6
+  generationVersion: 2.452.0
+  releaseVersion: 0.4.0
+  configChecksum: 1c64f4cbe6f181fadd0f6540f1862a08
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -73,11 +73,11 @@ generatedFiles:
   - package.json
   - src/core.ts
   - src/funcs/petDeletePet.ts
+  - src/funcs/petDsfsdff.ts
   - src/funcs/petFindPetsByStatus.ts
   - src/funcs/petFindPetsByTags.ts
   - src/funcs/petGetPetById.ts
   - src/funcs/petMyPet.ts
-  - src/funcs/petUpdatePet.ts
   - src/funcs/petUploadFile.ts
   - src/funcs/storeDeleteOrder.ts
   - src/funcs/storeGetInventory.ts
@@ -344,3 +344,16 @@ examples:
       responses:
         "200":
           application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
+  dsfsdff:
+    speakeasy-default-dsfsdff:
+      requestBody:
+        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
+      responses:
+        "200":
+          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
+        "400":
+          application/json: {"status": 400, "error": "Bad request"}
+        "401":
+          application/json: {"status": 401, "error": "Unauthorized"}
+        "404":
+          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
