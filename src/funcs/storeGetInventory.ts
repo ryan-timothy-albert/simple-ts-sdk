@@ -56,6 +56,9 @@ export async function storeGetInventory(
   const context = {
     operationID: "getInventory",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig

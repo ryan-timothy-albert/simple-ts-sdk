@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 53d49c0ce52dbdfbab0f52ed1e224edf
-  docVersion: 3.0.0
-  speakeasyVersion: 1.435.1
-  generationVersion: 2.455.2
-  releaseVersion: 1.6.0
-  configChecksum: d59928ddc7ec044c7bc45d94a124b8f3
+  docChecksum: be8867ee6a40cb9115b74910eb979633
+  docVersion: 4.0.0
+  speakeasyVersion: 1.437.0
+  generationVersion: 2.456.0
+  releaseVersion: 2.0.0
+  configChecksum: ceca9bd064f28b2fedd1fd6e99a8f68f
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -77,7 +77,7 @@ generatedFiles:
   - src/funcs/petFindPetsByTags.ts
   - src/funcs/petGetPetById.ts
   - src/funcs/petMyPet.ts
-  - src/funcs/petPutPet.ts
+  - src/funcs/petSit.ts
   - src/funcs/petUploadFile.ts
   - src/funcs/storeDeleteOrder.ts
   - src/funcs/storeGetInventory.ts
@@ -364,6 +364,19 @@ examples:
       responses:
         "200":
           application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": []}
+        "400":
+          application/json: {"status": 400, "error": "Bad request"}
+        "401":
+          application/json: {"status": 401, "error": "Unauthorized"}
+        "404":
+          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
+  sit:
+    speakeasy-default-sit:
+      requestBody:
+        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
+      responses:
+        "200":
+          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
         "400":
           application/json: {"status": 400, "error": "Bad request"}
         "401":

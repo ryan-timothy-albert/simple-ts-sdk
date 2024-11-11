@@ -77,6 +77,9 @@ export async function petFindPetsByStatus(
   const context = {
     operationID: "findPetsByStatus",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig

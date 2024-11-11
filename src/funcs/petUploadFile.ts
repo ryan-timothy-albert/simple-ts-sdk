@@ -77,6 +77,9 @@ export async function petUploadFile(
   const context = {
     operationID: "uploadFile",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig

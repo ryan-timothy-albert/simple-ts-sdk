@@ -79,6 +79,9 @@ export async function userDeleteUser(
   const context = {
     operationID: "deleteUser",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig

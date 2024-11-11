@@ -68,6 +68,9 @@ export async function petMyPet(
   const context = {
     operationID: "myPet",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig

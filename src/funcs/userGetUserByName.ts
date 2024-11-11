@@ -76,6 +76,9 @@ export async function userGetUserByName(
   const context = {
     operationID: "getUserByName",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig
