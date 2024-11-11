@@ -73,6 +73,9 @@ export async function userLoginUser(
   const context = {
     operationID: "loginUser",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig

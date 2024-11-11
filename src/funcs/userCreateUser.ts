@@ -70,6 +70,9 @@ export async function userCreateUser(
   const context = {
     operationID: "createUser",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig

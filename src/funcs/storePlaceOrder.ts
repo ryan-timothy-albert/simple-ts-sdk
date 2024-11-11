@@ -73,6 +73,9 @@ export async function storePlaceOrder(
   const context = {
     operationID: "placeOrder",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig

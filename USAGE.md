@@ -7,7 +7,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.putPet({
+  const result = await petstore.pet.sit({
     id: 10,
     name: "doggie",
     category: {

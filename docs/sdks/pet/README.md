@@ -10,7 +10,7 @@ Find out more
 
 ### Available Operations
 
-* [putPet](#putpet) - Update an existing pet
+* [sit](#sit) - Update an existing pet
 * [myPet](#mypet) - Add a new pet to the store
 * [findPetsByStatus](#findpetsbystatus) - Finds Pets by status
 * [findPetsByTags](#findpetsbytags) - Finds Pets by tags
@@ -18,7 +18,7 @@ Find out more
 * [deletePet](#deletepet) - Deletes a pet
 * [uploadFile](#uploadfile) - uploads an image
 
-## putPet
+## sit
 
 Update an existing pet by Id
 
@@ -32,7 +32,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.putPet({
+  const result = await petstore.pet.sit({
     id: 10,
     name: "doggie",
     category: {
@@ -58,7 +58,7 @@ The standalone function version of this method:
 
 ```typescript
 import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petPutPet } from "ryan-simple-test-act/funcs/petPutPet.js";
+import { petSit } from "ryan-simple-test-act/funcs/petSit.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -67,7 +67,7 @@ const petstore = new PetstoreCore({
 });
 
 async function run() {
-  const res = await petPutPet(petstore, {
+  const res = await petSit(petstore, {
     id: 10,
     name: "doggie",
     category: {

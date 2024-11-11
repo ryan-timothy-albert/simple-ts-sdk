@@ -98,7 +98,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.putPet({
+  const result = await petstore.pet.sit({
     id: 10,
     name: "doggie",
     category: {
@@ -128,7 +128,7 @@ run();
 
 ### [pet](docs/sdks/pet/README.md)
 
-* [putPet](docs/sdks/pet/README.md#putpet) - Update an existing pet
+* [sit](docs/sdks/pet/README.md#sit) - Update an existing pet
 * [myPet](docs/sdks/pet/README.md#mypet) - Add a new pet to the store
 * [findPetsByStatus](docs/sdks/pet/README.md#findpetsbystatus) - Finds Pets by status
 * [findPetsByTags](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
@@ -177,7 +177,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`petFindPetsByTags`](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
 - [`petGetPetById`](docs/sdks/pet/README.md#getpetbyid) - Find pet by ID
 - [`petMyPet`](docs/sdks/pet/README.md#mypet) - Add a new pet to the store
-- [`petPutPet`](docs/sdks/pet/README.md#putpet) - Update an existing pet
+- [`petSit`](docs/sdks/pet/README.md#sit) - Update an existing pet
 - [`petUploadFile`](docs/sdks/pet/README.md#uploadfile) - uploads an image
 - [`storeDeleteOrder`](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
 - [`storeGetInventory`](docs/sdks/store/README.md#getinventory) - Returns pet inventories by status
@@ -243,7 +243,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.putPet({
+  const result = await petstore.pet.sit({
     id: 10,
     name: "doggie",
     category: {
@@ -294,7 +294,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.putPet({
+  const result = await petstore.pet.sit({
     id: 10,
     name: "doggie",
     category: {
@@ -331,7 +331,7 @@ If a HTTP request fails, an operation my also throw an error from the `models/er
 | InvalidRequestError                                  | Any input used to create a request is invalid        |
 | UnexpectedClientError                                | Unrecognised or unexpected error                     |
 
-In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `putPet` method may throw the following errors:
+In addition, when custom error responses are specified for an operation, the SDK may throw their associated Error type. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation. For example, the `sit` method may throw the following errors:
 
 | Error Type                  | Status Code | Content Type     |
 | --------------------------- | ----------- | ---------------- |
@@ -356,7 +356,7 @@ const petstore = new Petstore({
 async function run() {
   let result;
   try {
-    result = await petstore.pet.putPet({
+    result = await petstore.pet.sit({
       id: 10,
       name: "doggie",
       category: {
@@ -429,7 +429,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.putPet({
+  const result = await petstore.pet.sit({
     id: 10,
     name: "doggie",
     category: {
@@ -520,7 +520,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.putPet({
+  const result = await petstore.pet.sit({
     id: 10,
     name: "doggie",
     category: {

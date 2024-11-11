@@ -80,6 +80,9 @@ export async function petDeletePet(
   const context = {
     operationID: "deletePet",
     oAuth2Scopes: [],
+
+    resolvedSecurity: requestSecurity,
+
     securitySource: client._options.apiKey,
     retryConfig: options?.retries
       || client._options.retryConfig
