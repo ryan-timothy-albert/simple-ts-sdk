@@ -3,10 +3,10 @@ id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
   docChecksum: be8867ee6a40cb9115b74910eb979633
   docVersion: 4.0.0
-  speakeasyVersion: 1.437.0
-  generationVersion: 2.456.0
-  releaseVersion: 2.0.0
-  configChecksum: ceca9bd064f28b2fedd1fd6e99a8f68f
+  speakeasyVersion: 1.438.1
+  generationVersion: 2.457.2
+  releaseVersion: 4.1.1.3.5
+  configChecksum: 860784be6ada74c36fe7a5dd7250d10a
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
