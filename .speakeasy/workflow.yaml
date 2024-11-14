@@ -4,8 +4,6 @@ sources:
     petstore-oas:
         inputs:
             - location: openapi.yaml
-        registry:
-            location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas
 targets:
     petstore:
         target: typescript
