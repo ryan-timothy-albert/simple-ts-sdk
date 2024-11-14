@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     petstore-oas:
         inputs:
-            - location: openapi.yaml
+            - location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas:main
 targets:
     petstore:
         target: typescript
