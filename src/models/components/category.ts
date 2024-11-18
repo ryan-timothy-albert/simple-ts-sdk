@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type Category = {
   id?: number | undefined;
@@ -46,4 +49,18 @@ export namespace Category$ {
   export const outboundSchema = Category$outboundSchema;
   /** @deprecated use `Category$Outbound` instead. */
   export type Outbound = Category$Outbound;
+}
+
+export function categoryToJSON(category: Category): string {
+  return JSON.stringify(Category$outboundSchema.parse(category));
+}
+
+export function categoryFromJSON(
+  jsonString: string,
+): SafeParseResult<Category, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Category$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Category' from JSON`,
+  );
 }

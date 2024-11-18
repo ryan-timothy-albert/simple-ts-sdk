@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type ApiResponse = {
   code?: number | undefined;
@@ -50,4 +53,18 @@ export namespace ApiResponse$ {
   export const outboundSchema = ApiResponse$outboundSchema;
   /** @deprecated use `ApiResponse$Outbound` instead. */
   export type Outbound = ApiResponse$Outbound;
+}
+
+export function apiResponseToJSON(apiResponse: ApiResponse): string {
+  return JSON.stringify(ApiResponse$outboundSchema.parse(apiResponse));
+}
+
+export function apiResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ApiResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ApiResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ApiResponse' from JSON`,
+  );
 }

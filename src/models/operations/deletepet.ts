@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type DeletePetRequest = {
   apiKey?: string | undefined;
@@ -58,4 +61,22 @@ export namespace DeletePetRequest$ {
   export const outboundSchema = DeletePetRequest$outboundSchema;
   /** @deprecated use `DeletePetRequest$Outbound` instead. */
   export type Outbound = DeletePetRequest$Outbound;
+}
+
+export function deletePetRequestToJSON(
+  deletePetRequest: DeletePetRequest,
+): string {
+  return JSON.stringify(
+    DeletePetRequest$outboundSchema.parse(deletePetRequest),
+  );
+}
+
+export function deletePetRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<DeletePetRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => DeletePetRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'DeletePetRequest' from JSON`,
+  );
 }

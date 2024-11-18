@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type GetPetByIdRequest = {
   /**
@@ -45,4 +48,22 @@ export namespace GetPetByIdRequest$ {
   export const outboundSchema = GetPetByIdRequest$outboundSchema;
   /** @deprecated use `GetPetByIdRequest$Outbound` instead. */
   export type Outbound = GetPetByIdRequest$Outbound;
+}
+
+export function getPetByIdRequestToJSON(
+  getPetByIdRequest: GetPetByIdRequest,
+): string {
+  return JSON.stringify(
+    GetPetByIdRequest$outboundSchema.parse(getPetByIdRequest),
+  );
+}
+
+export function getPetByIdRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<GetPetByIdRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => GetPetByIdRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'GetPetByIdRequest' from JSON`,
+  );
 }

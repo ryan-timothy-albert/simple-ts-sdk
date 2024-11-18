@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import {
   Category,
   Category$inboundSchema,
@@ -104,4 +107,18 @@ export namespace Pet$ {
   export const outboundSchema = Pet$outboundSchema;
   /** @deprecated use `Pet$Outbound` instead. */
   export type Outbound = Pet$Outbound;
+}
+
+export function petToJSON(pet: Pet): string {
+  return JSON.stringify(Pet$outboundSchema.parse(pet));
+}
+
+export function petFromJSON(
+  jsonString: string,
+): SafeParseResult<Pet, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => Pet$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'Pet' from JSON`,
+  );
 }

@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type UploadFileRequest = {
   /**
@@ -85,4 +88,22 @@ export namespace UploadFileRequest$ {
   export const outboundSchema = UploadFileRequest$outboundSchema;
   /** @deprecated use `UploadFileRequest$Outbound` instead. */
   export type Outbound = UploadFileRequest$Outbound;
+}
+
+export function uploadFileRequestToJSON(
+  uploadFileRequest: UploadFileRequest,
+): string {
+  return JSON.stringify(
+    UploadFileRequest$outboundSchema.parse(uploadFileRequest),
+  );
+}
+
+export function uploadFileRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<UploadFileRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => UploadFileRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'UploadFileRequest' from JSON`,
+  );
 }

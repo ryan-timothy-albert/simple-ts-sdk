@@ -4,6 +4,9 @@
 
 import * as z from "zod";
 import { remap as remap$ } from "../../lib/primitives.js";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type LoginUserRequest = {
   /**
@@ -60,6 +63,24 @@ export namespace LoginUserRequest$ {
   export type Outbound = LoginUserRequest$Outbound;
 }
 
+export function loginUserRequestToJSON(
+  loginUserRequest: LoginUserRequest,
+): string {
+  return JSON.stringify(
+    LoginUserRequest$outboundSchema.parse(loginUserRequest),
+  );
+}
+
+export function loginUserRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<LoginUserRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => LoginUserRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'LoginUserRequest' from JSON`,
+  );
+}
+
 /** @internal */
 export const LoginUserResponse$inboundSchema: z.ZodType<
   LoginUserResponse,
@@ -107,4 +128,22 @@ export namespace LoginUserResponse$ {
   export const outboundSchema = LoginUserResponse$outboundSchema;
   /** @deprecated use `LoginUserResponse$Outbound` instead. */
   export type Outbound = LoginUserResponse$Outbound;
+}
+
+export function loginUserResponseToJSON(
+  loginUserResponse: LoginUserResponse,
+): string {
+  return JSON.stringify(
+    LoginUserResponse$outboundSchema.parse(loginUserResponse),
+  );
+}
+
+export function loginUserResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<LoginUserResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => LoginUserResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'LoginUserResponse' from JSON`,
+  );
 }

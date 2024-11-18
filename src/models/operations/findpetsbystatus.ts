@@ -3,7 +3,10 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
 import { ClosedEnum } from "../../types/enums.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 /**
  * Status values that need to be considered for filter
@@ -78,4 +81,22 @@ export namespace FindPetsByStatusRequest$ {
   export const outboundSchema = FindPetsByStatusRequest$outboundSchema;
   /** @deprecated use `FindPetsByStatusRequest$Outbound` instead. */
   export type Outbound = FindPetsByStatusRequest$Outbound;
+}
+
+export function findPetsByStatusRequestToJSON(
+  findPetsByStatusRequest: FindPetsByStatusRequest,
+): string {
+  return JSON.stringify(
+    FindPetsByStatusRequest$outboundSchema.parse(findPetsByStatusRequest),
+  );
+}
+
+export function findPetsByStatusRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<FindPetsByStatusRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => FindPetsByStatusRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'FindPetsByStatusRequest' from JSON`,
+  );
 }

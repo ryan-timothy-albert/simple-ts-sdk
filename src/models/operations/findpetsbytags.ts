@@ -3,6 +3,9 @@
  */
 
 import * as z from "zod";
+import { safeParse } from "../../lib/schemas.js";
+import { Result as SafeParseResult } from "../../types/fp.js";
+import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
 export type FindPetsByTagsRequest = {
   /**
@@ -45,4 +48,22 @@ export namespace FindPetsByTagsRequest$ {
   export const outboundSchema = FindPetsByTagsRequest$outboundSchema;
   /** @deprecated use `FindPetsByTagsRequest$Outbound` instead. */
   export type Outbound = FindPetsByTagsRequest$Outbound;
+}
+
+export function findPetsByTagsRequestToJSON(
+  findPetsByTagsRequest: FindPetsByTagsRequest,
+): string {
+  return JSON.stringify(
+    FindPetsByTagsRequest$outboundSchema.parse(findPetsByTagsRequest),
+  );
+}
+
+export function findPetsByTagsRequestFromJSON(
+  jsonString: string,
+): SafeParseResult<FindPetsByTagsRequest, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => FindPetsByTagsRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'FindPetsByTagsRequest' from JSON`,
+  );
 }
