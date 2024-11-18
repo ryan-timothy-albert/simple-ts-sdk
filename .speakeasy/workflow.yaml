@@ -5,7 +5,7 @@ sources:
         inputs:
             - location: openapi.yaml
         registry:
-            location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas123
+            location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas
 targets:
     petstore:
         target: typescript
@@ -15,5 +15,5 @@ targets:
                 token: $npm_token
         codeSamples:
             registry:
-                location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas123-code-samples
+                location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas-code-samples
             blocking: false
