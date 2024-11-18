@@ -5,8 +5,8 @@ management:
   docVersion: 4.0.0
   speakeasyVersion: 1.440.2
   generationVersion: 2.460.1
-  releaseVersion: 5.0.8
-  configChecksum: 52479b23519d79b27afd53e8cd864593
+  releaseVersion: 5.0.9
+  configChecksum: fee18d6df88a1e4336f0a3e84a3cdb5e
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
