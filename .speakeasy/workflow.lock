@@ -2,19 +2,19 @@ speakeasyVersion: 1.440.2
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:d39ce4e24209cf5cb895de34726c38666425f4965e433717c37c9ab44a3c5e23
+        sourceRevisionDigest: sha256:39af4a6da6fb9e45c5261bd0690267a4800f5986d0333bd5379b6bded38d0d6d
         sourceBlobDigest: sha256:2c233fb0aeec9e0604105c8f8f7b34580440014e60aeb2acb1ae4919ed6698c3
         tags:
             - latest
-            - speakeasy-sdk-regen-1731953801
+            - speakeasy-sdk-regen-1731958070
 targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:d39ce4e24209cf5cb895de34726c38666425f4965e433717c37c9ab44a3c5e23
+        sourceRevisionDigest: sha256:39af4a6da6fb9e45c5261bd0690267a4800f5986d0333bd5379b6bded38d0d6d
         sourceBlobDigest: sha256:2c233fb0aeec9e0604105c8f8f7b34580440014e60aeb2acb1ae4919ed6698c3
         codeSamplesNamespace: petstore-oas-code-samples
-        codeSamplesRevisionDigest: sha256:062055d41a11421aca00f83534985a9b00a23c84f84d11e2493731a449f8279a
+        codeSamplesRevisionDigest: sha256:676564095f70c60e8622e73c083cbf0c85ecc8b48b3659967b14c75f92daeca4
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
