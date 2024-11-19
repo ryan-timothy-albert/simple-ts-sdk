@@ -2,19 +2,19 @@ speakeasyVersion: 1.441.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:ffb60b111ab40a642e89df775b310c9d398176b175a987f2cab3bc3cfdd94e96
+        sourceRevisionDigest: sha256:72799639fdbd6d38fb7f2f2533f4b24b507d6e340fe3a2315e6393a3fc26cc03
         sourceBlobDigest: sha256:2c233fb0aeec9e0604105c8f8f7b34580440014e60aeb2acb1ae4919ed6698c3
         tags:
             - latest
-            - speakeasy-sdk-regen-1731974979
+            - speakeasy-sdk-regen-1731975292
 targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:ffb60b111ab40a642e89df775b310c9d398176b175a987f2cab3bc3cfdd94e96
+        sourceRevisionDigest: sha256:72799639fdbd6d38fb7f2f2533f4b24b507d6e340fe3a2315e6393a3fc26cc03
         sourceBlobDigest: sha256:2c233fb0aeec9e0604105c8f8f7b34580440014e60aeb2acb1ae4919ed6698c3
         codeSamplesNamespace: petstore-oas-code-samples
-        codeSamplesRevisionDigest: sha256:3b3d4b31b5cf1a9c8c09ec1334d786478304c5e8d8915f7a73263462d326b7cb
+        codeSamplesRevisionDigest: sha256:484815fccd542e7ae0a524c797b6d57c651cc7ceda8a3110158a323c5fda31b1
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -28,6 +28,7 @@ workflow:
         petstore:
             target: typescript
             source: petstore-oas
+            output: .
             publish:
                 npm:
                     token: $npm_token
