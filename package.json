@@ -1,6 +1,6 @@
 {
   "name": "ryan-simple-test-act",
-  "version": "5.0.21",
+  "version": "5.0.22",
   "author": "ryan-timothy-albert",
   "main": "./index.js",
   "sideEffects": false,
