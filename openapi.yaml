@@ -20,17 +20,17 @@ externalDocs:
   url: http://swagger.io
 security:
   - api_key: []
-servers:
-  - url: https://{environment}.petstore.io
-    description: A per-environment API.
-    variables:
-      environment:
-        description: The environment name. Defaults to the production environment.
-        default: prod
-        enum:
-          - prod
-          - staging
-          - dev
+# servers:
+#   - url: https://{environment}.petstore.io
+#     description: A per-environment API.
+#     variables:
+#       environment:
+#         description: The environment name. Defaults to the production environment.
+#         default: prod
+#         enum:
+#           - prod
+#           - staging
+#           - dev
 tags:
   - name: pet
     description: Everything about your Pets
