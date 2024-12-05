@@ -16,5 +16,5 @@ targets:
                 token: $npm_token
         codeSamples:
             registry:
-                location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas-code-samples
+                location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas-typescript-code-samples
             blocking: false

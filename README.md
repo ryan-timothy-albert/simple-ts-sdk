@@ -31,19 +31,25 @@ For more information about the API: [Find out more about Swagger](http://swagger
 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
+<!-- $toc-max-depth=2 -->
+* [petstore](#petstore)
+  * [🏗 **Welcome to your new SDK!** 🏗](#welcome-to-your-new-sdk)
+  * [SDK Installation](#sdk-installation)
+  * [Requirements](#requirements)
+  * [SDK Example Usage](#sdk-example-usage)
+  * [Available Resources and Operations](#available-resources-and-operations)
+  * [Standalone functions](#standalone-functions)
+  * [File uploads](#file-uploads)
+  * [Retries](#retries)
+  * [Error Handling](#error-handling)
+  * [Server Selection](#server-selection)
+  * [Custom HTTP Client](#custom-http-client)
+  * [Authentication](#authentication)
+  * [Debugging](#debugging)
+* [Development](#development)
+  * [Maturity](#maturity)
+  * [Contributions](#contributions)
 
-* [SDK Installation](#sdk-installation)
-* [Requirements](#requirements)
-* [SDK Example Usage](#sdk-example-usage)
-* [Available Resources and Operations](#available-resources-and-operations)
-* [Standalone functions](#standalone-functions)
-* [File uploads](#file-uploads)
-* [Retries](#retries)
-* [Error Handling](#error-handling)
-* [Server Selection](#server-selection)
-* [Custom HTTP Client](#custom-http-client)
-* [Authentication](#authentication)
-* [Debugging](#debugging)
 <!-- End Table of Contents [toc] -->
 
 <!-- Start SDK Installation [installation] -->
@@ -132,7 +138,7 @@ run();
 * [myPet123](docs/sdks/pet/README.md#mypet123) - Add a new pet to the store
 * [findPetsByStatus](docs/sdks/pet/README.md#findpetsbystatus) - Finds Pets by status
 * [findPetsByTags](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
-* [getPetById](docs/sdks/pet/README.md#getpetbyid) - Find pet by ID
+* [getPetByIDS](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
 * [deletePet](docs/sdks/pet/README.md#deletepet) - Deletes a pet
 * [uploadFile](docs/sdks/pet/README.md#uploadfile) - uploads an image
 
@@ -175,7 +181,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`petDeletePet`](docs/sdks/pet/README.md#deletepet) - Deletes a pet
 - [`petFindPetsByStatus`](docs/sdks/pet/README.md#findpetsbystatus) - Finds Pets by status
 - [`petFindPetsByTags`](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
-- [`petGetPetById`](docs/sdks/pet/README.md#getpetbyid) - Find pet by ID
+- [`petGetPetByIDS`](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
 - [`petMyPet123`](docs/sdks/pet/README.md#mypet123) - Add a new pet to the store
 - [`petSit`](docs/sdks/pet/README.md#sit) - Update an existing pet
 - [`petUploadFile`](docs/sdks/pet/README.md#uploadfile) - uploads an image

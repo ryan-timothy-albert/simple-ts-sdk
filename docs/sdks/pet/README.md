@@ -14,7 +14,7 @@ Find out more dfdsiojfidjs
 * [myPet123](#mypet123) - Add a new pet to the store
 * [findPetsByStatus](#findpetsbystatus) - Finds Pets by status
 * [findPetsByTags](#findpetsbytags) - Finds Pets by tags
-* [getPetById](#getpetbyid) - Find pet by ID
+* [getPetByIDS](#getpetbyids) - Find pet by ID
 * [deletePet](#deletepet) - Deletes a pet
 * [uploadFile](#uploadfile) - uploads an image
 
@@ -357,7 +357,7 @@ run();
 | errors.ApiErrorNotFound     | 404                         | application/json            |
 | errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
-## getPetById
+## getPetByIDS
 
 Returns a single pet
 
@@ -371,8 +371,8 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.getPetById({
-    petId: 504151,
+  const result = await petstore.pet.getPetByIDS({
+    petId: 137396,
   });
 
   // Handle the result
@@ -388,7 +388,7 @@ The standalone function version of this method:
 
 ```typescript
 import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petGetPetById } from "ryan-simple-test-act/funcs/petGetPetById.js";
+import { petGetPetByIDS } from "ryan-simple-test-act/funcs/petGetPetByIDS.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -397,8 +397,8 @@ const petstore = new PetstoreCore({
 });
 
 async function run() {
-  const res = await petGetPetById(petstore, {
-    petId: 504151,
+  const res = await petGetPetByIDS(petstore, {
+    petId: 137396,
   });
 
   if (!res.ok) {
@@ -418,7 +418,7 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.GetPetByIdRequest](../../models/operations/getpetbyidrequest.md)                                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [operations.GetPetByIDSRequest](../../models/operations/getpetbyidsrequest.md)                                                                                                 | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |

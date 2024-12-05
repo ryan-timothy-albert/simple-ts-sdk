@@ -8,7 +8,7 @@ export * from "./deleteuser.js";
 export * from "./findpetsbystatus.js";
 export * from "./findpetsbytags.js";
 export * from "./getorderbyid.js";
-export * from "./getpetbyid.js";
+export * from "./getpetbyids.js";
 export * from "./getuserbyname.js";
 export * from "./loginuser.js";
 export * from "./updateuser.js";

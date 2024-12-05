@@ -5,7 +5,7 @@
 import { petDeletePet } from "../funcs/petDeletePet.js";
 import { petFindPetsByStatus } from "../funcs/petFindPetsByStatus.js";
 import { petFindPetsByTags } from "../funcs/petFindPetsByTags.js";
-import { petGetPetById } from "../funcs/petGetPetById.js";
+import { petGetPetByIDS } from "../funcs/petGetPetByIDS.js";
 import { petMyPet123 } from "../funcs/petMyPet123.js";
 import { petSit } from "../funcs/petSit.js";
 import { petUploadFile } from "../funcs/petUploadFile.js";
@@ -89,11 +89,11 @@ export class Pet extends ClientSDK {
    * @remarks
    * Returns a single pet
    */
-  async getPetById(
-    request: operations.GetPetByIdRequest,
+  async getPetByIDS(
+    request: operations.GetPetByIDSRequest,
     options?: RequestOptions,
   ): Promise<components.Pet> {
-    return unwrapAsync(petGetPetById(
+    return unwrapAsync(petGetPetByIDS(
       this,
       request,
       options,

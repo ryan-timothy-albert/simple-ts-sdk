@@ -29,9 +29,9 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Returns a single pet
  */
-export async function petGetPetById(
+export async function petGetPetByIDS(
   client: PetstoreCore,
-  request: operations.GetPetByIdRequest,
+  request: operations.GetPetByIDSRequest,
   options?: RequestOptions,
 ): Promise<
   Result<
@@ -50,7 +50,7 @@ export async function petGetPetById(
 > {
   const parsed = safeParse(
     request,
-    (value) => operations.GetPetByIdRequest$outboundSchema.parse(value),
+    (value) => operations.GetPetByIDSRequest$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -77,7 +77,7 @@ export async function petGetPetById(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "getPetById",
+    operationID: "getPetByIDS",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,

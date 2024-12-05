@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 55065f93fdcc6be1a140cbf922085627
+  docChecksum: d5a789891ce0c96a50ecae850b0722ea
   docVersion: 4.0.0
-  speakeasyVersion: 1.441.1
-  generationVersion: 2.461.2
-  releaseVersion: 5.0.22
-  configChecksum: bd55b26ca6745e61fdab541ffa0bb39a
+  speakeasyVersion: 1.451.6
+  generationVersion: 2.471.2
+  releaseVersion: 5.1.0
+  configChecksum: 4fea3568fd7c3d2cd32a79c4bacc88b2
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -14,7 +14,7 @@ features:
   typescript:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.11
-    core: 3.18.6
+    core: 3.18.8
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     enumUnions: 0.1.0
@@ -26,7 +26,6 @@ features:
     responseFormat: 0.2.3
     retries: 2.83.0
     sdkHooks: 0.2.0
-    tests: 0.7.0
     uploadStreams: 0.1.0
 generatedFiles:
   - .devcontainer/README.md
@@ -58,7 +57,7 @@ generatedFiles:
   - docs/models/operations/findpetsbystatusrequest.md
   - docs/models/operations/findpetsbytagsrequest.md
   - docs/models/operations/getorderbyidrequest.md
-  - docs/models/operations/getpetbyidrequest.md
+  - docs/models/operations/getpetbyidsrequest.md
   - docs/models/operations/getuserbynamerequest.md
   - docs/models/operations/loginuserrequest.md
   - docs/models/operations/loginuserresponse.md
@@ -75,7 +74,7 @@ generatedFiles:
   - src/funcs/petDeletePet.ts
   - src/funcs/petFindPetsByStatus.ts
   - src/funcs/petFindPetsByTags.ts
-  - src/funcs/petGetPetById.ts
+  - src/funcs/petGetPetByIDS.ts
   - src/funcs/petMyPet123.ts
   - src/funcs/petSit.ts
   - src/funcs/petUploadFile.ts
@@ -130,7 +129,7 @@ generatedFiles:
   - src/models/operations/findpetsbystatus.ts
   - src/models/operations/findpetsbytags.ts
   - src/models/operations/getorderbyid.ts
-  - src/models/operations/getpetbyid.ts
+  - src/models/operations/getpetbyids.ts
   - src/models/operations/getuserbyname.ts
   - src/models/operations/index.ts
   - src/models/operations/loginuser.ts
@@ -390,3 +389,18 @@ examples:
       responses:
         "200":
           application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
+  getPetByIDS:
+    speakeasy-default-get-pet-by-IDS:
+      parameters:
+        path:
+          petId: 137396
+      responses:
+        "200":
+          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
+        "400":
+          application/json: {"status": 400, "error": "Bad request"}
+        "401":
+          application/json: {"status": 401, "error": "Unauthorized"}
+        "404":
+          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
+generatedTests: {}
