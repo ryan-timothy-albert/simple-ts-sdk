@@ -102,7 +102,7 @@ paths:
       - pet
       summary: Finds Pets by status
       description: Multiple status values can be provided with comma separated strings
-      operationId: findPetsByStatus
+      operationId: findPetsByStatusTypes
       parameters:
       - name: status
         in: query
