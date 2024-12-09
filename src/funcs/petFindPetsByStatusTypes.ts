@@ -30,9 +30,9 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Multiple status values can be provided with comma separated strings
  */
-export async function petFindPetsByStatus(
+export async function petFindPetsByStatusTypes(
   client: PetstoreCore,
-  request: operations.FindPetsByStatusRequest,
+  request: operations.FindPetsByStatusTypesRequest,
   options?: RequestOptions,
 ): Promise<
   Result<
@@ -51,7 +51,8 @@ export async function petFindPetsByStatus(
 > {
   const parsed = safeParse(
     request,
-    (value) => operations.FindPetsByStatusRequest$outboundSchema.parse(value),
+    (value) =>
+      operations.FindPetsByStatusTypesRequest$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -75,7 +76,7 @@ export async function petFindPetsByStatus(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "findPetsByStatus",
+    operationID: "findPetsByStatusTypes",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,
