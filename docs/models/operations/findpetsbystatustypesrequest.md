@@ -1,11 +1,11 @@
-# FindPetsByStatusRequest
+# FindPetsByStatusTypesRequest
 
 ## Example Usage
 
 ```typescript
-import { FindPetsByStatusRequest } from "ryan-simple-test-act/models/operations";
+import { FindPetsByStatusTypesRequest } from "ryan-simple-test-act/models/operations";
 
-let value: FindPetsByStatusRequest = {};
+let value: FindPetsByStatusTypesRequest = {};
 ```
 
 ## Fields

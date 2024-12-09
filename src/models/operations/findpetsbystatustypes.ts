@@ -21,7 +21,7 @@ export const Status = {
  */
 export type Status = ClosedEnum<typeof Status>;
 
-export type FindPetsByStatusRequest = {
+export type FindPetsByStatusTypesRequest = {
   /**
    * Status values that need to be considered for filter
    */
@@ -48,8 +48,8 @@ export namespace Status$ {
 }
 
 /** @internal */
-export const FindPetsByStatusRequest$inboundSchema: z.ZodType<
-  FindPetsByStatusRequest,
+export const FindPetsByStatusTypesRequest$inboundSchema: z.ZodType<
+  FindPetsByStatusTypesRequest,
   z.ZodTypeDef,
   unknown
 > = z.object({
@@ -57,15 +57,15 @@ export const FindPetsByStatusRequest$inboundSchema: z.ZodType<
 });
 
 /** @internal */
-export type FindPetsByStatusRequest$Outbound = {
+export type FindPetsByStatusTypesRequest$Outbound = {
   status: string;
 };
 
 /** @internal */
-export const FindPetsByStatusRequest$outboundSchema: z.ZodType<
-  FindPetsByStatusRequest$Outbound,
+export const FindPetsByStatusTypesRequest$outboundSchema: z.ZodType<
+  FindPetsByStatusTypesRequest$Outbound,
   z.ZodTypeDef,
-  FindPetsByStatusRequest
+  FindPetsByStatusTypesRequest
 > = z.object({
   status: Status$outboundSchema.default("available"),
 });
@@ -74,29 +74,31 @@ export const FindPetsByStatusRequest$outboundSchema: z.ZodType<
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace FindPetsByStatusRequest$ {
-  /** @deprecated use `FindPetsByStatusRequest$inboundSchema` instead. */
-  export const inboundSchema = FindPetsByStatusRequest$inboundSchema;
-  /** @deprecated use `FindPetsByStatusRequest$outboundSchema` instead. */
-  export const outboundSchema = FindPetsByStatusRequest$outboundSchema;
-  /** @deprecated use `FindPetsByStatusRequest$Outbound` instead. */
-  export type Outbound = FindPetsByStatusRequest$Outbound;
+export namespace FindPetsByStatusTypesRequest$ {
+  /** @deprecated use `FindPetsByStatusTypesRequest$inboundSchema` instead. */
+  export const inboundSchema = FindPetsByStatusTypesRequest$inboundSchema;
+  /** @deprecated use `FindPetsByStatusTypesRequest$outboundSchema` instead. */
+  export const outboundSchema = FindPetsByStatusTypesRequest$outboundSchema;
+  /** @deprecated use `FindPetsByStatusTypesRequest$Outbound` instead. */
+  export type Outbound = FindPetsByStatusTypesRequest$Outbound;
 }
 
-export function findPetsByStatusRequestToJSON(
-  findPetsByStatusRequest: FindPetsByStatusRequest,
+export function findPetsByStatusTypesRequestToJSON(
+  findPetsByStatusTypesRequest: FindPetsByStatusTypesRequest,
 ): string {
   return JSON.stringify(
-    FindPetsByStatusRequest$outboundSchema.parse(findPetsByStatusRequest),
+    FindPetsByStatusTypesRequest$outboundSchema.parse(
+      findPetsByStatusTypesRequest,
+    ),
   );
 }
 
-export function findPetsByStatusRequestFromJSON(
+export function findPetsByStatusTypesRequestFromJSON(
   jsonString: string,
-): SafeParseResult<FindPetsByStatusRequest, SDKValidationError> {
+): SafeParseResult<FindPetsByStatusTypesRequest, SDKValidationError> {
   return safeParse(
     jsonString,
-    (x) => FindPetsByStatusRequest$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'FindPetsByStatusRequest' from JSON`,
+    (x) => FindPetsByStatusTypesRequest$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'FindPetsByStatusTypesRequest' from JSON`,
   );
 }

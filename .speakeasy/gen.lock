@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: d5a789891ce0c96a50ecae850b0722ea
+  docChecksum: 60d27c46481b9d9f9618b01182214273
   docVersion: 4.0.0
-  speakeasyVersion: 1.452.0
-  generationVersion: 2.472.1
-  releaseVersion: 5.2.0-alpha.1
-  configChecksum: d31541b7e3562c4fb70e3cf5608ca928
+  speakeasyVersion: 1.453.6
+  generationVersion: 2.474.6
+  releaseVersion: 5.2.0-alpha.2
+  configChecksum: afe0e4fa8e72100484c2494fbeb8165c
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -54,7 +54,7 @@ generatedFiles:
   - docs/models/operations/deleteorderrequest.md
   - docs/models/operations/deletepetrequest.md
   - docs/models/operations/deleteuserrequest.md
-  - docs/models/operations/findpetsbystatusrequest.md
+  - docs/models/operations/findpetsbystatustypesrequest.md
   - docs/models/operations/findpetsbytagsrequest.md
   - docs/models/operations/getorderbyidrequest.md
   - docs/models/operations/getpetbyidsrequest.md
@@ -72,7 +72,7 @@ generatedFiles:
   - package.json
   - src/core.ts
   - src/funcs/petDeletePet.ts
-  - src/funcs/petFindPetsByStatus.ts
+  - src/funcs/petFindPetsByStatusTypes.ts
   - src/funcs/petFindPetsByTags.ts
   - src/funcs/petGetPetByIDS.ts
   - src/funcs/petMyPet123.ts
@@ -126,7 +126,7 @@ generatedFiles:
   - src/models/operations/deleteorder.ts
   - src/models/operations/deletepet.ts
   - src/models/operations/deleteuser.ts
-  - src/models/operations/findpetsbystatus.ts
+  - src/models/operations/findpetsbystatustypes.ts
   - src/models/operations/findpetsbytags.ts
   - src/models/operations/getorderbyid.ts
   - src/models/operations/getpetbyids.ts
@@ -397,6 +397,17 @@ examples:
       responses:
         "200":
           application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
+        "400":
+          application/json: {"status": 400, "error": "Bad request"}
+        "401":
+          application/json: {"status": 401, "error": "Unauthorized"}
+        "404":
+          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
+  findPetsByStatusTypes:
+    speakeasy-default-find-pets-by-status-types:
+      responses:
+        "200":
+          application/json: [{"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}, {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}, {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}]
         "400":
           application/json: {"status": 400, "error": "Bad request"}
         "401":

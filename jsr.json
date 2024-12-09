@@ -2,7 +2,7 @@
 
 {
   "name": "ryan-simple-test-act",
-  "version": "5.2.0-alpha.1",
+  "version": "5.2.0-alpha.2",
   "exports": {
     ".": "./src/index.ts",    
     "./models/errors": "./src/models/errors/index.ts",    

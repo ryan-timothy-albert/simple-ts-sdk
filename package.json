@@ -1,6 +1,6 @@
 {
   "name": "ryan-simple-test-act",
-  "version": "5.2.0-alpha.1",
+  "version": "5.2.0-alpha.2",
   "author": "ryan-timothy-albert",
   "main": "./index.js",
   "sideEffects": false,
@@ -14,8 +14,6 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "react": "^18 || ^19",
-    "react-dom": "^18 || ^19",
     "zod": ">= 3"
   },
   "devDependencies": {
