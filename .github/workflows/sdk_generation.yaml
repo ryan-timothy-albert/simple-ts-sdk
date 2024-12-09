@@ -18,6 +18,11 @@ permissions:
     - cron: 0 0 * * *
   pull_request:
     types: [labeled, unlabeled]
+  push:
+    branches:
+      - main
+    paths:
+      - openapi.yaml
 jobs:
   generate:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15
