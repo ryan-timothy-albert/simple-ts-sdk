@@ -17,4 +17,6 @@ targets:
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas-typescript-code-samples
+            labelOverride:
+                fixedValue: Typescript
             blocking: false
