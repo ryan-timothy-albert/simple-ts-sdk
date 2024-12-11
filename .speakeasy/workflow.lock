@@ -1,21 +1,21 @@
-speakeasyVersion: 1.453.6
+speakeasyVersion: 1.454.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:558595623592288893574691a286b7b0f84a653e88099ea792dab52ecf20113d
+        sourceRevisionDigest: sha256:2f8622bc49b53a4b02bf1d1a3fae05c7b1009f370dd340e8ec8d0244d854f300
         sourceBlobDigest: sha256:f02c4f38e98b5b0d5cbcb1cfb791c984d70a54ced9305986b23dadad78683d80
         tags:
             - latest
-            - speakeasy-sdk-regen-1733776001
+            - speakeasy-sdk-regen-1733934520
             - 4.0.0
 targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:558595623592288893574691a286b7b0f84a653e88099ea792dab52ecf20113d
+        sourceRevisionDigest: sha256:2f8622bc49b53a4b02bf1d1a3fae05c7b1009f370dd340e8ec8d0244d854f300
         sourceBlobDigest: sha256:f02c4f38e98b5b0d5cbcb1cfb791c984d70a54ced9305986b23dadad78683d80
         codeSamplesNamespace: petstore-oas-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:8f1395761bfeab2ff79db70750f75df003f17a571ac173556a4bbc04ae4f5587
+        codeSamplesRevisionDigest: sha256:95d9accf719cd21101e9a13d416365972e07d3db9a5f61986fe1d7f5cc419956
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -36,4 +36,6 @@ workflow:
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/ryan-local/ryan-telemetry/petstore-oas-typescript-code-samples
+                labelOverride:
+                    fixedValue: Typescript
                 blocking: false
