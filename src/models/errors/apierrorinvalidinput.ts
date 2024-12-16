@@ -4,17 +4,11 @@
 
 import * as z from "zod";
 
-/**
- * Not Found error
- */
 export type ApiErrorInvalidInputData = {
   status: number;
   error: string;
 };
 
-/**
- * Not Found error
- */
 export class ApiErrorInvalidInput extends Error {
   status: number;
   error: string;
