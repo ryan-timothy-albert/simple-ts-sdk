@@ -11,7 +11,7 @@ Find out more dfdsiojfidjs
 ### Available Operations
 
 * [sit](#sit) - Update an existing pet
-* [myPet123](#mypet123) - Add a new pet to the store
+* [myTestPets](#mytestpets) - Add a new pet to the store
 * [findPetsByStatusTypes](#findpetsbystatustypes) - Finds Pets by status
 * [findPetsByTags](#findpetsbytags) - Finds Pets by tags
 * [getPetByIDS](#getpetbyids) - Find pet by ID
@@ -115,7 +115,7 @@ run();
 | errors.ApiErrorNotFound     | 404                         | application/json            |
 | errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
-## myPet123
+## myTestPets
 
 Add a new pet to the store
 
@@ -129,7 +129,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.myPet123({
+  const result = await petstore.pet.myTestPets({
     id: 10,
     name: "doggie",
     category: {
@@ -137,6 +137,8 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
+      "<value>",
+      "<value>",
       "<value>",
     ],
   });
@@ -154,7 +156,7 @@ The standalone function version of this method:
 
 ```typescript
 import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petMyPet123 } from "ryan-simple-test-act/funcs/petMyPet123.js";
+import { petMyTestPets } from "ryan-simple-test-act/funcs/petMyTestPets.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -163,7 +165,7 @@ const petstore = new PetstoreCore({
 });
 
 async function run() {
-  const res = await petMyPet123(petstore, {
+  const res = await petMyTestPets(petstore, {
     id: 10,
     name: "doggie",
     category: {
@@ -171,6 +173,8 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
+      "<value>",
+      "<value>",
       "<value>",
     ],
   });

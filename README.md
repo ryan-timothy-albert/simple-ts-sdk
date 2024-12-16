@@ -135,7 +135,7 @@ run();
 ### [pet](docs/sdks/pet/README.md)
 
 * [sit](docs/sdks/pet/README.md#sit) - Update an existing pet
-* [myPet123](docs/sdks/pet/README.md#mypet123) - Add a new pet to the store
+* [myTestPets](docs/sdks/pet/README.md#mytestpets) - Add a new pet to the store
 * [findPetsByStatusTypes](docs/sdks/pet/README.md#findpetsbystatustypes) - Finds Pets by status
 * [findPetsByTags](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
 * [getPetByIDS](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
@@ -182,7 +182,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`petFindPetsByStatusTypes`](docs/sdks/pet/README.md#findpetsbystatustypes) - Finds Pets by status
 - [`petFindPetsByTags`](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
 - [`petGetPetByIDS`](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
-- [`petMyPet123`](docs/sdks/pet/README.md#mypet123) - Add a new pet to the store
+- [`petMyTestPets`](docs/sdks/pet/README.md#mytestpets) - Add a new pet to the store
 - [`petSit`](docs/sdks/pet/README.md#sit) - Update an existing pet
 - [`petUploadFile`](docs/sdks/pet/README.md#uploadfile) - uploads an image
 - [`storeDeleteOrder`](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID

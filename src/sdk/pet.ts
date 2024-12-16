@@ -6,7 +6,7 @@ import { petDeletePet } from "../funcs/petDeletePet.js";
 import { petFindPetsByStatusTypes } from "../funcs/petFindPetsByStatusTypes.js";
 import { petFindPetsByTags } from "../funcs/petFindPetsByTags.js";
 import { petGetPetByIDS } from "../funcs/petGetPetByIDS.js";
-import { petMyPet123 } from "../funcs/petMyPet123.js";
+import { petMyTestPets } from "../funcs/petMyTestPets.js";
 import { petSit } from "../funcs/petSit.js";
 import { petUploadFile } from "../funcs/petUploadFile.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
@@ -38,11 +38,11 @@ export class Pet extends ClientSDK {
    * @remarks
    * Add a new pet to the store
    */
-  async myPet123(
+  async myTestPets(
     request: components.Pet,
     options?: RequestOptions,
   ): Promise<components.Pet> {
-    return unwrapAsync(petMyPet123(
+    return unwrapAsync(petMyTestPets(
       this,
       request,
       options,
