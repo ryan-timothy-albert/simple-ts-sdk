@@ -104,7 +104,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.sit({
+  const result = await petstore.pet.petsStoreMonday({
     id: 10,
     name: "doggie",
     category: {
@@ -112,7 +112,6 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
       "<value>",
     ],
   });
@@ -134,7 +133,7 @@ run();
 
 ### [pet](docs/sdks/pet/README.md)
 
-* [sit](docs/sdks/pet/README.md#sit) - Update an existing pet
+* [petsStoreMonday](docs/sdks/pet/README.md#petsstoremonday) - Update an existing pet
 * [myTestPets](docs/sdks/pet/README.md#mytestpets) - Add a new pet to the store
 * [findPetsByStatusTypes](docs/sdks/pet/README.md#findpetsbystatustypes) - Finds Pets by status
 * [findPetsByTags](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
@@ -183,7 +182,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`petFindPetsByTags`](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
 - [`petGetPetByIDS`](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
 - [`petMyTestPets`](docs/sdks/pet/README.md#mytestpets) - Add a new pet to the store
-- [`petSit`](docs/sdks/pet/README.md#sit) - Update an existing pet
+- [`petPetsStoreMonday`](docs/sdks/pet/README.md#petsstoremonday) - Update an existing pet
 - [`petUploadFile`](docs/sdks/pet/README.md#uploadfile) - uploads an image
 - [`storeDeleteOrder`](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
 - [`storeGetInventory`](docs/sdks/store/README.md#getinventory) - Returns pet inventories by status
@@ -249,7 +248,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.sit({
+  const result = await petstore.pet.petsStoreMonday({
     id: 10,
     name: "doggie",
     category: {
@@ -257,7 +256,6 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
       "<value>",
     ],
   }, {
@@ -300,7 +298,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.sit({
+  const result = await petstore.pet.petsStoreMonday({
     id: 10,
     name: "doggie",
     category: {
@@ -308,7 +306,6 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
       "<value>",
     ],
   });
@@ -325,7 +322,7 @@ run();
 <!-- Start Error Handling [errors] -->
 ## Error Handling
 
-Some methods specify known errors which can be thrown. All the known errors are enumerated in the `models/errors/errors.ts` module. The known errors for a method are documented under the *Errors* tables in SDK docs. For example, the `sit` method may throw the following errors:
+Some methods specify known errors which can be thrown. All the known errors are enumerated in the `models/errors/errors.ts` module. The known errors for a method are documented under the *Errors* tables in SDK docs. For example, the `petsStoreMonday` method may throw the following errors:
 
 | Error Type                  | Status Code | Content Type     |
 | --------------------------- | ----------- | ---------------- |
@@ -352,7 +349,7 @@ const petstore = new Petstore({
 async function run() {
   let result;
   try {
-    result = await petstore.pet.sit({
+    result = await petstore.pet.petsStoreMonday({
       id: 10,
       name: "doggie",
       category: {
@@ -360,7 +357,6 @@ async function run() {
         name: "Dogs",
       },
       photoUrls: [
-        "<value>",
         "<value>",
       ],
     });
@@ -437,7 +433,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.sit({
+  const result = await petstore.pet.petsStoreMonday({
     id: 10,
     name: "doggie",
     category: {
@@ -445,7 +441,6 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
       "<value>",
     ],
   });
@@ -528,7 +523,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.sit({
+  const result = await petstore.pet.petsStoreMonday({
     id: 10,
     name: "doggie",
     category: {
@@ -536,7 +531,6 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
       "<value>",
     ],
   });

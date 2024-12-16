@@ -7,7 +7,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.sit({
+  const result = await petstore.pet.petsStoreMonday({
     id: 10,
     name: "doggie",
     category: {
@@ -15,7 +15,6 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
       "<value>",
     ],
   });
