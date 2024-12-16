@@ -1,0 +1,41 @@
+speakeasyVersion: 1.455.7
+sources:
+    petstore-oas:
+        sourceNamespace: petstore-oas
+        sourceRevisionDigest: sha256:596a54ffd168f55a6ccf95c41238c64fec143ba83b6c4a71042da64db0074fd6
+        sourceBlobDigest: sha256:96cc6fae3e7a587d1440a68ab7d0ec805f37c12baa238e0aaefe4fd7e4e755a2
+        tags:
+            - latest
+            - speakeasy-sdk-regen-1734385142
+            - 4.0.0
+targets:
+    petstore:
+        source: petstore-oas
+        sourceNamespace: petstore-oas
+        sourceRevisionDigest: sha256:596a54ffd168f55a6ccf95c41238c64fec143ba83b6c4a71042da64db0074fd6
+        sourceBlobDigest: sha256:96cc6fae3e7a587d1440a68ab7d0ec805f37c12baa238e0aaefe4fd7e4e755a2
+        codeSamplesNamespace: petstore-oas-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:45379d056eb84554b0a13b157fc0a72db22a7198d108d8cb1d6fbd975aa037b1
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        petstore-oas:
+            inputs:
+                - location: openapi.json
+            registry:
+                location: registry.speakeasyapi.dev/ryan-local/ryan-docs-demo/petstore-oas
+    targets:
+        petstore:
+            target: typescript
+            source: petstore-oas
+            output: .
+            publish:
+                npm:
+                    token: $npm_token
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/ryan-local/ryan-docs-demo/petstore-oas-typescript-code-samples
+                labelOverride:
+                    fixedValue: Typescript
+                blocking: false
