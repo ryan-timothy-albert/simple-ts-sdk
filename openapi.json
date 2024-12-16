@@ -1058,7 +1058,7 @@
                 }
             },
             "InvalidInput": {
-                "description": "Not Found error",
+                "description": "",
                 "content": {
                     "application/json": {
                         "schema": {
