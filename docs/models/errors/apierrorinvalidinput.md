@@ -1,7 +1,5 @@
 # ApiErrorInvalidInput
 
-Not Found error
-
 ## Example Usage
 
 ```typescript
