@@ -7,7 +7,7 @@ import { petFindPetsByStatusTypes } from "../funcs/petFindPetsByStatusTypes.js";
 import { petFindPetsByTags } from "../funcs/petFindPetsByTags.js";
 import { petGetPetByIDS } from "../funcs/petGetPetByIDS.js";
 import { petMyTestPets } from "../funcs/petMyTestPets.js";
-import { petSit } from "../funcs/petSit.js";
+import { petPetsStoreMonday } from "../funcs/petPetsStoreMonday.js";
 import { petUploadFile } from "../funcs/petUploadFile.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
@@ -21,11 +21,11 @@ export class Pet extends ClientSDK {
    * @remarks
    * Update an existing pet by Id
    */
-  async sit(
+  async petsStoreMonday(
     request: components.Pet,
     options?: RequestOptions,
   ): Promise<components.Pet> {
-    return unwrapAsync(petSit(
+    return unwrapAsync(petPetsStoreMonday(
       this,
       request,
       options,

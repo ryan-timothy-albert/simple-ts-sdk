@@ -20,7 +20,7 @@ specific category of applications.
 
 ```typescript
 import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petSit } from "ryan-simple-test-act/funcs/petSit.js";
+import { petPetsStoreMonday } from "ryan-simple-test-act/funcs/petPetsStoreMonday.js";
 import { SDKValidationError } from "ryan-simple-test-act/models/errors/sdkvalidationerror.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
@@ -30,7 +30,7 @@ const petstore = new PetstoreCore({
 });
 
 async function run() {
-  const res = await petSit(petstore, {
+  const res = await petPetsStoreMonday(petstore, {
     id: 10,
     name: "doggie",
     category: {
@@ -38,7 +38,6 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
       "<value>",
     ],
   });
