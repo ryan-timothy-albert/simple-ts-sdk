@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 507ce959f2b1b52532ffcbaef25cbd3c
+  docChecksum: a86d8ff42d315d2a778b434d716e2d1f
   docVersion: 4.0.0
   speakeasyVersion: 1.455.7
   generationVersion: 2.480.1
-  releaseVersion: 5.2.0-alpha.5
-  configChecksum: ff977dc33a63ac9fe6f51fe1674b8ec0
+  releaseVersion: 5.2.0-alpha.6
+  configChecksum: ae609da663d2e77fb2dcb768a6db267b
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -75,7 +75,7 @@ generatedFiles:
   - src/funcs/petFindPetsByStatusTypes.ts
   - src/funcs/petFindPetsByTags.ts
   - src/funcs/petGetPetByIDS.ts
-  - src/funcs/petMyPet123.ts
+  - src/funcs/petMyTestPets.ts
   - src/funcs/petSit.ts
   - src/funcs/petUploadFile.ts
   - src/funcs/storeDeleteOrder.ts
@@ -414,4 +414,11 @@ examples:
           application/json: {"status": 401, "error": "Unauthorized"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
+  myTestPets:
+    speakeasy-default-my-test-pets:
+      requestBody:
+        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
+      responses:
+        "200":
+          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
 generatedTests: {}
