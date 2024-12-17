@@ -3,10 +3,10 @@ id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
   docChecksum: 1065214a2aa46aa7d5a83999c2311add
   docVersion: 4.0.0
-  speakeasyVersion: 1.455.7
-  generationVersion: 2.480.1
-  releaseVersion: 5.2.0-alpha.7
-  configChecksum: f62e8b840aa342702528e2c293aebd6d
+  speakeasyVersion: 1.456.0
+  generationVersion: 2.481.0
+  releaseVersion: 5.2.0-alpha.8
+  configChecksum: 733be64da6a7b0e565823cf10b867dd2
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -227,6 +227,9 @@ examples:
         path:
           petId: 565380
         query: {}
+      responses:
+        "200":
+          application/json: {}
   getInventory:
     speakeasy-default-get-inventory:
       responses:
