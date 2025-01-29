@@ -28,7 +28,7 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Add a new pet to the store
  */
-export async function petMyTestPets(
+export async function petMyNewTest(
   client: PetstoreCore,
   request: components.Pet,
   options?: RequestOptions,
@@ -67,7 +67,7 @@ export async function petMyTestPets(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
-    operationID: "myTestPets",
+    operationID: "MyNewTest",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,
