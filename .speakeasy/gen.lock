@@ -3,10 +3,10 @@ id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
   docChecksum: 1065214a2aa46aa7d5a83999c2311add
   docVersion: 4.0.0
-  speakeasyVersion: 1.456.0
-  generationVersion: 2.481.0
-  releaseVersion: 5.2.0-alpha.12
-  configChecksum: 436d9a765b6c12ab491fb81e07a63005
+  speakeasyVersion: 1.477.0
+  generationVersion: 2.497.0
+  releaseVersion: 5.2.0-alpha.13
+  configChecksum: 8765fd947d19966de97ef3c49fdb34ff
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -14,12 +14,12 @@ features:
   typescript:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.11
-    core: 3.18.11
+    core: 3.18.18
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.1.2
-    globalSecurity: 2.82.11
+    globalSecurity: 2.82.12
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.4
@@ -34,7 +34,6 @@ generatedFiles:
   - .eslintrc.cjs
   - .gitattributes
   - .npmignore
-  - CONTRIBUTING.md
   - FUNCTIONS.md
   - RUNTIMES.md
   - USAGE.md
@@ -150,31 +149,34 @@ generatedFiles:
   - src/types/streams.ts
   - tsconfig.json
 examples:
-  updatePet:
-    speakeasy-default-update-pet:
+  petsStoreMonday:
+    speakeasy-default-pets-store-monday:
       requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
+        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
       responses:
         "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
+          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
         "400":
           application/json: {"status": 400, "error": "Bad request"}
         "401":
           application/json: {"status": 401, "error": "Unauthorized"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
-  addPet:
-    speakeasy-default-add-pet:
+  myTestPets:
+    speakeasy-default-my-test-pets:
       requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
+        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
       responses:
         "200":
           application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
-  findPetsByStatus:
-    speakeasy-default-find-pets-by-status:
+  findPetsByStatusTypes:
+    speakeasy-default-find-pets-by-status-types:
+      parameters:
+        query:
+          status: "available"
       responses:
         "200":
-          application/json: [{"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": []}, {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}, {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": []}]
+          application/json: [{"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}, {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}, {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}]
         "400":
           application/json: {"status": 400, "error": "Bad request"}
         "401":
@@ -192,14 +194,14 @@ examples:
           application/json: {"status": 401, "error": "Unauthorized"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
-  getPetById:
-    speakeasy-default-get-pet-by-id:
+  getPetByIDS:
+    speakeasy-default-get-pet-by-IDS:
       parameters:
         path:
-          petId: 504151
+          petId: 137396
       responses:
         "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": []}
+          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
         "400":
           application/json: {"status": 400, "error": "Bad request"}
         "401":
@@ -234,7 +236,7 @@ examples:
     speakeasy-default-get-inventory:
       responses:
         "200":
-          application/json: {"key": 373538}
+          application/json: {"key": 373538, "key1": 961069}
         "401":
           application/json: {"status": 401, "error": "Unauthorized"}
         "404":
@@ -288,7 +290,7 @@ examples:
   createUsersWithListInput:
     speakeasy-default-create-users-with-list-input:
       requestBody:
-        application/json: []
+        application/json: [{"id": 10, "username": "theUser", "firstName": "John", "lastName": "James", "email": "john@email.com", "password": "12345", "phone": "12345", "userStatus": 1}]
       responses:
         "200":
           application/json: {"id": 10, "username": "theUser", "firstName": "John", "lastName": "James", "email": "john@email.com", "password": "12345", "phone": "12345", "userStatus": 1}
@@ -339,102 +341,5 @@ examples:
           application/json: {"status": 401, "error": "Unauthorized"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
-  myPet:
-    speakeasy-default-my-pet:
-      requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
-  dsfsdff:
-    speakeasy-default-dsfsdff:
-      requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
-        "400":
-          application/json: {"status": 400, "error": "Bad request"}
-        "401":
-          application/json: {"status": 401, "error": "Unauthorized"}
-        "404":
-          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
-  putPet:
-    speakeasy-default-put-pet:
-      requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": []}
-        "400":
-          application/json: {"status": 400, "error": "Bad request"}
-        "401":
-          application/json: {"status": 401, "error": "Unauthorized"}
-        "404":
-          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
-  sit:
-    speakeasy-default-sit:
-      requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
-        "400":
-          application/json: {"status": 400, "error": "Bad request"}
-        "401":
-          application/json: {"status": 401, "error": "Unauthorized"}
-        "404":
-          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
-  myPet123:
-    speakeasy-default-my-pet123:
-      requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
-  getPetByIDS:
-    speakeasy-default-get-pet-by-IDS:
-      parameters:
-        path:
-          petId: 137396
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
-        "400":
-          application/json: {"status": 400, "error": "Bad request"}
-        "401":
-          application/json: {"status": 401, "error": "Unauthorized"}
-        "404":
-          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
-  findPetsByStatusTypes:
-    speakeasy-default-find-pets-by-status-types:
-      responses:
-        "200":
-          application/json: [{"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}, {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}, {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}]
-        "400":
-          application/json: {"status": 400, "error": "Bad request"}
-        "401":
-          application/json: {"status": 401, "error": "Unauthorized"}
-        "404":
-          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
-  myTestPets:
-    speakeasy-default-my-test-pets:
-      requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
-  petsStoreMonday:
-    speakeasy-default-pets-store-monday:
-      requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
-        "400":
-          application/json: {"status": 400, "error": "Bad request"}
-        "401":
-          application/json: {"status": 401, "error": "Unauthorized"}
-        "404":
-          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
+examplesVersion: 1.0.0
 generatedTests: {}

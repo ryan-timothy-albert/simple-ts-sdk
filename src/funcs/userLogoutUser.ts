@@ -5,6 +5,7 @@
 import * as z from "zod";
 import { PetstoreCore } from "../core.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
@@ -39,9 +40,9 @@ export async function userLogoutUser(
 > {
   const path = pathToFunc("/user/logout")();
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     Accept: "*/*",
-  });
+  }));
 
   const secConfig = await extractSecurity(client._options.apiKey);
   const securityInput = secConfig == null ? {} : { apiKey: secConfig };
@@ -95,7 +96,8 @@ export async function userLogoutUser(
     | ConnectionError
   >(
     M.nil(200, z.void()),
-    M.fail(["4XX", "5XX"]),
+    M.fail("4XX"),
+    M.fail("5XX"),
   )(response);
   if (!result.ok) {
     return result;

@@ -223,7 +223,9 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByStatusTypes({});
+  const result = await petstore.pet.findPetsByStatusTypes({
+    status: "available",
+  });
 
   // Handle the result
   console.log(result);
@@ -247,7 +249,9 @@ const petstore = new PetstoreCore({
 });
 
 async function run() {
-  const res = await petFindPetsByStatusTypes(petstore, {});
+  const res = await petFindPetsByStatusTypes(petstore, {
+    status: "available",
+  });
 
   if (!res.ok) {
     throw res.error;

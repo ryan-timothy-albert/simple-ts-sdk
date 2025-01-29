@@ -5,6 +5,7 @@
 import { PetstoreCore } from "../core.js";
 import { encodeJSON } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
@@ -61,10 +62,10 @@ export async function storePlaceOrder(
 
   const path = pathToFunc("/store/order")();
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     "Content-Type": "application/json",
     Accept: "application/json",
-  });
+  }));
 
   const secConfig = await extractSecurity(client._options.apiKey);
   const securityInput = secConfig == null ? {} : { apiKey: secConfig };
@@ -127,7 +128,8 @@ export async function storePlaceOrder(
     M.json(200, components.Order$inboundSchema),
     M.jsonErr(401, errors.ApiErrorUnauthorized$inboundSchema),
     M.jsonErr(404, errors.ApiErrorNotFound$inboundSchema),
-    M.fail([405, "4XX", "5XX"]),
+    M.fail([405, "4XX"]),
+    M.fail("5XX"),
   )(response, { extraFields: responseFields });
   if (!result.ok) {
     return result;
