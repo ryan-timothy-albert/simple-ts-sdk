@@ -20,3 +20,4 @@ targets:
             labelOverride:
                 fixedValue: Typescript
             blocking: false
+            output: codeSamples.yaml
