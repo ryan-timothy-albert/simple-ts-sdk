@@ -17,7 +17,7 @@ permissions:
       signed_commits:
         description: Enable usage of signed commits
         type: boolean
-        default: true
+        default: false
   schedule:
     - cron: 0 0 * * *
 jobs:
