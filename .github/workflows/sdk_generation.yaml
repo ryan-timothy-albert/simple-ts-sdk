@@ -14,10 +14,6 @@ permissions:
       set_version:
         description: optionally set a specific SDK version
         type: string
-      signed_commits:
-        description: Enable usage of signed commits
-        type: boolean
-        default: false
   schedule:
     - cron: 0 0 * * *
 jobs:
