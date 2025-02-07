@@ -15,9 +15,9 @@ targets:
             npm:
                 token: $npm_token
         codeSamples:
+            output: codeSamples.yaml
             registry:
                 location: registry.speakeasyapi.dev/ryan-local/ryan-docs-demo/petstore-oas-typescript-code-samples
             labelOverride:
                 fixedValue: Typescript
             blocking: false
-            output: codeSamples.yaml
