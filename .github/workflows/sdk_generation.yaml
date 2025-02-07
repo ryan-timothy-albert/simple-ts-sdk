@@ -15,7 +15,7 @@ permissions:
         description: optionally set a specific SDK version
         type: string
       signed_commits:
-        description: Force generation of SDKs
+        description: Sign Commits
         type: boolean
         default: false
   schedule:
