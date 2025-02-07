@@ -14,10 +14,6 @@ permissions:
       set_version:
         description: optionally set a specific SDK version
         type: string
-      signed_commits:
-        description: Sign Commits
-        type: boolean
-        default: false
   schedule:
     - cron: 0 0 * * *
 jobs:
@@ -28,7 +24,6 @@ jobs:
       mode: pr
       set_version: ${{ github.event.inputs.set_version }}
       target: petstore
-      signed_commits: ${{ github.event.inputs.signed_commits }}
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_TOKEN }}
