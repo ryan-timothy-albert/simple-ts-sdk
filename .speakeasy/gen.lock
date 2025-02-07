@@ -3,10 +3,10 @@ id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
   docChecksum: 68f031b665ac709143c9b0cf53f922a8
   docVersion: 4.0.0
-  speakeasyVersion: 1.477.0
-  generationVersion: 2.497.0
-  releaseVersion: 5.2.0-alpha.14
-  configChecksum: e51bb5c5a43e83145091abfdbdf4abce
+  speakeasyVersion: 1.487.0
+  generationVersion: 2.506.0
+  releaseVersion: 5.2.0-alpha.15
+  configChecksum: 3c0338fb655b2de214cda86f21b26110
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -14,7 +14,7 @@ features:
   typescript:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.11
-    core: 3.18.18
+    core: 3.19.0
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     enumUnions: 0.1.0
@@ -31,7 +31,6 @@ generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
   - .devcontainer/setup.sh
-  - .eslintrc.cjs
   - .gitattributes
   - .npmignore
   - FUNCTIONS.md
@@ -67,6 +66,7 @@ generatedFiles:
   - docs/sdks/petstore/README.md
   - docs/sdks/store/README.md
   - docs/sdks/user/README.md
+  - eslint.config.mjs
   - jsr.json
   - package.json
   - src/core.ts
