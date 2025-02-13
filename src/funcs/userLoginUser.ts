@@ -72,6 +72,7 @@ export async function userLoginUser(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "loginUser",
     oAuth2Scopes: [],
 

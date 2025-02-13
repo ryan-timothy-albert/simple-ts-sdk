@@ -78,6 +78,7 @@ export async function petGetPetByIDS(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "getPetByIDS",
     oAuth2Scopes: [],
 

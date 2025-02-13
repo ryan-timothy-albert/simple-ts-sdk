@@ -70,6 +70,7 @@ export async function userCreateUsersWithListInput(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "createUsersWithListInput",
     oAuth2Scopes: [],
 

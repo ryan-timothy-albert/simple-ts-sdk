@@ -75,6 +75,7 @@ export async function userGetUserByName(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "getUserByName",
     oAuth2Scopes: [],
 

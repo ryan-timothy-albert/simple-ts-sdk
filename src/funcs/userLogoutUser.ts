@@ -49,6 +49,7 @@ export async function userLogoutUser(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "logoutUser",
     oAuth2Scopes: [],
 
