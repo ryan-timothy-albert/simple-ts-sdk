@@ -55,6 +55,7 @@ export async function storeGetInventory(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "getInventory",
     oAuth2Scopes: [],
 

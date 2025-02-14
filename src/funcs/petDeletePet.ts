@@ -79,6 +79,7 @@ export async function petDeletePet(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "deletePet",
     oAuth2Scopes: [],
 

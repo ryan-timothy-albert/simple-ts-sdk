@@ -76,6 +76,7 @@ export async function petFindPetsByTags(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "findPetsByTags",
     oAuth2Scopes: [],
 

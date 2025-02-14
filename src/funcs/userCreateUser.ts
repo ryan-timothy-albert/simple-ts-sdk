@@ -69,6 +69,7 @@ export async function userCreateUser(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "createUser",
     oAuth2Scopes: [],
 

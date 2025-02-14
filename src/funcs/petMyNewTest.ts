@@ -67,6 +67,7 @@ export async function petMyNewTest(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "MyNewTest",
     oAuth2Scopes: [],
 

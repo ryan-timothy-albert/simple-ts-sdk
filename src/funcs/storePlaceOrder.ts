@@ -72,6 +72,7 @@ export async function storePlaceOrder(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "placeOrder",
     oAuth2Scopes: [],
 

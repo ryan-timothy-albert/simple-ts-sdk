@@ -78,6 +78,7 @@ export async function storeDeleteOrder(
   const requestSecurity = resolveGlobalSecurity(securityInput);
 
   const context = {
+    baseURL: options?.serverURL ?? "",
     operationID: "deleteOrder",
     oAuth2Scopes: [],
 
