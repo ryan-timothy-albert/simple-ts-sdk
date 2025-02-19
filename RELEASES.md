@@ -544,11 +544,11 @@ Based on:
 ### Releases
 - [NPM v5.2.0-alpha.14] https://www.npmjs.com/package/ryan-simple-test-act/v/5.2.0-alpha.14 - .
 
-## 2025-02-18 01:37:03
+## 2025-02-19 01:37:48
 ### Changes
 Based on:
 - OpenAPI Doc  
-- Speakeasy CLI 1.494.0 (2.515.0) https://github.com/speakeasy-api/speakeasy
+- Speakeasy CLI 1.495.1 (2.515.4) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [typescript v5.2.0-alpha.15] .
 ### Releases
