@@ -1,4 +1,4 @@
-speakeasyVersion: 1.501.0
+speakeasyVersion: 1.501.1
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas

@@ -82,7 +82,7 @@ export const SDK_METADATA = {
   language: "typescript",
   openapiDocVersion: "4.0.0",
   sdkVersion: "5.2.0-alpha.15",
-  genVersion: "2.522.1",
+  genVersion: "2.522.5",
   userAgent:
-    "speakeasy-sdk/typescript 5.2.0-alpha.15 2.522.1 4.0.0 ryan-simple-test-act",
+    "speakeasy-sdk/typescript 5.2.0-alpha.15 2.522.5 4.0.0 ryan-simple-test-act",
 } as const;
