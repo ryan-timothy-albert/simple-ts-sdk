@@ -32,7 +32,7 @@ export const ServerEnvironment = {
 export type ServerEnvironment = ClosedEnum<typeof ServerEnvironment>;
 
 export type SDKOptions = {
-  apiKey?: string | (() => Promise<string>);
+  apiKey?: string | (() => Promise<string>) | undefined;
 
   httpClient?: HTTPClient;
   /**
@@ -82,7 +82,7 @@ export const SDK_METADATA = {
   language: "typescript",
   openapiDocVersion: "4.0.0",
   sdkVersion: "5.2.0-alpha.15",
-  genVersion: "2.522.5",
+  genVersion: "2.524.1",
   userAgent:
-    "speakeasy-sdk/typescript 5.2.0-alpha.15 2.522.5 4.0.0 ryan-simple-test-act",
+    "speakeasy-sdk/typescript 5.2.0-alpha.15 2.524.1 4.0.0 ryan-simple-test-act",
 } as const;
