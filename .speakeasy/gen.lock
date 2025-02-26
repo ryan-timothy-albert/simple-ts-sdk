@@ -3,8 +3,8 @@ id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
   docChecksum: 68f031b665ac709143c9b0cf53f922a8
   docVersion: 4.0.0
-  speakeasyVersion: 1.502.0
-  generationVersion: 2.524.1
+  speakeasyVersion: 1.504.1
+  generationVersion: 2.529.2
   releaseVersion: 5.2.0-alpha.15
   configChecksum: 9ead79df0830d52f8c9a7be4b7b14d63
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
@@ -14,7 +14,7 @@ features:
   typescript:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.11
-    core: 3.21.1
+    core: 3.21.2
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     enumUnions: 0.1.0
