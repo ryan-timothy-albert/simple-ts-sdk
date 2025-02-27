@@ -7,9 +7,11 @@ import { Petstore } from "../index.js";
 import { createTestHTTPClient } from "./testclient.js";
 
 test("Store Get Inventory", async () => {
+  const testHttpClient = createTestHTTPClient("getInventory");
+
   const petstore = new Petstore({
     serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: createTestHTTPClient("getInventory"),
+    httpClient: testHttpClient,
     apiKey: "<YOUR_API_KEY_HERE>",
   });
 
@@ -22,9 +24,11 @@ test("Store Get Inventory", async () => {
 });
 
 test("Store Place Order", async () => {
+  const testHttpClient = createTestHTTPClient("placeOrder");
+
   const petstore = new Petstore({
     serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: createTestHTTPClient("placeOrder"),
+    httpClient: testHttpClient,
     apiKey: "<YOUR_API_KEY_HERE>",
   });
 
@@ -44,9 +48,11 @@ test("Store Place Order", async () => {
 });
 
 test("Store Get Order By Id", async () => {
+  const testHttpClient = createTestHTTPClient("getOrderById");
+
   const petstore = new Petstore({
     serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: createTestHTTPClient("getOrderById"),
+    httpClient: testHttpClient,
     apiKey: "<YOUR_API_KEY_HERE>",
   });
 
@@ -63,9 +69,11 @@ test("Store Get Order By Id", async () => {
 });
 
 test("Store Delete Order", async () => {
+  const testHttpClient = createTestHTTPClient("deleteOrder");
+
   const petstore = new Petstore({
     serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: createTestHTTPClient("deleteOrder"),
+    httpClient: testHttpClient,
     apiKey: "<YOUR_API_KEY_HERE>",
   });
 
