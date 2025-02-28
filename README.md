@@ -83,6 +83,58 @@ yarn add ryan-simple-test-act zod
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
 ```
+
+
+
+### Model Context Protocol (MCP) Server
+
+This SDK is also an installable MCP server where the various SDK methods are
+exposed as tools that can be invoked by AI applications.
+
+> Node.js v20 or greater is required to run the MCP server.
+
+<details>
+<summary>Claude installation steps</summary>
+
+Add the following server definition to your `claude_desktop_config.json` file:
+
+```json
+{
+  "mcpServers": {
+    "Petstore": {
+      "command": "npx",
+      "args": [
+        "-y", "--package", "ryan-simple-test-act",
+        "--",
+        "mcp", "start",
+        "--api-key", "..."
+      ]
+    }
+  }
+}
+```
+
+</details>
+
+<details>
+<summary>Cursor installation steps</summary>
+
+Go to `Cursor Settings > Features > MCP Servers > Add new MCP server` and use the following settings:
+
+- Name: Petstore
+- Type: `command`
+- Command:
+```sh
+npx -y --package ryan-simple-test-act -- mcp start --api-key ... 
+```
+
+</details>
+
+For a full list of server arguments, run:
+
+```sh
+npx -y --package ryan-simple-test-act -- mcp start --help
+```
 <!-- End SDK Installation [installation] -->
 
 <!-- Start Requirements [requirements] -->
@@ -134,7 +186,7 @@ run();
 ### [pet](docs/sdks/pet/README.md)
 
 * [petsStoreMonday](docs/sdks/pet/README.md#petsstoremonday) - Update an existing pet
-* [myNewTest](docs/sdks/pet/README.md#mynewtest) - Add a new pet to the store
+* [mcp](docs/sdks/pet/README.md#mcp) - Add a new pet to the store
 * [findPetsByStatusTypes](docs/sdks/pet/README.md#findpetsbystatustypes) - Finds Pets by status
 * [findPetsByTags](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
 * [getPetByIDS](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
@@ -181,7 +233,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`petFindPetsByStatusTypes`](docs/sdks/pet/README.md#findpetsbystatustypes) - Finds Pets by status
 - [`petFindPetsByTags`](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
 - [`petGetPetByIDS`](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
-- [`petMyNewTest`](docs/sdks/pet/README.md#mynewtest) - Add a new pet to the store
+- [`petMCP`](docs/sdks/pet/README.md#mcp) - Add a new pet to the store
 - [`petPetsStoreMonday`](docs/sdks/pet/README.md#petsstoremonday) - Update an existing pet
 - [`petUploadFile`](docs/sdks/pet/README.md#uploadfile) - uploads an image
 - [`storeDeleteOrder`](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
@@ -419,11 +471,45 @@ In some rare cases, the SDK can fail to get a response from the server or even m
 ### Server Variables
 
 The default server `https://{environment}.petstore.io` contains variables and is set to `https://prod.petstore.io` by default. To override default values, the following parameters are available when initializing the SDK client instance:
- * `environment: models.ServerEnvironment`
+
+| Variable      | Parameter                               | Supported Values                           | Default  | Description                                                   |
+| ------------- | --------------------------------------- | ------------------------------------------ | -------- | ------------------------------------------------------------- |
+| `environment` | `environment: models.ServerEnvironment` | - `"prod"`<br/>- `"staging"`<br/>- `"dev"` | `"prod"` | The environment name. Defaults to the production environment. |
+
+#### Example
+
+```typescript
+import { Petstore } from "ryan-simple-test-act";
+
+const petstore = new Petstore({
+  environment: "dev",
+  apiKey: "<YOUR_API_KEY_HERE>",
+});
+
+async function run() {
+  const result = await petstore.pet.petsStoreMonday({
+    id: 10,
+    name: "doggie",
+    category: {
+      id: 1,
+      name: "Dogs",
+    },
+    photoUrls: [
+      "<value>",
+    ],
+  });
+
+  // Handle the result
+  console.log(result);
+}
+
+run();
+
+```
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
+The default server can be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
 ```typescript
 import { Petstore } from "ryan-simple-test-act";
 
