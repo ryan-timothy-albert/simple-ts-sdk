@@ -22,15 +22,15 @@ func pathPostPet(dir *logging.HTTPFileDirectory, rt *tracking.RequestTracker) ht
 		count := rt.GetRequestCount(test, instanceID)
 
 		switch fmt.Sprintf("%s[%d]", test, count) {
-		case "MyNewTest[0]":
-			dir.HandlerFunc("MyNewTest", testMyNewTestMyNewTest0)(w, req)
+		case "MCP[0]":
+			dir.HandlerFunc("MCP", testMCPMcp0)(w, req)
 		default:
-			http.Error(w, "Unknown test: "+test, http.StatusBadRequest)
+			http.Error(w, fmt.Sprintf("Unknown test: %s[%d]", test, count), http.StatusBadRequest)
 		}
 	}
 }
 
-func testMyNewTestMyNewTest0(w http.ResponseWriter, req *http.Request) {
+func testMCPMcp0(w http.ResponseWriter, req *http.Request) {
 	if err := assert.SecurityHeader(req, "api_key", false); err != nil {
 		log.Printf("assertion error: %s\n", err)
 		http.Error(w, err.Error(), http.StatusUnauthorized)
@@ -59,6 +59,7 @@ func testMyNewTestMyNewTest0(w http.ResponseWriter, req *http.Request) {
 			Name: types.String("Dogs"),
 		},
 		PhotoUrls: []string{
+			"<value>",
 			"<value>",
 		},
 	}

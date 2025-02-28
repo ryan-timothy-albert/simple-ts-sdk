@@ -8,7 +8,7 @@ actions:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.myNewTest({\n    id: 10,\n    name: \"doggie\",\n    category: {\n      id: 1,\n      name: \"Dogs\",\n    },\n    photoUrls: [\n      \"<value>\",\n      \"<value>\",\n    ],\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.mcp({\n    id: 10,\n    name: \"doggie\",\n    category: {\n      id: 1,\n      name: \"Dogs\",\n    },\n    photoUrls: [\n      \"<value>\",\n    ],\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/pet"]["put"]
     update:
       "x-codeSamples":
