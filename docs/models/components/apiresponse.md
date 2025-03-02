@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponse } from "ryan-simple-test-act/models/components";
+import { ApiResponse } from "meep-moop/models/components";
 
 let value: ApiResponse = {};
 ```

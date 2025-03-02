@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { LoginUserRequest } from "ryan-simple-test-act/models/operations";
+import { LoginUserRequest } from "meep-moop/models/operations";
 
 let value: LoginUserRequest = {};
 ```
