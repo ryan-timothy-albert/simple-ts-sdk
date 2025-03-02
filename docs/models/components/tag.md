@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { Tag } from "ryan-simple-test-act/models/components";
+import { Tag } from "meep-moop/models/components";
 
 let value: Tag = {};
 ```

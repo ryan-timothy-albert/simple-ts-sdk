@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateUserRequest } from "ryan-simple-test-act/models/operations";
+import { UpdateUserRequest } from "meep-moop/models/operations";
 
 let value: UpdateUserRequest = {
   username: "Kenyon2",

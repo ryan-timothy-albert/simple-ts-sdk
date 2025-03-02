@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { LoginUserResponse } from "ryan-simple-test-act/models/operations";
+import { LoginUserResponse } from "meep-moop/models/operations";
 
 let value: LoginUserResponse = {
   headers: {

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { User } from "ryan-simple-test-act/models/components";
+import { User } from "meep-moop/models/components";
 
 let value: User = {
   id: 10,

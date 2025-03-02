@@ -1,6 +1,6 @@
 <!-- Start SDK Example Usage [usage] -->
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",

@@ -5,7 +5,7 @@ Not Found error
 ## Example Usage
 
 ```typescript
-import { ApiErrorNotFound } from "ryan-simple-test-act/models/errors";
+import { ApiErrorNotFound } from "meep-moop/models/errors";
 
 // No examples available for this model
 ```

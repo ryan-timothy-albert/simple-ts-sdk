@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeletePetRequest } from "ryan-simple-test-act/models/operations";
+import { DeletePetRequest } from "meep-moop/models/operations";
 
 let value: DeletePetRequest = {
   petId: 544883,

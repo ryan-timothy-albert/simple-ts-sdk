@@ -5,7 +5,7 @@ pet status in the store
 ## Example Usage
 
 ```typescript
-import { Status } from "ryan-simple-test-act/models/components";
+import { Status } from "meep-moop/models/components";
 
 let value: Status = "pending";
 ```
