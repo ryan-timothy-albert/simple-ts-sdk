@@ -1,8 +1,8 @@
 
 
 {
-  "name": "ryan-simple-test-act",
-  "version": "5.2.0-alpha.15",
+  "name": "meep-moop",
+  "version": "5.2.0-alpha.16",
   "exports": {
     ".": "./src/index.ts",    
     "./models/errors": "./src/models/errors/index.ts",    

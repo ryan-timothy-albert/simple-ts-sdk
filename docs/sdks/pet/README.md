@@ -11,7 +11,7 @@ Find out more dfdsiojfidjs
 ### Available Operations
 
 * [petsStoreMonday](#petsstoremonday) - Update an existing pet
-* [mcp](#mcp) - Add a new pet to the store
+* [mcpTest](#mcptest) - Add a new pet to the store
 * [findPetsByStatusTypes](#findpetsbystatustypes) - Finds Pets by status
 * [findPetsByTags](#findpetsbytags) - Finds Pets by tags
 * [getPetByIDS](#getpetbyids) - Find pet by ID
@@ -25,7 +25,7 @@ Update an existing pet by Id
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -56,8 +56,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petPetsStoreMonday } from "ryan-simple-test-act/funcs/petPetsStoreMonday.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { petPetsStoreMonday } from "meep-moop/funcs/petPetsStoreMonday.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -113,21 +113,21 @@ run();
 | errors.ApiErrorNotFound     | 404                         | application/json            |
 | errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
-## mcp
+## mcpTest
 
 Add a new pet to the store
 
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-  const result = await petstore.pet.mcp({
+  const result = await petstore.pet.mcpTest({
     id: 10,
     name: "doggie",
     category: {
@@ -135,6 +135,8 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
+      "<value>",
+      "<value>",
       "<value>",
     ],
   });
@@ -151,8 +153,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petMCP } from "ryan-simple-test-act/funcs/petMCP.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { petMCPTest } from "meep-moop/funcs/petMCPTest.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -161,7 +163,7 @@ const petstore = new PetstoreCore({
 });
 
 async function run() {
-  const res = await petMCP(petstore, {
+  const res = await petMCPTest(petstore, {
     id: 10,
     name: "doggie",
     category: {
@@ -169,6 +171,8 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
+      "<value>",
+      "<value>",
       "<value>",
     ],
   });
@@ -212,7 +216,7 @@ Multiple status values can be provided with comma separated strings
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -233,8 +237,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petFindPetsByStatusTypes } from "ryan-simple-test-act/funcs/petFindPetsByStatusTypes.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { petFindPetsByStatusTypes } from "meep-moop/funcs/petFindPetsByStatusTypes.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -287,7 +291,7 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -308,8 +312,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petFindPetsByTags } from "ryan-simple-test-act/funcs/petFindPetsByTags.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { petFindPetsByTags } from "meep-moop/funcs/petFindPetsByTags.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -362,7 +366,7 @@ Returns a single pet
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -385,8 +389,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petGetPetByIDS } from "ryan-simple-test-act/funcs/petGetPetByIDS.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { petGetPetByIDS } from "meep-moop/funcs/petGetPetByIDS.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -441,7 +445,7 @@ Deletes a pet
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -464,8 +468,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petDeletePet } from "ryan-simple-test-act/funcs/petDeletePet.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { petDeletePet } from "meep-moop/funcs/petDeletePet.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -520,7 +524,7 @@ uploads an image
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -543,8 +547,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { petUploadFile } from "ryan-simple-test-act/funcs/petUploadFile.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { petUploadFile } from "meep-moop/funcs/petUploadFile.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

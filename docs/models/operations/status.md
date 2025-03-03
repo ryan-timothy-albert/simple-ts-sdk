@@ -5,7 +5,7 @@ Status values that need to be considered for filter
 ## Example Usage
 
 ```typescript
-import { Status } from "ryan-simple-test-act/models/operations";
+import { Status } from "meep-moop/models/operations";
 
 let value: Status = "sold";
 ```
