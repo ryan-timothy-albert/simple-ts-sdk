@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiErrorInvalidInput } from "ryan-simple-test-act/models/errors";
+import { ApiErrorInvalidInput } from "meep-moop/models/errors";
 
 // No examples available for this model
 ```

@@ -8,106 +8,106 @@ actions:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.mcp({\n    id: 10,\n    name: \"doggie\",\n    category: {\n      id: 1,\n      name: \"Dogs\",\n    },\n    photoUrls: [\n      \"<value>\",\n    ],\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.mcpTest({\n    id: 10,\n    name: \"doggie\",\n    category: {\n      id: 1,\n      name: \"Dogs\",\n    },\n    photoUrls: [\n      \"<value>\",\n      \"<value>\",\n      \"<value>\",\n    ],\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/pet"]["put"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.petsStoreMonday({\n    id: 10,\n    name: \"doggie\",\n    category: {\n      id: 1,\n      name: \"Dogs\",\n    },\n    photoUrls: [\n      \"<value>\",\n    ],\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.petsStoreMonday({\n    id: 10,\n    name: \"doggie\",\n    category: {\n      id: 1,\n      name: \"Dogs\",\n    },\n    photoUrls: [\n      \"<value>\",\n    ],\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/pet/findByStatus"]["get"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.findPetsByStatusTypes({});\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.findPetsByStatusTypes({});\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/pet/findByTags"]["get"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.findPetsByTags({});\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.findPetsByTags({});\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/pet/{petId}"]["delete"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.deletePet({\n    petId: 441876,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.deletePet({\n    petId: 441876,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/pet/{petId}"]["get"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.getPetByIDS({\n    petId: 137396,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.getPetByIDS({\n    petId: 137396,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/pet/{petId}/uploadImage"]["post"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.uploadFile({\n    petId: 565380,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.uploadFile({\n    petId: 565380,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/store/inventory"]["get"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.store.getInventory();\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.store.getInventory();\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/store/order"]["post"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.store.placeOrder({\n    id: 10,\n    petId: 198772,\n    quantity: 7,\n    status: \"approved\",\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.store.placeOrder({\n    id: 10,\n    petId: 198772,\n    quantity: 7,\n    status: \"approved\",\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/store/order/{orderId}"]["delete"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.store.deleteOrder({\n    orderId: 127902,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.store.deleteOrder({\n    orderId: 127902,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/store/order/{orderId}"]["get"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.store.getOrderById({\n    orderId: 614993,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.store.getOrderById({\n    orderId: 614993,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/user"]["post"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.createUser({\n    id: 10,\n    username: \"theUser\",\n    firstName: \"John\",\n    lastName: \"James\",\n    email: \"john@email.com\",\n    password: \"12345\",\n    phone: \"12345\",\n    userStatus: 1,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.createUser({\n    id: 10,\n    username: \"theUser\",\n    firstName: \"John\",\n    lastName: \"James\",\n    email: \"john@email.com\",\n    password: \"12345\",\n    phone: \"12345\",\n    userStatus: 1,\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/user/createWithList"]["post"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.createUsersWithListInput([\n    {\n      id: 10,\n      username: \"theUser\",\n      firstName: \"John\",\n      lastName: \"James\",\n      email: \"john@email.com\",\n      password: \"12345\",\n      phone: \"12345\",\n      userStatus: 1,\n    },\n  ]);\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.createUsersWithListInput([\n    {\n      id: 10,\n      username: \"theUser\",\n      firstName: \"John\",\n      lastName: \"James\",\n      email: \"john@email.com\",\n      password: \"12345\",\n      phone: \"12345\",\n      userStatus: 1,\n    },\n  ]);\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/user/login"]["get"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.loginUser({});\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.loginUser({});\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/user/logout"]["get"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  await petstore.user.logoutUser();\n\n\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  await petstore.user.logoutUser();\n\n\n}\n\nrun();"
   - target: $["paths"]["/user/{username}"]["delete"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.deleteUser({\n    username: \"Demetris_Schmitt\",\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.deleteUser({\n    username: \"Demetris_Schmitt\",\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/user/{username}"]["get"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.getUserByName({\n    username: \"Zachery_Lubowitz15\",\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.getUserByName({\n    username: \"Zachery_Lubowitz15\",\n  });\n\n  // Handle the result\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/user/{username}"]["put"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"ryan-simple-test-act\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  await petstore.user.updateUser({\n    username: \"Dandre_Hand41\",\n    user: {\n      id: 10,\n      username: \"theUser\",\n      firstName: \"John\",\n      lastName: \"James\",\n      email: \"john@email.com\",\n      password: \"12345\",\n      phone: \"12345\",\n      userStatus: 1,\n    },\n  });\n\n\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  await petstore.user.updateUser({\n    username: \"Dandre_Hand41\",\n    user: {\n      id: 10,\n      username: \"theUser\",\n      firstName: \"John\",\n      lastName: \"James\",\n      email: \"john@email.com\",\n      password: \"12345\",\n      phone: \"12345\",\n      userStatus: 1,\n    },\n  });\n\n\n}\n\nrun();"

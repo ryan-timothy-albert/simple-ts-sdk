@@ -12,7 +12,7 @@ import { tool$petDeletePet } from "./tools/petDeletePet.js";
 import { tool$petFindPetsByStatusTypes } from "./tools/petFindPetsByStatusTypes.js";
 import { tool$petFindPetsByTags } from "./tools/petFindPetsByTags.js";
 import { tool$petGetPetByIDS } from "./tools/petGetPetByIDS.js";
-import { tool$petMCP } from "./tools/petMCP.js";
+import { tool$petMCPTest } from "./tools/petMCPTest.js";
 import { tool$petPetsStoreMonday } from "./tools/petPetsStoreMonday.js";
 import { tool$petUploadFile } from "./tools/petUploadFile.js";
 import { tool$storeDeleteOrder } from "./tools/storeDeleteOrder.js";
@@ -37,7 +37,7 @@ export function createMCPServer(deps: {
 }) {
   const server = new McpServer({
     name: "Petstore",
-    version: "5.2.0-alpha.15",
+    version: "5.2.0-alpha.16",
   });
 
   const client = new PetstoreCore({
@@ -50,7 +50,7 @@ export function createMCPServer(deps: {
   const tool = createRegisterTool(deps.logger, server, client, scopes);
 
   tool(tool$petPetsStoreMonday);
-  tool(tool$petMCP);
+  tool(tool$petMCPTest);
   tool(tool$petFindPetsByStatusTypes);
   tool(tool$petFindPetsByTags);
   tool(tool$petGetPetByIDS);

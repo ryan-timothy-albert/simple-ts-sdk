@@ -22,7 +22,7 @@ This can only be done by the logged in user.
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -52,8 +52,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { userCreateUser } from "ryan-simple-test-act/funcs/userCreateUser.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { userCreateUser } from "meep-moop/funcs/userCreateUser.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -112,7 +112,7 @@ Creates list of users with given input array
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -144,8 +144,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { userCreateUsersWithListInput } from "ryan-simple-test-act/funcs/userCreateUsersWithListInput.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { userCreateUsersWithListInput } from "meep-moop/funcs/userCreateUsersWithListInput.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -206,7 +206,7 @@ Logs user into the system
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -227,8 +227,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { userLoginUser } from "ryan-simple-test-act/funcs/userLoginUser.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { userLoginUser } from "meep-moop/funcs/userLoginUser.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -281,7 +281,7 @@ Logs out current logged in user session
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -301,8 +301,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { userLogoutUser } from "ryan-simple-test-act/funcs/userLogoutUser.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { userLogoutUser } from "meep-moop/funcs/userLogoutUser.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -350,7 +350,7 @@ Get user by user name
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -373,8 +373,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { userGetUserByName } from "ryan-simple-test-act/funcs/userGetUserByName.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { userGetUserByName } from "meep-moop/funcs/userGetUserByName.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -429,7 +429,7 @@ This can only be done by the logged in user.
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -461,8 +461,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { userUpdateUser } from "ryan-simple-test-act/funcs/userUpdateUser.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { userUpdateUser } from "meep-moop/funcs/userUpdateUser.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -523,7 +523,7 @@ This can only be done by the logged in user.
 ### Example Usage
 
 ```typescript
-import { Petstore } from "ryan-simple-test-act";
+import { Petstore } from "meep-moop";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
@@ -546,8 +546,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { PetstoreCore } from "ryan-simple-test-act/core.js";
-import { userDeleteUser } from "ryan-simple-test-act/funcs/userDeleteUser.js";
+import { PetstoreCore } from "meep-moop/core.js";
+import { userDeleteUser } from "meep-moop/funcs/userDeleteUser.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

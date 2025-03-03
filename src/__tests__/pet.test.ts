@@ -196,8 +196,14 @@ test("Pet Upload File", async () => {
   expect(result).toEqual({});
 });
 
-test("Pet Mcp", async () => {
-  const testHttpClient = createTestHTTPClient("MCP");
+it.skip("Pet Mcp", async () => {
+  assert.fail(
+    "incomplete test found please make sure to address the following errors: [`workflow step MCP.test referencing operation MCP not found in document`]",
+  );
+});
+
+test("Pet Mcp Test", async () => {
+  const testHttpClient = createTestHTTPClient("MCPTest");
 
   const petstore = new Petstore({
     serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
@@ -205,7 +211,7 @@ test("Pet Mcp", async () => {
     apiKey: "<YOUR_API_KEY_HERE>",
   });
 
-  const result = await petstore.pet.mcp({
+  const result = await petstore.pet.mcpTest({
     id: 10,
     name: "doggie",
     category: {
@@ -213,6 +219,8 @@ test("Pet Mcp", async () => {
       name: "Dogs",
     },
     photoUrls: [
+      "<value>",
+      "<value>",
       "<value>",
     ],
   });
@@ -225,7 +233,6 @@ test("Pet Mcp", async () => {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
       "<value>",
     ],
   });

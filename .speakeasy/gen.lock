@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: e8d2fe8b15b7a4e4e657779b1fc1bf08
+  docChecksum: 39bc5f392449cb9aaf342951d428adcc
   docVersion: 4.0.0
-  speakeasyVersion: 1.507.0
-  generationVersion: 2.533.0
-  releaseVersion: 5.2.0-alpha.15
-  configChecksum: 98c7d423bfc749f5b734837d86e12093
+  speakeasyVersion: 1.508.1
+  generationVersion: 2.536.0
+  releaseVersion: 5.2.0-alpha.16
+  configChecksum: 76af7bc562eaac2765504e2413fb750c
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -135,7 +135,7 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
   - src/__tests__/mockserver/internal/sdk/models/operations/loginuser.go
   - src/__tests__/mockserver/internal/sdk/models/operations/logoutuser.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/mcp.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/mcptest.go
   - src/__tests__/mockserver/internal/sdk/models/operations/petsstoremonday.go
   - src/__tests__/mockserver/internal/sdk/models/operations/placeorder.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
@@ -170,7 +170,7 @@ generatedFiles:
   - src/funcs/petFindPetsByStatusTypes.ts
   - src/funcs/petFindPetsByTags.ts
   - src/funcs/petGetPetByIDS.ts
-  - src/funcs/petMCP.ts
+  - src/funcs/petMCPTest.ts
   - src/funcs/petPetsStoreMonday.ts
   - src/funcs/petUploadFile.ts
   - src/funcs/storeDeleteOrder.ts
@@ -218,7 +218,7 @@ generatedFiles:
   - src/mcp-server/tools/petFindPetsByStatusTypes.ts
   - src/mcp-server/tools/petFindPetsByTags.ts
   - src/mcp-server/tools/petGetPetByIDS.ts
-  - src/mcp-server/tools/petMCP.ts
+  - src/mcp-server/tools/petMCPTest.ts
   - src/mcp-server/tools/petPetsStoreMonday.ts
   - src/mcp-server/tools/petUploadFile.ts
   - src/mcp-server/tools/storeDeleteOrder.ts
@@ -481,6 +481,13 @@ examples:
       responses:
         "200":
           application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
+  MCPTest:
+    speakeasy-default-MCP-test:
+      requestBody:
+        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
+      responses:
+        "200":
+          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
 examplesVersion: 1.0.0
 generatedTests:
   petsStoreMonday: "2025-02-13T16:15:08-08:00"
@@ -502,3 +509,4 @@ generatedTests:
   updateUser: "2025-02-13T16:15:08-08:00"
   deleteUser: "2025-02-13T16:15:08-08:00"
   MCP: "2025-02-28T00:57:37Z"
+  MCPTest: "2025-03-03T17:28:36Z"
