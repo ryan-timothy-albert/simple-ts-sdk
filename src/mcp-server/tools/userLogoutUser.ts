@@ -6,7 +6,7 @@ import { userLogoutUser } from "../../funcs/userLogoutUser.js";
 import { formatResult, ToolDefinition } from "../tools.js";
 
 export const tool$userLogoutUser: ToolDefinition = {
-  name: "user_logout-user",
+  name: "user-logout-user",
   description: `Logs out current logged in user session`,
   tool: async (client, ctx) => {
     const [result, apiCall] = await userLogoutUser(

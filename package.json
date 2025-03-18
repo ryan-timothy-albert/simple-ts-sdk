@@ -1,6 +1,6 @@
 {
   "name": "meep-moop",
-  "version": "5.2.0-alpha.16",
+  "version": "5.2.0-alpha.17",
   "author": "ryan-timothy-albert",
   "bin": {
     "mcp": "bin/mcp-server.js"

@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$storePlaceOrder: ToolDefinition<typeof args> = {
-  name: "store_place-order",
+  name: "store-place-order",
   description: `Place an order for a pet
 
 Place a new order in the store`,

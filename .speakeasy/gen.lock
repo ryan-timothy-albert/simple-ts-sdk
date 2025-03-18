@@ -3,10 +3,10 @@ id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
   docChecksum: 39bc5f392449cb9aaf342951d428adcc
   docVersion: 4.0.0
-  speakeasyVersion: 1.508.1
-  generationVersion: 2.536.0
-  releaseVersion: 5.2.0-alpha.16
-  configChecksum: 76af7bc562eaac2765504e2413fb750c
+  speakeasyVersion: 1.519.0
+  generationVersion: 2.552.1
+  releaseVersion: 5.2.0-alpha.17
+  configChecksum: 4ef4b95360a3296bbc99473d0921ec18
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -14,7 +14,7 @@ features:
   typescript:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.11
-    core: 3.21.3
+    core: 3.21.4
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     enumUnions: 0.1.0
@@ -23,12 +23,12 @@ features:
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.4
-    mcpServer: 0.3.0
+    mcpServer: 0.8.0
     mockServer: 0.1.0
     responseFormat: 0.2.3
     retries: 2.83.0
     sdkHooks: 0.2.0
-    tests: 0.15.0
+    tests: 0.16.0
     uploadStreams: 0.1.0
 generatedFiles:
   - .devcontainer/README.md
@@ -208,7 +208,9 @@ generatedFiles:
   - src/mcp-server/cli/start/command.ts
   - src/mcp-server/cli/start/impl.ts
   - src/mcp-server/console-logger.ts
+  - src/mcp-server/extensions.ts
   - src/mcp-server/mcp-server.ts
+  - src/mcp-server/prompts.ts
   - src/mcp-server/resources.ts
   - src/mcp-server/scopes.ts
   - src/mcp-server/server.ts

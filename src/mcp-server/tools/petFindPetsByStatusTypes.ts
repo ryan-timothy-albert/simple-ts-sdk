@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$petFindPetsByStatusTypes: ToolDefinition<typeof args> = {
-  name: "pet_find-pets-by-status-types",
+  name: "pet-find-pets-by-status-types",
   description: `Finds Pets by status
 
 Multiple status values can be provided with comma separated strings`,

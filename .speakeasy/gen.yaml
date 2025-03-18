@@ -20,7 +20,7 @@ generation:
   tests:
     generateNewTests: true
 typescript:
-  version: 5.2.0-alpha.16
+  version: 5.2.0-alpha.17
   additionalDependencies:
     dependencies: {}
     devDependencies: {}

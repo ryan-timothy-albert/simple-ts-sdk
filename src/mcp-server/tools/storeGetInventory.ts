@@ -6,7 +6,7 @@ import { storeGetInventory } from "../../funcs/storeGetInventory.js";
 import { formatResult, ToolDefinition } from "../tools.js";
 
 export const tool$storeGetInventory: ToolDefinition = {
-  name: "store_get-inventory",
+  name: "store-get-inventory",
   description: `Returns pet inventories by status
 
 Returns a map of status codes to quantities`,

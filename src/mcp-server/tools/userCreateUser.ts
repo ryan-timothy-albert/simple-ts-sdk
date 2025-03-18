@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$userCreateUser: ToolDefinition<typeof args> = {
-  name: "user_create-user",
+  name: "user-create-user",
   description: `Create user
 
 This can only be done by the logged in user.`,

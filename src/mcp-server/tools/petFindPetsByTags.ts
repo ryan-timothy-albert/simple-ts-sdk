@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$petFindPetsByTags: ToolDefinition<typeof args> = {
-  name: "pet_find-pets-by-tags",
+  name: "pet-find-pets-by-tags",
   description: `Finds Pets by tags
 
 Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.`,

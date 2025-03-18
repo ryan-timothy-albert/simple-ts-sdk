@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$userDeleteUser: ToolDefinition<typeof args> = {
-  name: "user_delete-user",
+  name: "user-delete-user",
   description: `Delete user
 
 This can only be done by the logged in user.`,

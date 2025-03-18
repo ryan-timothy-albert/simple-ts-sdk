@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$userLoginUser: ToolDefinition<typeof args> = {
-  name: "user_login-user",
+  name: "user-login-user",
   description: `Logs user into the system`,
   args,
   tool: async (client, args, ctx) => {
