@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$userUpdateUser: ToolDefinition<typeof args> = {
-  name: "user_update-user",
+  name: "user-update-user",
   description: `Update user
 
 This can only be done by the logged in user.`,

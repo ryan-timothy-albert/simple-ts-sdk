@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$petDeletePet: ToolDefinition<typeof args> = {
-  name: "pet_delete-pet",
+  name: "pet-delete-pet",
   description: `Deletes a pet`,
   args,
   tool: async (client, args, ctx) => {

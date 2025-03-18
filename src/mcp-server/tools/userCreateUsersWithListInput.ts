@@ -12,7 +12,7 @@ const args = {
 };
 
 export const tool$userCreateUsersWithListInput: ToolDefinition<typeof args> = {
-  name: "user_create-users-with-list-input",
+  name: "user-create-users-with-list-input",
   description: `Creates list of users with given input array
 
 Creates list of users with given input array`,

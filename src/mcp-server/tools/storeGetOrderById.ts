@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$storeGetOrderById: ToolDefinition<typeof args> = {
-  name: "store_get-order-by-id",
+  name: "store-get-order-by-id",
   description: `Find purchase order by ID
 
 For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.`,

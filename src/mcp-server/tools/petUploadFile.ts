@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$petUploadFile: ToolDefinition<typeof args> = {
-  name: "pet_upload-file",
+  name: "pet-upload-file",
   description: `uploads an image`,
   args,
   tool: async (client, args, ctx) => {

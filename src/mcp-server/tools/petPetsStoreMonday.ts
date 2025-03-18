@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$petPetsStoreMonday: ToolDefinition<typeof args> = {
-  name: "pet_pets-store-monday",
+  name: "pet-pets-store-monday",
   description: `Update an existing pet
 
 Update an existing pet by Id`,

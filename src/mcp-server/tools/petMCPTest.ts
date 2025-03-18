@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$petMCPTest: ToolDefinition<typeof args> = {
-  name: "pet_MCP-test",
+  name: "pet-MCP-test",
   description: `Add a new pet to the store
 
 Add a new pet to the store`,

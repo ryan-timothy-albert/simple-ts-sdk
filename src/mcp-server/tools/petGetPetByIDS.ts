@@ -11,7 +11,7 @@ const args = {
 };
 
 export const tool$petGetPetByIDS: ToolDefinition<typeof args> = {
-  name: "pet_get-pet-by-IDS",
+  name: "pet-get-pet-by-IDS",
   description: `Find pet by ID
 
 Returns a single pet`,
