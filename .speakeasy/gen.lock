@@ -5,8 +5,8 @@ management:
   docVersion: 4.0.0
   speakeasyVersion: 1.519.0
   generationVersion: 2.552.1
-  releaseVersion: 5.2.0-alpha.17
-  configChecksum: 4ef4b95360a3296bbc99473d0921ec18
+  releaseVersion: 5.2.0-alpha.19
+  configChecksum: 5ac2b94c6898d6642c39de9343b6cd27
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -290,8 +290,8 @@ examples:
           application/json: {"status": 401, "error": "Unauthorized"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
-  myTestPets:
-    speakeasy-default-my-test-pets:
+  MCPTest:
+    speakeasy-default-MCP-test:
       requestBody:
         application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
       responses:
@@ -469,27 +469,6 @@ examples:
           application/json: {"status": 401, "error": "Unauthorized"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
-  MyNewTest:
-    speakeasy-default-my-new-test:
-      requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
-  MCP:
-    speakeasy-default-mcp:
-      requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>"]}
-  MCPTest:
-    speakeasy-default-MCP-test:
-      requestBody:
-        application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>", "<value>", "<value>"]}
-      responses:
-        "200":
-          application/json: {"id": 10, "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value>"]}
 examplesVersion: 1.0.0
 generatedTests:
   petsStoreMonday: "2025-02-13T16:15:08-08:00"
