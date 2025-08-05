@@ -9,7 +9,6 @@ Operations about user
 
 * [createUser](#createuser) - Create user
 * [createUsersWithListInput](#createuserswithlistinput) - Creates list of users with given input array
-* [loginUser](#loginuser) - Logs user into the system
 * [logoutUser](#logoutuser) - Logs out current logged in user session
 * [getUserByName](#getuserbyname) - Get user by user name
 * [updateUser](#updateuser) - Update user
@@ -198,81 +197,6 @@ run();
 | Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
-
-## loginUser
-
-Logs user into the system
-
-### Example Usage
-
-```typescript
-import { Petstore } from "meep-moop";
-
-const petstore = new Petstore({
-  apiKey: "<YOUR_API_KEY_HERE>",
-});
-
-async function run() {
-  const result = await petstore.user.loginUser({});
-
-  // Handle the result
-  console.log(result);
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { PetstoreCore } from "meep-moop/core.js";
-import { userLoginUser } from "meep-moop/funcs/userLoginUser.js";
-
-// Use `PetstoreCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const petstore = new PetstoreCore({
-  apiKey: "<YOUR_API_KEY_HERE>",
-});
-
-async function run() {
-  const res = await userLoginUser(petstore, {});
-
-  if (!res.ok) {
-    throw res.error;
-  }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.LoginUserRequest](../../models/operations/loginuserrequest.md)                                                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[operations.LoginUserResponse](../../models/operations/loginuserresponse.md)\>**
-
-### Errors
-
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.ApiErrorInvalidInput | 400                         | application/json            |
-| errors.ApiErrorUnauthorized | 401                         | application/json            |
-| errors.ApiErrorNotFound     | 404                         | application/json            |
-| errors.SDKError             | 4XX, 5XX                    | \*/\*                       |
 
 ## logoutUser
 

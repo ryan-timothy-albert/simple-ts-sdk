@@ -1,0 +1,16 @@
+POST /user/createWithList HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip, deflate
+Accept-Language: *
+Api_key: <YOUR_API_KEY_HERE>
+Connection: keep-alive
+Content-Length: 145
+Content-Type: application/json
+Cookie: 
+Sec-Fetch-Mode: cors
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.25 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: AEE81E15-6242-F972-A841-C0F2AD761677
+X-Speakeasy-Test-Name: createUsersWithListInput
+
+[{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}]

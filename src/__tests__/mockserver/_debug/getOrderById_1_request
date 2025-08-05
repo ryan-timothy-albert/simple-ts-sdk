@@ -1,0 +1,13 @@
+GET /store/order/614993 HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip, deflate
+Accept-Language: *
+Api_key: <YOUR_API_KEY_HERE>
+Connection: keep-alive
+Cookie: 
+Sec-Fetch-Mode: cors
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.25 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: 5BF6AEB7-CAA3-B2A1-CEBD-8D9E96152ABF
+X-Speakeasy-Test-Name: getOrderById
+
