@@ -690,6 +690,37 @@
                 }
             }
         },
+        "/hi": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "Say hello",
+                "description": "Returns a simple hello message",
+                "operationId": "sayHello",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Hello, world!"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    }
+                }
+            }
+        },
         "/user/{username}": {
             "get": {
                 "tags": [
