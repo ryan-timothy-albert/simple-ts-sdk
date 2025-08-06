@@ -7,7 +7,7 @@ Status values that need to be considered for filter
 ```typescript
 import { Status } from "meep-moop/models/operations";
 
-let value: Status = "sold";
+let value: Status = "pending";
 ```
 
 ## Values

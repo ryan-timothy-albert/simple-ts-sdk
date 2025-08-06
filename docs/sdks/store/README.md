@@ -21,6 +21,7 @@ Returns a map of status codes to quantities
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="getInventory" method="get" path="/store/inventory" -->
 ```typescript
 import { Petstore } from "meep-moop";
 
@@ -31,7 +32,6 @@ const petstore = new Petstore({
 async function run() {
   const result = await petstore.store.getInventory();
 
-  // Handle the result
   console.log(result);
 }
 
@@ -54,15 +54,12 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await storeGetInventory(petstore);
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("storeGetInventory failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();
@@ -94,6 +91,7 @@ Place a new order in the store
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="placeOrder" method="post" path="/store/order" -->
 ```typescript
 import { Petstore } from "meep-moop";
 
@@ -109,7 +107,6 @@ async function run() {
     status: "approved",
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -137,15 +134,12 @@ async function run() {
     quantity: 7,
     status: "approved",
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("storePlaceOrder failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();
@@ -178,6 +172,7 @@ For valid response try integer IDs with value <= 5 or > 10. Other values will ge
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="getOrderById" method="get" path="/store/order/{orderId}" -->
 ```typescript
 import { Petstore } from "meep-moop";
 
@@ -187,10 +182,9 @@ const petstore = new Petstore({
 
 async function run() {
   const result = await petstore.store.getOrderById({
-    orderId: 614993,
+    orderId: 728529,
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -213,17 +207,14 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await storeGetOrderById(petstore, {
-    orderId: 614993,
+    orderId: 728529,
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("storeGetOrderById failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();
@@ -257,6 +248,7 @@ For valid response try integer IDs with value < 1000. Anything above 1000 or non
 
 ### Example Usage
 
+<!-- UsageSnippet language="typescript" operationID="deleteOrder" method="delete" path="/store/order/{orderId}" -->
 ```typescript
 import { Petstore } from "meep-moop";
 
@@ -266,10 +258,9 @@ const petstore = new Petstore({
 
 async function run() {
   const result = await petstore.store.deleteOrder({
-    orderId: 127902,
+    orderId: 690575,
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -292,17 +283,14 @@ const petstore = new PetstoreCore({
 
 async function run() {
   const res = await storeDeleteOrder(petstore, {
-    orderId: 127902,
+    orderId: 690575,
   });
-
-  if (!res.ok) {
-    throw res.error;
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("storeDeleteOrder failed:", res.error);
   }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
 }
 
 run();

@@ -51,7 +51,7 @@ func testCreateUserCreateUser0(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	respBody := &components.User{
+	var respBody *components.User = &components.User{
 		ID:         types.Int64(10),
 		Username:   types.String("theUser"),
 		FirstName:  types.String("John"),

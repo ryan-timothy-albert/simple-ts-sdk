@@ -91,7 +91,7 @@ yarn add meep-moop zod
 This SDK is also an installable MCP server where the various SDK methods are
 exposed as tools that can be invoked by AI applications.
 
-> Node.js v20 or greater is required to run the MCP server.
+> Node.js v20 or greater is required to run the MCP server from npm.
 
 <details>
 <summary>Claude installation steps</summary>
@@ -119,16 +119,49 @@ Add the following server definition to your `claude_desktop_config.json` file:
 <details>
 <summary>Cursor installation steps</summary>
 
-Go to `Cursor Settings > Features > MCP Servers > Add new MCP server` and use the following settings:
+Create a `.cursor/mcp.json` file in your project root with the following content:
 
-- Name: Petstore
-- Type: `command`
-- Command:
-```sh
-npx -y --package meep-moop -- mcp start --api-key ... 
+```json
+{
+  "mcpServers": {
+    "Petstore": {
+      "command": "npx",
+      "args": [
+        "-y", "--package", "meep-moop",
+        "--",
+        "mcp", "start",
+        "--api-key", "..."
+      ]
+    }
+  }
+}
 ```
 
 </details>
+
+You can also run MCP servers as a standalone binary with no additional dependencies. You must pull these binaries from available Github releases:
+
+```bash
+curl -L -o mcp-server \
+    https://github.com/{org}/{repo}/releases/download/{tag}/mcp-server-bun-darwin-arm64 && \
+chmod +x mcp-server
+```
+
+If the repo is a private repo you must add your Github PAT to download a release `-H "Authorization: Bearer {GITHUB_PAT}"`.
+
+
+```json
+{
+  "mcpServers": {
+    "Todos": {
+      "command": "./DOWNLOAD/PATH/mcp-server",
+      "args": [
+        "start"
+      ]
+    }
+  }
+}
+```
 
 For a full list of server arguments, run:
 
@@ -164,11 +197,11 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
+      "<value 1>",
+      "<value 2>",
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -276,10 +309,9 @@ const petstore = new Petstore({
 
 async function run() {
   const result = await petstore.pet.uploadFile({
-    petId: 565380,
+    petId: 150516,
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -310,7 +342,8 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
+      "<value 1>",
+      "<value 2>",
     ],
   }, {
     retries: {
@@ -325,7 +358,6 @@ async function run() {
     },
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -360,11 +392,11 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
+      "<value 1>",
+      "<value 2>",
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -376,34 +408,29 @@ run();
 <!-- Start Error Handling [errors] -->
 ## Error Handling
 
-Some methods specify known errors which can be thrown. All the known errors are enumerated in the `models/errors/errors.ts` module. The known errors for a method are documented under the *Errors* tables in SDK docs. For example, the `petsStoreMonday` method may throw the following errors:
+[`PetstoreError`](./src/models/errors/petstoreerror.ts) is the base class for all HTTP error responses. It has the following properties:
 
-| Error Type                  | Status Code | Content Type     |
-| --------------------------- | ----------- | ---------------- |
-| errors.ApiErrorInvalidInput | 400         | application/json |
-| errors.ApiErrorUnauthorized | 401         | application/json |
-| errors.ApiErrorNotFound     | 404         | application/json |
-| errors.SDKError             | 4XX, 5XX    | \*/\*            |
+| Property            | Type       | Description                                                                             |
+| ------------------- | ---------- | --------------------------------------------------------------------------------------- |
+| `error.message`     | `string`   | Error message                                                                           |
+| `error.statusCode`  | `number`   | HTTP response status code eg `404`                                                      |
+| `error.headers`     | `Headers`  | HTTP response headers                                                                   |
+| `error.body`        | `string`   | HTTP body. Can be empty string if no body is returned.                                  |
+| `error.rawResponse` | `Response` | Raw HTTP response                                                                       |
+| `error.data$`       |            | Optional. Some errors may contain structured data. [See Error Classes](#error-classes). |
 
-If the method throws an error and it is not captured by the known errors, it will default to throwing a `SDKError`.
-
+### Example
 ```typescript
 import { Petstore } from "meep-moop";
-import {
-  ApiErrorInvalidInput,
-  ApiErrorNotFound,
-  ApiErrorUnauthorized,
-  SDKValidationError,
-} from "meep-moop/models/errors";
+import * as errors from "meep-moop/models/errors";
 
 const petstore = new Petstore({
   apiKey: "<YOUR_API_KEY_HERE>",
 });
 
 async function run() {
-  let result;
   try {
-    result = await petstore.pet.petsStoreMonday({
+    const result = await petstore.pet.petsStoreMonday({
       id: 10,
       name: "doggie",
       category: {
@@ -411,40 +438,24 @@ async function run() {
         name: "Dogs",
       },
       photoUrls: [
-        "<value>",
+        "<value 1>",
+        "<value 2>",
       ],
     });
 
-    // Handle the result
     console.log(result);
-  } catch (err) {
-    switch (true) {
-      // The server response does not match the expected SDK schema
-      case (err instanceof SDKValidationError): {
-        // Pretty-print will provide a human-readable multi-line error message
-        console.error(err.pretty());
-        // Raw value may also be inspected
-        console.error(err.rawValue);
-        return;
-      }
-      case (err instanceof ApiErrorInvalidInput): {
-        // Handle err.data$: ApiErrorInvalidInputData
-        console.error(err);
-        return;
-      }
-      case (err instanceof ApiErrorUnauthorized): {
-        // Handle err.data$: ApiErrorUnauthorizedData
-        console.error(err);
-        return;
-      }
-      case (err instanceof ApiErrorNotFound): {
-        // Handle err.data$: ApiErrorNotFoundData
-        console.error(err);
-        return;
-      }
-      default: {
-        // Other errors such as network errors, see HTTPClientErrors for more details
-        throw err;
+  } catch (error) {
+    // The base class for HTTP error responses
+    if (error instanceof errors.PetstoreError) {
+      console.log(error.message);
+      console.log(error.statusCode);
+      console.log(error.body);
+      console.log(error.headers);
+
+      // Depending on the method different errors may be thrown
+      if (error instanceof errors.ApiErrorInvalidInput) {
+        console.log(error.data$.status); // number
+        console.log(error.data$.error); // string
       }
     }
   }
@@ -454,17 +465,31 @@ run();
 
 ```
 
-Validation errors can also occur when either method arguments or data returned from the server do not match the expected format. The `SDKValidationError` that is thrown as a result will capture the raw value that failed validation in an attribute called `rawValue`. Additionally, a `pretty()` method is available on this error that can be used to log a nicely formatted multi-line string since validation errors can list many issues and the plain error string may be difficult read when debugging.
+### Error Classes
+**Primary error:**
+* [`PetstoreError`](./src/models/errors/petstoreerror.ts): The base class for HTTP error responses.
 
-In some rare cases, the SDK can fail to get a response from the server or even make the request due to unexpected circumstances such as network conditions. These types of errors are captured in the `models/errors/httpclienterrors.ts` module:
+<details><summary>Less common errors (9)</summary>
 
-| HTTP Client Error                                    | Description                                          |
-| ---------------------------------------------------- | ---------------------------------------------------- |
-| RequestAbortedError                                  | HTTP request was aborted by the client               |
-| RequestTimeoutError                                  | HTTP request timed out due to an AbortSignal signal  |
-| ConnectionError                                      | HTTP client was unable to make a request to a server |
-| InvalidRequestError                                  | Any input used to create a request is invalid        |
-| UnexpectedClientError                                | Unrecognised or unexpected error                     |
+<br />
+
+**Network errors:**
+* [`ConnectionError`](./src/models/errors/httpclienterrors.ts): HTTP client was unable to make a request to a server.
+* [`RequestTimeoutError`](./src/models/errors/httpclienterrors.ts): HTTP request timed out due to an AbortSignal signal.
+* [`RequestAbortedError`](./src/models/errors/httpclienterrors.ts): HTTP request was aborted by the client.
+* [`InvalidRequestError`](./src/models/errors/httpclienterrors.ts): Any input used to create a request is invalid.
+* [`UnexpectedClientError`](./src/models/errors/httpclienterrors.ts): Unrecognised or unexpected error.
+
+
+**Inherit from [`PetstoreError`](./src/models/errors/petstoreerror.ts)**:
+* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 13 of 19 methods.*
+* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 12 of 19 methods.*
+* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 10 of 19 methods.*
+* [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
+
+</details>
+
+\* Check [the method documentation](#available-resources-and-operations) to see if the error is applicable.
 <!-- End Error Handling [errors] -->
 
 <!-- Start Server Selection [server] -->
@@ -497,11 +522,11 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
+      "<value 1>",
+      "<value 2>",
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -529,11 +554,11 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
+      "<value 1>",
+      "<value 2>",
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 
@@ -619,11 +644,11 @@ async function run() {
       name: "Dogs",
     },
     photoUrls: [
-      "<value>",
+      "<value 1>",
+      "<value 2>",
     ],
   });
 
-  // Handle the result
   console.log(result);
 }
 

@@ -8,7 +8,7 @@ import { LoginUserResponse } from "meep-moop/models/operations";
 let value: LoginUserResponse = {
   headers: {
     "key": [
-      "<value>",
+      "<value 1>",
     ],
   },
   result: "<value>",

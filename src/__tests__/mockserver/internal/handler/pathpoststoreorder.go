@@ -51,7 +51,7 @@ func testPlaceOrderPlaceOrder0(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	respBody := &components.Order{
+	var respBody *components.Order = &components.Order{
 		ID:       types.Int64(10),
 		PetID:    types.Int64(198772),
 		Quantity: types.Int(7),

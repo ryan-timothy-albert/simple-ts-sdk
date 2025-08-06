@@ -6,5 +6,6 @@ export * from "./apierrorinvalidinput.js";
 export * from "./apierrornotfound.js";
 export * from "./apierrorunauthorized.js";
 export * from "./httpclienterrors.js";
+export * from "./responsevalidationerror.js";
 export * from "./sdkerror.js";
 export * from "./sdkvalidationerror.js";

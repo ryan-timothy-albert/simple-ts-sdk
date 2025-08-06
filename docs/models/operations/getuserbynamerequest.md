@@ -6,7 +6,7 @@
 import { GetUserByNameRequest } from "meep-moop/models/operations";
 
 let value: GetUserByNameRequest = {
-  username: "Hunter.Windler",
+  username: "Bethany86",
 };
 ```
 

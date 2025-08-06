@@ -51,7 +51,7 @@ func testPetsStoreMondayPetsStoreMonday0(w http.ResponseWriter, req *http.Reques
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	respBody := &components.Pet{
+	var respBody *components.Pet = &components.Pet{
 		ID:   types.Int64(10),
 		Name: "doggie",
 		Category: &components.Category{

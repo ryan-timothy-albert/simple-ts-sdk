@@ -44,7 +44,7 @@ func testGetInventoryGetInventory0(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	respBody := map[string]int{
+	var respBody map[string]int = map[string]int{
 		"key":  373538,
 		"key1": 961069,
 	}

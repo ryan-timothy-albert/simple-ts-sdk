@@ -6,7 +6,7 @@
 import { GetPetByIDSRequest } from "meep-moop/models/operations";
 
 let value: GetPetByIDSRequest = {
-  petId: 602763,
+  petId: 767432,
 };
 ```
 
