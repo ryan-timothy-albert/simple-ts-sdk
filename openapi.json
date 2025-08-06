@@ -695,9 +695,9 @@
                 "tags": [
                     "user"
                 ],
-                "summary": "Say hello",
-                "description": "Returns a simple hello message",
-                "operationId": "sayHello",
+                "summary": "Say random",
+                "description": "Returns a random message",
+                "operationId": "sayRandom",
                 "responses": {
                     "200": {
                         "description": "successful operation",
