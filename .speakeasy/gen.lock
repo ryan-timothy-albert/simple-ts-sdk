@@ -385,7 +385,7 @@ examples:
           username: "Demetris_Schmitt"
       responses:
         "200":
-          application/json: {"id": 10, "username": "theUser", "firstName": "John", "lastName": "James", "email": "john@email.com", "password": "12345", "phone": "12345", "userStatus": 1}
+          application/json: {"id": 10, "username": "theUser1", "firstName": "John", "lastName": "James", "email": "john@email.com", "password": "12345", "phone": "12345", "userStatus": 1}
         "400":
           application/json: {"status": 400, "error": "Bad request"}
         "401":
