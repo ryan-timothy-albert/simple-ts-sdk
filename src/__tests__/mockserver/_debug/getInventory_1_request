@@ -7,7 +7,7 @@ Api_key: <YOUR_API_KEY_HERE>
 Connection: keep-alive
 Cookie: 
 Sec-Fetch-Mode: cors
-User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.27 2.552.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: D8F22939-DA60-F896-2ADA-332C985E7D49
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.29 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: A5F54447-24BE-222B-87DE-734E8D82FFA5
 X-Speakeasy-Test-Name: getInventory
 

@@ -9,7 +9,7 @@ Content-Length: 0
 Content-Type: application/octet-stream
 Cookie: 
 Sec-Fetch-Mode: cors
-User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.27 2.552.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: DE585A39-D441-316C-50CA-447BBC9ECC4F
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.29 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: 71614FEF-EFE2-9500-9194-5782FFBC2AEF
 X-Speakeasy-Test-Name: uploadFile
 

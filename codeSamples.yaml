@@ -3,7 +3,7 @@ info:
   title: CodeSamples overlay for typescript target
   version: 0.0.0
 actions:
-  - target: $["paths"]["/hi"]["get"]
+  - target: $["paths"]["/hello"]["get"]
     update:
       "x-codeSamples":
         - "lang": "typescript"
