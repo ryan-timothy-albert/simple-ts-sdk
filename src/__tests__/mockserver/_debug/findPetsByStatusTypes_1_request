@@ -1,0 +1,13 @@
+GET /pet/findByStatus?status=available HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip, deflate
+Accept-Language: *
+Api_key: <YOUR_API_KEY_HERE>
+Connection: keep-alive
+Cookie: 
+Sec-Fetch-Mode: cors
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.23 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: 890EEF2E-F57F-8E6F-8D10-FF1BA2557979
+X-Speakeasy-Test-Name: findPetsByStatusTypes
+

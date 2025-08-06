@@ -1,0 +1,16 @@
+POST /user HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip, deflate
+Accept-Language: *
+Api_key: <YOUR_API_KEY_HERE>
+Connection: keep-alive
+Content-Length: 143
+Content-Type: application/json
+Cookie: 
+Sec-Fetch-Mode: cors
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.23 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: BDB8B9FF-F917-1DA6-4EDB-917C39F8D916
+X-Speakeasy-Test-Name: createUser
+
+{"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
