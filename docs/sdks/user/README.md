@@ -11,7 +11,7 @@ Operations about user
 * [createUsersWithListInput](#createuserswithlistinput) - Creates list of users with given input array
 * [loginUser](#loginuser) - Logs user into the system
 * [logoutUser](#logoutuser) - Logs out current logged in user session
-* [sayHello](#sayhello) - Say hello
+* [sayRandom](#sayrandom) - Say random
 * [getUserByName](#getuserbyname) - Get user by user name
 * [updateUser](#updateuser) - Update user
 * [deleteUser](#deleteuser) - Delete user
@@ -344,9 +344,9 @@ run();
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## sayHello
+## sayRandom
 
-Returns a simple hello message
+Returns a random message
 
 ### Example Usage
 
@@ -358,7 +358,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.user.sayHello();
+  const result = await petstore.user.sayRandom();
 
   // Handle the result
   console.log(result);
@@ -373,7 +373,7 @@ The standalone function version of this method:
 
 ```typescript
 import { PetstoreCore } from "meep-moop/core.js";
-import { userSayHello } from "meep-moop/funcs/userSayHello.js";
+import { userSayRandom } from "meep-moop/funcs/userSayRandom.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -382,7 +382,7 @@ const petstore = new PetstoreCore({
 });
 
 async function run() {
-  const res = await userSayHello(petstore);
+  const res = await userSayRandom(petstore);
 
   if (!res.ok) {
     throw res.error;
@@ -407,7 +407,7 @@ run();
 
 ### Response
 
-**Promise\<[operations.SayHelloResponseBody](../../models/operations/sayhelloresponsebody.md)\>**
+**Promise\<[operations.SayRandomResponseBody](../../models/operations/sayrandomresponsebody.md)\>**
 
 ### Errors
 
