@@ -5,8 +5,8 @@ permissions:
   pull-requests: write
   statuses: write
 env:
-  SDK_CHANGELOG_JULY_2025: "true"
-  INPUT_DEBUG: "true"
+  SDK_CHANGELOG_JULY_2025: true
+  INPUT_DEBUG: true
 "on":
   workflow_dispatch:
     inputs:
