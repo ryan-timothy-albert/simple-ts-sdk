@@ -2,20 +2,20 @@ speakeasyVersion: 1.519.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:6bbdc702e84339c63cb2f285338293d4d5d0cf531b180b02586dd49043bb86e7
+        sourceRevisionDigest: sha256:41a770c2d0b93c281e0b59ca603498de2770ba0972ea6f0f9595ce7d9dc7c9f0
         sourceBlobDigest: sha256:fbcbf23ec1b92b5512f066f19f38df7d2d72b7fac0893293c05b4a8e14ac14fa
         tags:
             - latest
-            - speakeasy-sdk-regen-1754481458
+            - speakeasy-sdk-regen-1754486814
             - 4.0.0
 targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:6bbdc702e84339c63cb2f285338293d4d5d0cf531b180b02586dd49043bb86e7
+        sourceRevisionDigest: sha256:41a770c2d0b93c281e0b59ca603498de2770ba0972ea6f0f9595ce7d9dc7c9f0
         sourceBlobDigest: sha256:fbcbf23ec1b92b5512f066f19f38df7d2d72b7fac0893293c05b4a8e14ac14fa
         codeSamplesNamespace: petstore-oas-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:7b18f4ac20ed00e9a88d208796b19e62f17f5fc78aa2490dc247489fdf9086cd
+        codeSamplesRevisionDigest: sha256:235fd126004deb632f899287610dce355d9a757120a7178f5615f3a1fb8988f9
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

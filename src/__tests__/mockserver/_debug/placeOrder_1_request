@@ -9,8 +9,8 @@ Content-Length: 57
 Content-Type: application/json
 Cookie: 
 Sec-Fetch-Mode: cors
-User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.25 2.552.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: 3B023ADA-160B-9281-9955-F357B3D05975
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.27 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: AA057F15-4268-1C31-02AA-4D6A51F4C697
 X-Speakeasy-Test-Name: placeOrder
 
 {"id":10,"petId":198772,"quantity":7,"status":"approved"}

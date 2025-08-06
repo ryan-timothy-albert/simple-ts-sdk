@@ -7,7 +7,7 @@ Api_key: <YOUR_API_KEY_HERE>
 Connection: keep-alive
 Cookie: 
 Sec-Fetch-Mode: cors
-User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.25 2.552.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: 2A0A6E7B-5D01-DD1B-B451-4A2A42A29A2B
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.27 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: 799C20C9-1CF4-C11C-2FD9-02C5B1E75280
 X-Speakeasy-Test-Name: sayHello
 
