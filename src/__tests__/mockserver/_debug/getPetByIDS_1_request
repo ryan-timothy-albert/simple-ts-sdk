@@ -7,7 +7,7 @@ Api_key: <YOUR_API_KEY_HERE>
 Connection: keep-alive
 Cookie: 
 Sec-Fetch-Mode: cors
-User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.23 2.552.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: 8C08648B-9A54-C484-6B0E-6FE9EEB21A2A
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.25 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: E4D85729-9C31-DC65-C2D8-0A9B810440B7
 X-Speakeasy-Test-Name: getPetByIDS
 

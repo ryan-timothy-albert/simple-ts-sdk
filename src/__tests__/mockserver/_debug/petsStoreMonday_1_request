@@ -9,8 +9,8 @@ Content-Length: 83
 Content-Type: application/json
 Cookie: 
 Sec-Fetch-Mode: cors
-User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.23 2.552.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: E29DD472-DB43-5C4A-ED47-308BEAE7F83F
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.25 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: A938D025-E030-9F87-6D87-3901A5A65375
 X-Speakeasy-Test-Name: petsStoreMonday
 
 {"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["<value>"]}

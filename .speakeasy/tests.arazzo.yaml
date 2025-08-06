@@ -526,3 +526,18 @@ workflows:
               }
             type: simple
     x-speakeasy-test-group: pet
+  - workflowId: sayHello
+    steps:
+      - stepId: test
+        operationId: sayHello
+        successCriteria:
+          - condition: $statusCode == 200
+          - condition: $response.header.Content-Type == application/json
+          - context: $response.body
+            condition: |
+              {
+                "message": "Hello, world!"
+              }
+            type: simple
+    x-speakeasy-test-group: user
+    x-speakeasy-test-rebuild: true

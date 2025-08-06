@@ -8,6 +8,7 @@ import { userDeleteUser } from "../funcs/userDeleteUser.js";
 import { userGetUserByName } from "../funcs/userGetUserByName.js";
 import { userLoginUser } from "../funcs/userLoginUser.js";
 import { userLogoutUser } from "../funcs/userLogoutUser.js";
+import { userSayHello } from "../funcs/userSayHello.js";
 import { userUpdateUser } from "../funcs/userUpdateUser.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
@@ -70,6 +71,21 @@ export class User extends ClientSDK {
     options?: RequestOptions,
   ): Promise<void> {
     return unwrapAsync(userLogoutUser(
+      this,
+      options,
+    ));
+  }
+
+  /**
+   * Say hello
+   *
+   * @remarks
+   * Returns a simple hello message
+   */
+  async sayHello(
+    options?: RequestOptions,
+  ): Promise<operations.SayHelloResponseBody> {
+    return unwrapAsync(userSayHello(
       this,
       options,
     ));

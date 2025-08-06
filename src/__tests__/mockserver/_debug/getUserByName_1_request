@@ -7,7 +7,7 @@ Api_key: <YOUR_API_KEY_HERE>
 Connection: keep-alive
 Cookie: 
 Sec-Fetch-Mode: cors
-User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.23 2.552.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: CB5D4352-BA53-210E-B832-7AC285402DC4
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.25 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: A52D9997-92C8-B73C-0EF1-2C0004F4B285
 X-Speakeasy-Test-Name: getUserByName
 

@@ -1,4 +1,4 @@
-DELETE /user/Demetris_Schmitt HTTP/1.1
+GET /hi HTTP/1.1
 Host: localhost:18080
 Accept: application/json
 Accept-Encoding: gzip, deflate
@@ -8,6 +8,6 @@ Connection: keep-alive
 Cookie: 
 Sec-Fetch-Mode: cors
 User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.25 2.552.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: 9AEE3452-2B1C-1E08-29DF-A6FD00C124C0
-X-Speakeasy-Test-Name: deleteUser
+X-Speakeasy-Test-Instance-Id: 2A0A6E7B-5D01-DD1B-B451-4A2A42A29A2B
+X-Speakeasy-Test-Name: sayHello
 
