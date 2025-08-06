@@ -207,6 +207,7 @@ run();
 * [createUsersWithListInput](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
 * [loginUser](docs/sdks/user/README.md#loginuser) - Logs user into the system
 * [logoutUser](docs/sdks/user/README.md#logoutuser) - Logs out current logged in user session
+* [sayHello](docs/sdks/user/README.md#sayhello) - Say hello
 * [getUserByName](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 * [updateUser](docs/sdks/user/README.md#updateuser) - Update user
 * [deleteUser](docs/sdks/user/README.md#deleteuser) - Delete user
@@ -246,6 +247,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`userGetUserByName`](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 - [`userLoginUser`](docs/sdks/user/README.md#loginuser) - Logs user into the system
 - [`userLogoutUser`](docs/sdks/user/README.md#logoutuser) - Logs out current logged in user session
+- [`userSayHello`](docs/sdks/user/README.md#sayhello) - Say hello
 - [`userUpdateUser`](docs/sdks/user/README.md#updateuser) - Update user
 
 </details>

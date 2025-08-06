@@ -9,8 +9,8 @@ Content-Length: 103
 Content-Type: application/json
 Cookie: 
 Sec-Fetch-Mode: cors
-User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.23 2.552.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: 10C4D764-D707-C5E6-CF70-EE38D9DE0F4C
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.27 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: E6B813EC-53B4-C96A-DD25-A8ED80866537
 X-Speakeasy-Test-Name: MCPTest
 
 {"id":10,"name":"doggie","category":{"id":1,"name":"Dogs"},"photoUrls":["<value>","<value>","<value>"]}

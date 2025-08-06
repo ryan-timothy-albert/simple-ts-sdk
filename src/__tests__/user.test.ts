@@ -172,3 +172,19 @@ test("User Delete User", async () => {
     userStatus: 1,
   });
 });
+
+test("User Say Hello", async () => {
+  const testHttpClient = createTestHTTPClient("sayHello");
+
+  const petstore = new Petstore({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    apiKey: "<YOUR_API_KEY_HERE>",
+  });
+
+  const result = await petstore.user.sayHello();
+  expect(result).toBeDefined();
+  expect(result).toEqual({
+    message: "Hello, world!",
+  });
+});
