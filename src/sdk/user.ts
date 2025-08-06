@@ -8,7 +8,7 @@ import { userDeleteUser } from "../funcs/userDeleteUser.js";
 import { userGetUserByName } from "../funcs/userGetUserByName.js";
 import { userLoginUser } from "../funcs/userLoginUser.js";
 import { userLogoutUser } from "../funcs/userLogoutUser.js";
-import { userSayHello } from "../funcs/userSayHello.js";
+import { userSayRandom } from "../funcs/userSayRandom.js";
 import { userUpdateUser } from "../funcs/userUpdateUser.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
@@ -77,15 +77,15 @@ export class User extends ClientSDK {
   }
 
   /**
-   * Say hello
+   * Say random
    *
    * @remarks
-   * Returns a simple hello message
+   * Returns a random message
    */
-  async sayHello(
+  async sayRandom(
     options?: RequestOptions,
-  ): Promise<operations.SayHelloResponseBody> {
-    return unwrapAsync(userSayHello(
+  ): Promise<operations.SayRandomResponseBody> {
+    return unwrapAsync(userSayRandom(
       this,
       options,
     ));
