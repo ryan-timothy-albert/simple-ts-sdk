@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: b61da2bd87ae9ed1e6b31441c3095431
+  docChecksum: 440cf6768ede51c8eb5a2967f0bdd3c2
   docVersion: 4.0.0
   speakeasyVersion: 1.598.2
   generationVersion: 2.674.3
-  releaseVersion: 5.2.0-alpha.36
-  configChecksum: b89e4a5237e0daa6bac61715526de705
+  releaseVersion: 5.2.0-alpha.37
+  configChecksum: c3055b680fca5ebdc0fc82e56432c3f6
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -62,6 +62,7 @@ generatedFiles:
   - docs/models/operations/getuserbynamerequest.md
   - docs/models/operations/loginuserrequest.md
   - docs/models/operations/loginuserresponse.md
+  - docs/models/operations/saynewrandomresponsebody.md
   - docs/models/operations/sayrandomresponsebody.md
   - docs/models/operations/status.md
   - docs/models/operations/updateuserrequest.md
@@ -144,6 +145,7 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/operations/mcptest.go
   - src/__tests__/mockserver/internal/sdk/models/operations/petsstoremonday.go
   - src/__tests__/mockserver/internal/sdk/models/operations/placeorder.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/saynewrandom.go
   - src/__tests__/mockserver/internal/sdk/models/operations/sayrandom.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
   - src/__tests__/mockserver/internal/sdk/models/operations/uploadfile.go
@@ -191,6 +193,7 @@ generatedFiles:
   - src/funcs/userGetUserByName.ts
   - src/funcs/userLoginUser.ts
   - src/funcs/userLogoutUser.ts
+  - src/funcs/userSayNewRandom.ts
   - src/funcs/userSayRandom.ts
   - src/funcs/userUpdateUser.ts
   - src/hooks/hooks.ts
@@ -242,6 +245,7 @@ generatedFiles:
   - src/mcp-server/tools/userGetUserByName.ts
   - src/mcp-server/tools/userLoginUser.ts
   - src/mcp-server/tools/userLogoutUser.ts
+  - src/mcp-server/tools/userSayNewRandom.ts
   - src/mcp-server/tools/userSayRandom.ts
   - src/mcp-server/tools/userUpdateUser.ts
   - src/models/components/apiresponse.ts
@@ -271,6 +275,7 @@ generatedFiles:
   - src/models/operations/getuserbyname.ts
   - src/models/operations/index.ts
   - src/models/operations/loginuser.ts
+  - src/models/operations/saynewrandom.ts
   - src/models/operations/sayrandom.ts
   - src/models/operations/updateuser.ts
   - src/models/operations/uploadfile.ts
@@ -485,6 +490,13 @@ examples:
           application/json: {"status": 400, "error": "Bad request"}
         "401":
           application/json: {"status": 401, "error": "Unauthorized"}
+        "404":
+          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
+  sayNewRandom:
+    speakeasy-default-say-new-random:
+      responses:
+        "200":
+          application/json: {"message": "Hello, world!"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
 examplesVersion: 1.0.2

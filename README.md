@@ -241,6 +241,7 @@ run();
 * [loginUser](docs/sdks/user/README.md#loginuser) - Logs user into the system
 * [logoutUser](docs/sdks/user/README.md#logoutuser) - Logs out current logged in user session
 * [sayRandom](docs/sdks/user/README.md#sayrandom) - Say random
+* [sayNewRandom](docs/sdks/user/README.md#saynewrandom) - Say new random
 * [getUserByName](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 * [updateUser](docs/sdks/user/README.md#updateuser) - Update user
 * [deleteUser](docs/sdks/user/README.md#deleteuser) - Delete user
@@ -280,6 +281,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`userGetUserByName`](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 - [`userLoginUser`](docs/sdks/user/README.md#loginuser) - Logs user into the system
 - [`userLogoutUser`](docs/sdks/user/README.md#logoutuser) - Logs out current logged in user session
+- [`userSayNewRandom`](docs/sdks/user/README.md#saynewrandom) - Say new random
 - [`userSayRandom`](docs/sdks/user/README.md#sayrandom) - Say random
 - [`userUpdateUser`](docs/sdks/user/README.md#updateuser) - Update user
 
@@ -482,9 +484,9 @@ run();
 
 
 **Inherit from [`PetstoreError`](./src/models/errors/petstoreerror.ts)**:
-* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 13 of 19 methods.*
-* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 12 of 19 methods.*
-* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 10 of 19 methods.*
+* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 14 of 20 methods.*
+* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 12 of 20 methods.*
+* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 10 of 20 methods.*
 * [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
 
 </details>
