@@ -1,0 +1,16 @@
+POST /store/order HTTP/1.1
+Host: localhost:18080
+Accept: application/json
+Accept-Encoding: gzip, deflate
+Accept-Language: *
+Api_key: <YOUR_API_KEY_HERE>
+Connection: keep-alive
+Content-Length: 57
+Content-Type: application/json
+Cookie: 
+Sec-Fetch-Mode: cors
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.23 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: 843AD3DB-F936-0616-8457-75F29767202A
+X-Speakeasy-Test-Name: placeOrder
+
+{"id":10,"petId":198772,"quantity":7,"status":"approved"}
