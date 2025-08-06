@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 455b75e0d1a6f8a38872cd91afc3b7ae
+  docChecksum: 2e2584065989342802566b7327f091ad
   docVersion: 4.0.0
   speakeasyVersion: 1.519.0
   generationVersion: 2.552.1
-  releaseVersion: 5.2.0-alpha.27
-  configChecksum: e2d17836bb00d9878778c35a7ef5b4e0
+  releaseVersion: 5.2.0-alpha.29
+  configChecksum: 30934bb5157f4fb995a10f23f9e433dc
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -91,7 +91,7 @@ generatedFiles:
   - src/__tests__/mockserver/internal/handler/pathdeletepetpetid.go
   - src/__tests__/mockserver/internal/handler/pathdeletestoreorderorderid.go
   - src/__tests__/mockserver/internal/handler/pathdeleteuserusername.go
-  - src/__tests__/mockserver/internal/handler/pathgethi.go
+  - src/__tests__/mockserver/internal/handler/pathgethello.go
   - src/__tests__/mockserver/internal/handler/pathgetpetfindbystatus.go
   - src/__tests__/mockserver/internal/handler/pathgetpetfindbytags.go
   - src/__tests__/mockserver/internal/handler/pathgetpetpetid.go

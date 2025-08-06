@@ -7,7 +7,7 @@ Api_key: <YOUR_API_KEY_HERE>
 Connection: keep-alive
 Cookie: 
 Sec-Fetch-Mode: cors
-User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.27 2.552.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: 8D31510F-C88A-BBD5-B22A-8A5E465CCA60
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.29 2.552.1 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: 5B886B2B-1B2E-2EBC-F254-1A04F333FA76
 X-Speakeasy-Test-Name: deletePet
 
