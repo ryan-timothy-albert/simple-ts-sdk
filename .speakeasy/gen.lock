@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 9a57f0bff7c8c00f15e6c09ce5ff7544
+  docChecksum: 6b3baacaeb9e2c362acbc9f76be1de3f
   docVersion: 4.0.0
-  speakeasyVersion: 1.598.2
-  generationVersion: 2.674.3
-  releaseVersion: 5.2.0-alpha.39
-  configChecksum: ac83d49f5f6ea83894078803e35dfa70
+  speakeasyVersion: 1.599.0
+  generationVersion: 2.675.0
+  releaseVersion: 5.2.0-alpha.40
+  configChecksum: c5f1919fc47295af0801858d7a9434ec
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -61,7 +61,6 @@ generatedFiles:
   - docs/models/operations/getpetbyidsrequest.md
   - docs/models/operations/getuserbynamerequest.md
   - docs/models/operations/saynewrandomresponsebody.md
-  - docs/models/operations/sayrandomresponsebody.md
   - docs/models/operations/status.md
   - docs/models/operations/updateuserrequest.md
   - docs/models/operations/uploadfilerequest.md
@@ -104,7 +103,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/handler/pathpostpet.go
   - src/__tests__/mockserver/internal/handler/pathpostpetpetiduploadimage.go
   - src/__tests__/mockserver/internal/handler/pathpoststoreorder.go
-  - src/__tests__/mockserver/internal/handler/pathpostuser.go
   - src/__tests__/mockserver/internal/handler/pathpostusercreatewithlist.go
   - src/__tests__/mockserver/internal/handler/pathputpet.go
   - src/__tests__/mockserver/internal/handler/pathputuserusername.go
@@ -125,7 +123,7 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/components/security.go
   - src/__tests__/mockserver/internal/sdk/models/components/tag.go
   - src/__tests__/mockserver/internal/sdk/models/components/user.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/createuser.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/createrahul.go
   - src/__tests__/mockserver/internal/sdk/models/operations/createuserswithlistinput.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deleteorder.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deletepet.go
@@ -140,7 +138,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/operations/petsstoremonday.go
   - src/__tests__/mockserver/internal/sdk/models/operations/placeorder.go
   - src/__tests__/mockserver/internal/sdk/models/operations/saynewrandom.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/sayrandom.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
   - src/__tests__/mockserver/internal/sdk/models/operations/uploadfile.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorinvalidinput.go
@@ -181,12 +178,11 @@ generatedFiles:
   - src/funcs/storeGetInventory.ts
   - src/funcs/storeGetOrderById.ts
   - src/funcs/storePlaceOrder.ts
-  - src/funcs/userCreateUser.ts
+  - src/funcs/userCreateRahul.ts
   - src/funcs/userCreateUsersWithListInput.ts
   - src/funcs/userDeleteUser.ts
   - src/funcs/userGetUserByName.ts
   - src/funcs/userSayNewRandom.ts
-  - src/funcs/userSayRandom.ts
   - src/funcs/userUpdateUser.ts
   - src/hooks/hooks.ts
   - src/hooks/index.ts
@@ -231,12 +227,11 @@ generatedFiles:
   - src/mcp-server/tools/storeGetInventory.ts
   - src/mcp-server/tools/storeGetOrderById.ts
   - src/mcp-server/tools/storePlaceOrder.ts
-  - src/mcp-server/tools/userCreateUser.ts
+  - src/mcp-server/tools/userCreateRahul.ts
   - src/mcp-server/tools/userCreateUsersWithListInput.ts
   - src/mcp-server/tools/userDeleteUser.ts
   - src/mcp-server/tools/userGetUserByName.ts
   - src/mcp-server/tools/userSayNewRandom.ts
-  - src/mcp-server/tools/userSayRandom.ts
   - src/mcp-server/tools/userUpdateUser.ts
   - src/models/components/apiresponse.ts
   - src/models/components/category.ts
@@ -265,7 +260,6 @@ generatedFiles:
   - src/models/operations/getuserbyname.ts
   - src/models/operations/index.ts
   - src/models/operations/saynewrandom.ts
-  - src/models/operations/sayrandom.ts
   - src/models/operations/updateuser.ts
   - src/models/operations/uploadfile.ts
   - src/sdk/index.ts
@@ -488,6 +482,13 @@ examples:
           application/json: {"message": "Hello, world!"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
+  createRahul:
+    speakeasy-default-create-rahul:
+      requestBody:
+        application/json: {"id": 10, "username": "theUser", "firstName": "John", "lastName": "James", "email": "john@email.com", "password": "12345", "phone": "12345", "userStatus": 1}
+      responses:
+        "200":
+          application/json: {"id": 10, "username": "theUser", "firstName": "John", "lastName": "James", "email": "john@email.com", "password": "12345", "phone": "12345", "userStatus": 1}
 examplesVersion: 1.0.2
 generatedTests:
   petsStoreMonday: "2025-02-13T16:15:08-08:00"
@@ -511,3 +512,8 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
+releaseNotes: |
+  ## Typescript SDK Changes Detected:
+  * petstore.user.createRahul(): **Added**
+  * petstore.user.createUser(): **Deleted**
+  * petstore.user.sayRandom(): **Deleted**

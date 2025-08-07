@@ -6,36 +6,10 @@ import { assert, expect, it, test } from "vitest";
 import { Petstore } from "../index.js";
 import { createTestHTTPClient } from "./testclient.js";
 
-test("User Create User", async () => {
-  const testHttpClient = createTestHTTPClient("createUser");
-
-  const petstore = new Petstore({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-    apiKey: "<YOUR_API_KEY_HERE>",
-  });
-
-  const result = await petstore.user.createUser({
-    id: 10,
-    username: "theUser",
-    firstName: "John",
-    lastName: "James",
-    email: "john@email.com",
-    password: "12345",
-    phone: "12345",
-    userStatus: 1,
-  });
-  expect(result).toBeDefined();
-  expect(result).toEqual({
-    id: 10,
-    username: "theUser",
-    firstName: "John",
-    lastName: "James",
-    email: "john@email.com",
-    password: "12345",
-    phone: "12345",
-    userStatus: 1,
-  });
+it.skip("User Create User", async () => {
+  assert.fail(
+    "incomplete test found please make sure to address the following errors: [`workflow step createUser.test referencing operation createUser not found in document`]",
+  );
 });
 
 test("User Create Users With List Input", async () => {
