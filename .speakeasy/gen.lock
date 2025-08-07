@@ -3,10 +3,10 @@ id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
   docChecksum: 9a57f0bff7c8c00f15e6c09ce5ff7544
   docVersion: 4.0.0
-  speakeasyVersion: 1.599.0
-  generationVersion: 2.675.0
-  releaseVersion: 5.2.0-alpha.38
-  configChecksum: ef018180807579ed7f712c42d059a04b
+  speakeasyVersion: 1.598.2
+  generationVersion: 2.674.3
+  releaseVersion: 5.2.0-alpha.39
+  configChecksum: ac83d49f5f6ea83894078803e35dfa70
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -511,7 +511,3 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
-releaseNotes: |
-  ## Typescript SDK Changes Detected:
-  * petstore.user.loginUser(): **Deleted**
-  * petstore.user.logoutUser(): **Deleted**
