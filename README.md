@@ -236,9 +236,8 @@ run();
 
 ### [user](docs/sdks/user/README.md)
 
-* [createUser](docs/sdks/user/README.md#createuser) - Create user
+* [createRahul](docs/sdks/user/README.md#createrahul) - Create rahul
 * [createUsersWithListInput](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
-* [sayRandom](docs/sdks/user/README.md#sayrandom) - Say random
 * [sayNewRandom](docs/sdks/user/README.md#saynewrandom) - Say new random
 * [getUserByName](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 * [updateUser](docs/sdks/user/README.md#updateuser) - Update user
@@ -273,12 +272,11 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`storeGetInventory`](docs/sdks/store/README.md#getinventory) - Returns pet inventories by status
 - [`storeGetOrderById`](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
 - [`storePlaceOrder`](docs/sdks/store/README.md#placeorder) - Place an order for a pet
-- [`userCreateUser`](docs/sdks/user/README.md#createuser) - Create user
+- [`userCreateRahul`](docs/sdks/user/README.md#createrahul) - Create rahul
 - [`userCreateUsersWithListInput`](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
 - [`userDeleteUser`](docs/sdks/user/README.md#deleteuser) - Delete user
 - [`userGetUserByName`](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 - [`userSayNewRandom`](docs/sdks/user/README.md#saynewrandom) - Say new random
-- [`userSayRandom`](docs/sdks/user/README.md#sayrandom) - Say random
 - [`userUpdateUser`](docs/sdks/user/README.md#updateuser) - Update user
 
 </details>
@@ -480,9 +478,9 @@ run();
 
 
 **Inherit from [`PetstoreError`](./src/models/errors/petstoreerror.ts)**:
-* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 13 of 18 methods.*
-* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 11 of 18 methods.*
-* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 9 of 18 methods.*
+* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 12 of 17 methods.*
+* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 11 of 17 methods.*
+* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 9 of 17 methods.*
 * [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
 
 </details>

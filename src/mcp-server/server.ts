@@ -24,12 +24,11 @@ import { tool$storeDeleteOrder } from "./tools/storeDeleteOrder.js";
 import { tool$storeGetInventory } from "./tools/storeGetInventory.js";
 import { tool$storeGetOrderById } from "./tools/storeGetOrderById.js";
 import { tool$storePlaceOrder } from "./tools/storePlaceOrder.js";
-import { tool$userCreateUser } from "./tools/userCreateUser.js";
+import { tool$userCreateRahul } from "./tools/userCreateRahul.js";
 import { tool$userCreateUsersWithListInput } from "./tools/userCreateUsersWithListInput.js";
 import { tool$userDeleteUser } from "./tools/userDeleteUser.js";
 import { tool$userGetUserByName } from "./tools/userGetUserByName.js";
 import { tool$userSayNewRandom } from "./tools/userSayNewRandom.js";
-import { tool$userSayRandom } from "./tools/userSayRandom.js";
 import { tool$userUpdateUser } from "./tools/userUpdateUser.js";
 
 export function createMCPServer(deps: {
@@ -43,7 +42,7 @@ export function createMCPServer(deps: {
 }) {
   const server = new McpServer({
     name: "Petstore",
-    version: "5.2.0-alpha.39",
+    version: "5.2.0-alpha.40",
   });
 
   const client = new PetstoreCore({
@@ -85,9 +84,8 @@ export function createMCPServer(deps: {
   tool(tool$storePlaceOrder);
   tool(tool$storeGetOrderById);
   tool(tool$storeDeleteOrder);
-  tool(tool$userCreateUser);
+  tool(tool$userCreateRahul);
   tool(tool$userCreateUsersWithListInput);
-  tool(tool$userSayRandom);
   tool(tool$userSayNewRandom);
   tool(tool$userGetUserByName);
   tool(tool$userUpdateUser);
