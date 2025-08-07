@@ -72,31 +72,16 @@ test("User Create Users With List Input", async () => {
   });
 });
 
-test("User Login User", async () => {
-  const testHttpClient = createTestHTTPClient("loginUser");
-
-  const petstore = new Petstore({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-    apiKey: "<YOUR_API_KEY_HERE>",
-  });
-
-  const result = await petstore.user.loginUser({});
-  expect(result).toBeDefined();
-  expect(result.result).toBeDefined();
-  expect(result.result).toEqual("<value>");
+it.skip("User Login User", async () => {
+  assert.fail(
+    "incomplete test found please make sure to address the following errors: [`workflow step loginUser.test referencing operation loginUser not found in document`]",
+  );
 });
 
-test("User Logout User", async () => {
-  const testHttpClient = createTestHTTPClient("logoutUser");
-
-  const petstore = new Petstore({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-    apiKey: "<YOUR_API_KEY_HERE>",
-  });
-
-  await petstore.user.logoutUser();
+it.skip("User Logout User", async () => {
+  assert.fail(
+    "incomplete test found please make sure to address the following errors: [`workflow step logoutUser.test referencing operation logoutUser not found in document`]",
+  );
 });
 
 test("User Get User By Name", async () => {

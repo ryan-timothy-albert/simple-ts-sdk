@@ -6,8 +6,6 @@ import { userCreateUser } from "../funcs/userCreateUser.js";
 import { userCreateUsersWithListInput } from "../funcs/userCreateUsersWithListInput.js";
 import { userDeleteUser } from "../funcs/userDeleteUser.js";
 import { userGetUserByName } from "../funcs/userGetUserByName.js";
-import { userLoginUser } from "../funcs/userLoginUser.js";
-import { userLogoutUser } from "../funcs/userLogoutUser.js";
 import { userSayNewRandom } from "../funcs/userSayNewRandom.js";
 import { userSayRandom } from "../funcs/userSayRandom.js";
 import { userUpdateUser } from "../funcs/userUpdateUser.js";
@@ -47,32 +45,6 @@ export class User extends ClientSDK {
     return unwrapAsync(userCreateUsersWithListInput(
       this,
       request,
-      options,
-    ));
-  }
-
-  /**
-   * Logs user into the system
-   */
-  async loginUser(
-    request: operations.LoginUserRequest,
-    options?: RequestOptions,
-  ): Promise<operations.LoginUserResponse> {
-    return unwrapAsync(userLoginUser(
-      this,
-      request,
-      options,
-    ));
-  }
-
-  /**
-   * Logs out current logged in user session
-   */
-  async logoutUser(
-    options?: RequestOptions,
-  ): Promise<void> {
-    return unwrapAsync(userLogoutUser(
-      this,
       options,
     ));
   }
