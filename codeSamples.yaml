@@ -93,18 +93,6 @@ actions:
         - "lang": "typescript"
           "label": "Typescript"
           "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.createUsersWithListInput([\n    {\n      id: 10,\n      username: \"theUser\",\n      firstName: \"John\",\n      lastName: \"James\",\n      email: \"john@email.com\",\n      password: \"12345\",\n      phone: \"12345\",\n      userStatus: 1,\n    },\n  ]);\n\n  console.log(result);\n}\n\nrun();"
-  - target: $["paths"]["/user/login"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "typescript"
-          "label": "Typescript"
-          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.loginUser({});\n\n  console.log(result);\n}\n\nrun();"
-  - target: $["paths"]["/user/logout"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "typescript"
-          "label": "Typescript"
-          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  await petstore.user.logoutUser();\n\n\n}\n\nrun();"
   - target: $["paths"]["/user/{username}"]["delete"]
     update:
       "x-codeSamples":
