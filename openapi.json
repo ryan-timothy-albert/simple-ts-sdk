@@ -541,16 +541,16 @@
                 }
             }
         },
-        "/user": {
+        "/rahul": {
             "post": {
                 "tags": [
                     "user"
                 ],
-                "summary": "Create user",
+                "summary": "Create rahul",
                 "description": "This can only be done by the logged in user.",
-                "operationId": "createUser",
+                "operationId": "createRahul",
                 "requestBody": {
-                    "description": "Created user object",
+                    "description": "Created rahul object",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -603,37 +603,6 @@
                                 }
                             }
                         }
-                    }
-                }
-            }
-        },
-        "/random": {
-            "get": {
-                "tags": [
-                    "user"
-                ],
-                "summary": "Say random",
-                "description": "Returns a random message",
-                "operationId": "sayRandom",
-                "responses": {
-                    "200": {
-                        "description": "successful operation",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Hello, world!"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "$ref": "#/components/responses/NotFound"
                     }
                 }
             }
