@@ -2,7 +2,7 @@
 
 {
   "name": "meep-moop",
-  "version": "5.2.0-alpha.40",
+  "version": "5.2.0-alpha.42",
   "exports": {
     ".": "./src/index.ts",    
     "./models/errors": "./src/models/errors/index.ts",    
