@@ -30,6 +30,7 @@ import { tool$userDeleteUser } from "./tools/userDeleteUser.js";
 import { tool$userGetUserByName } from "./tools/userGetUserByName.js";
 import { tool$userLoginUser } from "./tools/userLoginUser.js";
 import { tool$userLogoutUser } from "./tools/userLogoutUser.js";
+import { tool$userSayNewRandom } from "./tools/userSayNewRandom.js";
 import { tool$userSayRandom } from "./tools/userSayRandom.js";
 import { tool$userUpdateUser } from "./tools/userUpdateUser.js";
 
@@ -44,7 +45,7 @@ export function createMCPServer(deps: {
 }) {
   const server = new McpServer({
     name: "Petstore",
-    version: "5.2.0-alpha.36",
+    version: "5.2.0-alpha.37",
   });
 
   const client = new PetstoreCore({
@@ -91,6 +92,7 @@ export function createMCPServer(deps: {
   tool(tool$userLoginUser);
   tool(tool$userLogoutUser);
   tool(tool$userSayRandom);
+  tool(tool$userSayNewRandom);
   tool(tool$userGetUserByName);
   tool(tool$userUpdateUser);
   tool(tool$userDeleteUser);
