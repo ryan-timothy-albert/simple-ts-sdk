@@ -11,6 +11,7 @@ export * from "./getorderbyid.js";
 export * from "./getpetbyids.js";
 export * from "./getuserbyname.js";
 export * from "./loginuser.js";
+export * from "./saynewrandom.js";
 export * from "./sayrandom.js";
 export * from "./updateuser.js";
 export * from "./uploadfile.js";
