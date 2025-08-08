@@ -282,7 +282,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Plan"
+                                    "$ref": "#/components/schemas/Pet"
                                 }
                             }
                         }
@@ -332,7 +332,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Plan"
+                                    "$ref": "#/components/schemas/Pet"
                                 }
                             }
                         }
