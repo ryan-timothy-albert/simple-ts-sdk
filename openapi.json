@@ -766,10 +766,9 @@
                 ],
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 10
+                    "breed":{
+                        "type": "string",
+                        "example": "something random"
                     },
                     "name": {
                         "type": "string",
