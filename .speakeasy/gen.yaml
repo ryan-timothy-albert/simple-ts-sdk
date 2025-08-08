@@ -24,7 +24,7 @@ generation:
     generateNewTests: false
     skipResponseBodyAssertions: false
 typescript:
-  version: 5.2.0-alpha.48
+  version: 5.2.0-alpha.51
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -36,7 +36,7 @@ typescript:
   constFieldsAlwaysOptional: true
   defaultErrorName: SDKError
   enableCustomCodeRegions: false
-  enableMCPServer: true
+  enableMCPServer: false
   enableReactQuery: false
   enumFormat: union
   flattenGlobalSecurity: true

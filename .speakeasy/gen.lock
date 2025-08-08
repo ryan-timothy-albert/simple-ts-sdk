@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: ca9260c23e94faa6fca2ff074bd4f33c
+  docChecksum: 268ac6991a1ecc3b50045cba9169d10a
   docVersion: 4.0.0
   speakeasyVersion: 1.599.0
   generationVersion: 2.675.0
-  releaseVersion: 5.2.0-alpha.48
-  configChecksum: 56af3f9ed3e24d5d2c5e9109900cfb22
+  releaseVersion: 5.2.0-alpha.51
+  configChecksum: 54454e9ee20ff56b4868b3878ff7f51d
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -23,7 +23,6 @@ features:
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.5
-    mcpServer: 0.9.3
     mockServer: 0.1.1
     responseFormat: 0.2.3
     retries: 2.83.0
@@ -97,7 +96,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/handler/pathgetstoreorderorderid.go
   - src/__tests__/mockserver/internal/handler/pathgetuserusername.go
   - src/__tests__/mockserver/internal/handler/pathpostpet.go
-  - src/__tests__/mockserver/internal/handler/pathpoststoreorder.go
   - src/__tests__/mockserver/internal/handler/pathpostusercreatewithlist.go
   - src/__tests__/mockserver/internal/handler/pathputpet.go
   - src/__tests__/mockserver/internal/handler/pathputuserusername.go
@@ -129,7 +127,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
   - src/__tests__/mockserver/internal/sdk/models/operations/mcptest.go
   - src/__tests__/mockserver/internal/sdk/models/operations/petsstoremonday.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/placeorder.go
   - src/__tests__/mockserver/internal/sdk/models/operations/saynewrandom.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorinvalidinput.go
@@ -167,7 +164,6 @@ generatedFiles:
   - src/funcs/petPetsStoreMonday.ts
   - src/funcs/storeDeleteOrder.ts
   - src/funcs/storeGetOrderById.ts
-  - src/funcs/storePlaceOrder.ts
   - src/funcs/userCreateRahul.ts
   - src/funcs/userCreateUsersWithListInput.ts
   - src/funcs/userDeleteUser.ts
@@ -193,34 +189,6 @@ generatedFiles:
   - src/lib/sdks.ts
   - src/lib/security.ts
   - src/lib/url.ts
-  - src/mcp-server/build.mts
-  - src/mcp-server/cli.ts
-  - src/mcp-server/cli/start/command.ts
-  - src/mcp-server/cli/start/impl.ts
-  - src/mcp-server/console-logger.ts
-  - src/mcp-server/extensions.ts
-  - src/mcp-server/mcp-server.ts
-  - src/mcp-server/prompts.ts
-  - src/mcp-server/resources.ts
-  - src/mcp-server/scopes.ts
-  - src/mcp-server/server.ts
-  - src/mcp-server/shared.ts
-  - src/mcp-server/tools.ts
-  - src/mcp-server/tools/petDeletePet.ts
-  - src/mcp-server/tools/petFindPetsByStatusTypes.ts
-  - src/mcp-server/tools/petFindPetsByTags.ts
-  - src/mcp-server/tools/petGetPetByIDS.ts
-  - src/mcp-server/tools/petMCPTest.ts
-  - src/mcp-server/tools/petPetsStoreMonday.ts
-  - src/mcp-server/tools/storeDeleteOrder.ts
-  - src/mcp-server/tools/storeGetOrderById.ts
-  - src/mcp-server/tools/storePlaceOrder.ts
-  - src/mcp-server/tools/userCreateRahul.ts
-  - src/mcp-server/tools/userCreateUsersWithListInput.ts
-  - src/mcp-server/tools/userDeleteUser.ts
-  - src/mcp-server/tools/userGetUserByName.ts
-  - src/mcp-server/tools/userSayNewRandom.ts
-  - src/mcp-server/tools/userUpdateUser.ts
   - src/models/components/category.ts
   - src/models/components/index.ts
   - src/models/components/order.ts
@@ -501,3 +469,4 @@ generatedTests:
 releaseNotes: |
   ## Typescript SDK Changes Detected:
   * petstore.store.getInventory(): **Deleted**
+  * petstore.store.placeOrder(): **Deleted**
