@@ -4,11 +4,13 @@
 
 export * from "./deleteorder.js";
 export * from "./deletepet.js";
+export * from "./deleteplan.js";
 export * from "./deleteuser.js";
 export * from "./findpetsbystatustypes.js";
 export * from "./findpetsbytags.js";
 export * from "./getorderbyid.js";
 export * from "./getpetbyids.js";
+export * from "./getplanbyids.js";
 export * from "./getuserbyname.js";
 export * from "./saynewrandom.js";
 export * from "./updateuser.js";

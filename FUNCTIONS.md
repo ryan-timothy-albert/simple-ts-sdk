@@ -20,7 +20,7 @@ specific category of applications.
 
 ```typescript
 import { PetstoreCore } from "meep-moop/core.js";
-import { petPetsStoreMonday } from "meep-moop/funcs/petPetsStoreMonday.js";
+import { petFindPetsByStatusTypes } from "meep-moop/funcs/petFindPetsByStatusTypes.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -29,23 +29,12 @@ const petstore = new PetstoreCore({
 });
 
 async function run() {
-  const res = await petPetsStoreMonday(petstore, {
-    id: 10,
-    name: "doggie",
-    category: {
-      id: 1,
-      name: "Dogs",
-    },
-    photoUrls: [
-      "<value 1>",
-      "<value 2>",
-    ],
-  });
+  const res = await petFindPetsByStatusTypes(petstore, {});
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("petPetsStoreMonday failed:", res.error);
+    console.log("petFindPetsByStatusTypes failed:", res.error);
   }
 }
 
