@@ -7,18 +7,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.petsStoreMonday({
-    id: 10,
-    name: "doggie",
-    category: {
-      id: 1,
-      name: "Dogs",
-    },
-    photoUrls: [
-      "<value 1>",
-      "<value 2>",
-    ],
-  });
+  const result = await petstore.pet.findPetsByStatusTypes({});
 
   console.log(result);
 }
