@@ -6,48 +6,12 @@ import { petDeletePet } from "../funcs/petDeletePet.js";
 import { petFindPetsByStatusTypes } from "../funcs/petFindPetsByStatusTypes.js";
 import { petFindPetsByTags } from "../funcs/petFindPetsByTags.js";
 import { petGetPetByIDS } from "../funcs/petGetPetByIDS.js";
-import { petMCPTest } from "../funcs/petMCPTest.js";
-import { petPetsStoreMonday } from "../funcs/petPetsStoreMonday.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Pet extends ClientSDK {
-  /**
-   * Update an existing pet
-   *
-   * @remarks
-   * Update an existing pet by Id
-   */
-  async petsStoreMonday(
-    request: components.Pet,
-    options?: RequestOptions,
-  ): Promise<components.Pet> {
-    return unwrapAsync(petPetsStoreMonday(
-      this,
-      request,
-      options,
-    ));
-  }
-
-  /**
-   * Add a new pet to the store
-   *
-   * @remarks
-   * Add a new pet to the store
-   */
-  async mcpTest(
-    request: components.Pet,
-    options?: RequestOptions,
-  ): Promise<components.Pet> {
-    return unwrapAsync(petMCPTest(
-      this,
-      request,
-      options,
-    ));
-  }
-
   /**
    * Finds Pets by status
    *

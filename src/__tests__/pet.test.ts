@@ -6,39 +6,10 @@ import { assert, expect, it, test } from "vitest";
 import { Petstore } from "../index.js";
 import { createTestHTTPClient } from "./testclient.js";
 
-test("Pet Pets Store Monday", async () => {
-  const testHttpClient = createTestHTTPClient("petsStoreMonday");
-
-  const petstore = new Petstore({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-    apiKey: "<YOUR_API_KEY_HERE>",
-  });
-
-  const result = await petstore.pet.petsStoreMonday({
-    id: 10,
-    name: "doggie",
-    category: {
-      id: 1,
-      name: "Dogs",
-    },
-    photoUrls: [
-      "<value>",
-    ],
-  });
-  expect(result).toBeDefined();
-  expect(result).toEqual({
-    id: 10,
-    name: "doggie",
-    category: {
-      id: 1,
-      name: "Dogs",
-    },
-    photoUrls: [
-      "<value>",
-      "<value>",
-    ],
-  });
+it.skip("Pet Pets Store Monday", async () => {
+  assert.fail(
+    "incomplete test found please make sure to address the following errors: [`workflow step petsStoreMonday.test referencing operation petsStoreMonday not found in document`]",
+  );
 });
 
 it.skip("Pet My New Test", async () => {
@@ -192,38 +163,8 @@ it.skip("Pet Mcp", async () => {
   );
 });
 
-test("Pet Mcp Test", async () => {
-  const testHttpClient = createTestHTTPClient("MCPTest");
-
-  const petstore = new Petstore({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-    apiKey: "<YOUR_API_KEY_HERE>",
-  });
-
-  const result = await petstore.pet.mcpTest({
-    id: 10,
-    name: "doggie",
-    category: {
-      id: 1,
-      name: "Dogs",
-    },
-    photoUrls: [
-      "<value>",
-      "<value>",
-      "<value>",
-    ],
-  });
-  expect(result).toBeDefined();
-  expect(result).toEqual({
-    id: 10,
-    name: "doggie",
-    category: {
-      id: 1,
-      name: "Dogs",
-    },
-    photoUrls: [
-      "<value>",
-    ],
-  });
+it.skip("Pet Mcp Test", async () => {
+  assert.fail(
+    "incomplete test found please make sure to address the following errors: [`workflow step MCPTest.test referencing operation MCPTest not found in document`]",
+  );
 });
