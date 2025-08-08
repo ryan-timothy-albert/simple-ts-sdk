@@ -180,20 +180,10 @@ test("Pet Delete Pet", async () => {
   });
 });
 
-test("Pet Upload File", async () => {
-  const testHttpClient = createTestHTTPClient("uploadFile");
-
-  const petstore = new Petstore({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-    apiKey: "<YOUR_API_KEY_HERE>",
-  });
-
-  const result = await petstore.pet.uploadFile({
-    petId: 565380,
-  });
-  expect(result).toBeDefined();
-  expect(result).toEqual({});
+it.skip("Pet Upload File", async () => {
+  assert.fail(
+    "incomplete test found please make sure to address the following errors: [`workflow step uploadFile.test referencing operation uploadFile not found in document`]",
+  );
 });
 
 it.skip("Pet Mcp", async () => {

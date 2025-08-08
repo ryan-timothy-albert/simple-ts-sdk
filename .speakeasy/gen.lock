@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 6b3baacaeb9e2c362acbc9f76be1de3f
+  docChecksum: b1010e980c068973abf7fda66c6e6cd1
   docVersion: 4.0.0
-  speakeasyVersion: 1.598.2
-  generationVersion: 2.674.3
-  releaseVersion: 5.2.0-alpha.43
-  configChecksum: d812e62652fbff789480e9827dd6a8a4
+  speakeasyVersion: 1.599.0
+  generationVersion: 2.675.0
+  releaseVersion: 5.2.0-alpha.44
+  configChecksum: 33fe2f3ea122b9c5a607d644e72af040
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -29,7 +29,6 @@ features:
     retries: 2.83.0
     sdkHooks: 0.3.0
     tests: 0.17.1
-    uploadStreams: 0.1.0
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
@@ -40,7 +39,6 @@ generatedFiles:
   - RUNTIMES.md
   - USAGE.md
   - docs/lib/utils/retryconfig.md
-  - docs/models/components/apiresponse.md
   - docs/models/components/category.md
   - docs/models/components/order.md
   - docs/models/components/orderstatus.md
@@ -63,7 +61,6 @@ generatedFiles:
   - docs/models/operations/saynewrandomresponsebody.md
   - docs/models/operations/status.md
   - docs/models/operations/updateuserrequest.md
-  - docs/models/operations/uploadfilerequest.md
   - docs/sdks/pet/README.md
   - docs/sdks/petstore/README.md
   - docs/sdks/store/README.md
@@ -101,7 +98,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/handler/pathgetstoreorderorderid.go
   - src/__tests__/mockserver/internal/handler/pathgetuserusername.go
   - src/__tests__/mockserver/internal/handler/pathpostpet.go
-  - src/__tests__/mockserver/internal/handler/pathpostpetpetiduploadimage.go
   - src/__tests__/mockserver/internal/handler/pathpoststoreorder.go
   - src/__tests__/mockserver/internal/handler/pathpostusercreatewithlist.go
   - src/__tests__/mockserver/internal/handler/pathputpet.go
@@ -115,7 +111,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/logging/logger.go
   - src/__tests__/mockserver/internal/logging/oas_operation.go
   - src/__tests__/mockserver/internal/logging/oas_operation_call.go
-  - src/__tests__/mockserver/internal/sdk/models/components/apiresponse.go
   - src/__tests__/mockserver/internal/sdk/models/components/category.go
   - src/__tests__/mockserver/internal/sdk/models/components/httpmetadata.go
   - src/__tests__/mockserver/internal/sdk/models/components/order.go
@@ -139,7 +134,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/operations/placeorder.go
   - src/__tests__/mockserver/internal/sdk/models/operations/saynewrandom.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/uploadfile.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorinvalidinput.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrornotfound.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorunauthorized.go
@@ -173,7 +167,6 @@ generatedFiles:
   - src/funcs/petGetPetByIDS.ts
   - src/funcs/petMCPTest.ts
   - src/funcs/petPetsStoreMonday.ts
-  - src/funcs/petUploadFile.ts
   - src/funcs/storeDeleteOrder.ts
   - src/funcs/storeGetInventory.ts
   - src/funcs/storeGetOrderById.ts
@@ -222,7 +215,6 @@ generatedFiles:
   - src/mcp-server/tools/petGetPetByIDS.ts
   - src/mcp-server/tools/petMCPTest.ts
   - src/mcp-server/tools/petPetsStoreMonday.ts
-  - src/mcp-server/tools/petUploadFile.ts
   - src/mcp-server/tools/storeDeleteOrder.ts
   - src/mcp-server/tools/storeGetInventory.ts
   - src/mcp-server/tools/storeGetOrderById.ts
@@ -233,7 +225,6 @@ generatedFiles:
   - src/mcp-server/tools/userGetUserByName.ts
   - src/mcp-server/tools/userSayNewRandom.ts
   - src/mcp-server/tools/userUpdateUser.ts
-  - src/models/components/apiresponse.ts
   - src/models/components/category.ts
   - src/models/components/index.ts
   - src/models/components/order.ts
@@ -261,7 +252,6 @@ generatedFiles:
   - src/models/operations/index.ts
   - src/models/operations/saynewrandom.ts
   - src/models/operations/updateuser.ts
-  - src/models/operations/uploadfile.ts
   - src/sdk/index.ts
   - src/sdk/pet.ts
   - src/sdk/sdk.ts
@@ -512,3 +502,6 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
+releaseNotes: |
+  ## Typescript SDK Changes Detected:
+  * petstore.pet.uploadFile(): **Deleted**
