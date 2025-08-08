@@ -3,47 +3,13 @@
  */
 
 import { storeDeleteOrder } from "../funcs/storeDeleteOrder.js";
-import { storeGetInventory } from "../funcs/storeGetInventory.js";
 import { storeGetOrderById } from "../funcs/storeGetOrderById.js";
-import { storePlaceOrder } from "../funcs/storePlaceOrder.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Store extends ClientSDK {
-  /**
-   * Returns pet inventories by status
-   *
-   * @remarks
-   * Returns a map of status codes to quantities
-   */
-  async getInventory(
-    options?: RequestOptions,
-  ): Promise<{ [k: string]: number }> {
-    return unwrapAsync(storeGetInventory(
-      this,
-      options,
-    ));
-  }
-
-  /**
-   * Place an order for a pet
-   *
-   * @remarks
-   * Place a new order in the store
-   */
-  async placeOrder(
-    request?: components.Order | undefined,
-    options?: RequestOptions,
-  ): Promise<components.Order> {
-    return unwrapAsync(storePlaceOrder(
-      this,
-      request,
-      options,
-    ));
-  }
-
   /**
    * Find purchase order by ID
    *

@@ -82,91 +82,6 @@ yarn add meep-moop zod
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
 ```
-
-
-
-### Model Context Protocol (MCP) Server
-
-This SDK is also an installable MCP server where the various SDK methods are
-exposed as tools that can be invoked by AI applications.
-
-> Node.js v20 or greater is required to run the MCP server from npm.
-
-<details>
-<summary>Claude installation steps</summary>
-
-Add the following server definition to your `claude_desktop_config.json` file:
-
-```json
-{
-  "mcpServers": {
-    "Petstore": {
-      "command": "npx",
-      "args": [
-        "-y", "--package", "meep-moop",
-        "--",
-        "mcp", "start",
-        "--api-key", "..."
-      ]
-    }
-  }
-}
-```
-
-</details>
-
-<details>
-<summary>Cursor installation steps</summary>
-
-Create a `.cursor/mcp.json` file in your project root with the following content:
-
-```json
-{
-  "mcpServers": {
-    "Petstore": {
-      "command": "npx",
-      "args": [
-        "-y", "--package", "meep-moop",
-        "--",
-        "mcp", "start",
-        "--api-key", "..."
-      ]
-    }
-  }
-}
-```
-
-</details>
-
-You can also run MCP servers as a standalone binary with no additional dependencies. You must pull these binaries from available Github releases:
-
-```bash
-curl -L -o mcp-server \
-    https://github.com/{org}/{repo}/releases/download/{tag}/mcp-server-bun-darwin-arm64 && \
-chmod +x mcp-server
-```
-
-If the repo is a private repo you must add your Github PAT to download a release `-H "Authorization: Bearer {GITHUB_PAT}"`.
-
-
-```json
-{
-  "mcpServers": {
-    "Todos": {
-      "command": "./DOWNLOAD/PATH/mcp-server",
-      "args": [
-        "start"
-      ]
-    }
-  }
-}
-```
-
-For a full list of server arguments, run:
-
-```sh
-npx -y --package meep-moop -- mcp start --help
-```
 <!-- End SDK Installation [installation] -->
 
 <!-- Start Requirements [requirements] -->
@@ -227,8 +142,6 @@ run();
 
 ### [store](docs/sdks/store/README.md)
 
-* [getInventory](docs/sdks/store/README.md#getinventory) - Returns pet inventories by status
-* [placeOrder](docs/sdks/store/README.md#placeorder) - Place an order for a pet
 * [getOrderById](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
 * [deleteOrder](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
 
@@ -266,9 +179,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`petMCPTest`](docs/sdks/pet/README.md#mcptest) - Add a new pet to the store
 - [`petPetsStoreMonday`](docs/sdks/pet/README.md#petsstoremonday) - Update an existing pet
 - [`storeDeleteOrder`](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
-- [`storeGetInventory`](docs/sdks/store/README.md#getinventory) - Returns pet inventories by status
 - [`storeGetOrderById`](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
-- [`storePlaceOrder`](docs/sdks/store/README.md#placeorder) - Place an order for a pet
 - [`userCreateRahul`](docs/sdks/user/README.md#createrahul) - Create rahul
 - [`userCreateUsersWithListInput`](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
 - [`userDeleteUser`](docs/sdks/user/README.md#deleteuser) - Delete user
@@ -441,9 +352,9 @@ run();
 
 
 **Inherit from [`PetstoreError`](./src/models/errors/petstoreerror.ts)**:
-* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 12 of 16 methods.*
-* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 11 of 16 methods.*
-* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 9 of 16 methods.*
+* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 10 of 14 methods.*
+* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 9 of 14 methods.*
+* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 9 of 14 methods.*
 * [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
 
 </details>
