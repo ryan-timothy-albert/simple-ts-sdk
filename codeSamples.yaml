@@ -45,12 +45,6 @@ actions:
         - "lang": "typescript"
           "label": "Typescript"
           "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.getPetByIDS({\n    petId: 327430,\n  });\n\n  console.log(result);\n}\n\nrun();"
-  - target: $["paths"]["/pet/{petId}/uploadImage"]["post"]
-    update:
-      "x-codeSamples":
-        - "lang": "typescript"
-          "label": "Typescript"
-          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.uploadFile({\n    petId: 150516,\n  });\n\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/rahul"]["post"]
     update:
       "x-codeSamples":

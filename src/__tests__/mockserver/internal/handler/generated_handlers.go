@@ -22,7 +22,6 @@ func GeneratedHandlers(ctx context.Context, dir *logging.HTTPFileDirectory, rt *
 		NewGeneratedHandler(ctx, http.MethodGet, "/store/order/{orderId}", pathGetStoreOrderOrderID(dir, rt)),
 		NewGeneratedHandler(ctx, http.MethodGet, "/user/{username}", pathGetUserUsername(dir, rt)),
 		NewGeneratedHandler(ctx, http.MethodPost, "/pet", pathPostPet(dir, rt)),
-		NewGeneratedHandler(ctx, http.MethodPost, "/pet/{petId}/uploadImage", pathPostPetPetIDUploadImage(dir, rt)),
 		NewGeneratedHandler(ctx, http.MethodPost, "/store/order", pathPostStoreOrder(dir, rt)),
 		NewGeneratedHandler(ctx, http.MethodPost, "/user/createWithList", pathPostUserCreateWithList(dir, rt)),
 		NewGeneratedHandler(ctx, http.MethodPut, "/pet", pathPutPet(dir, rt)),

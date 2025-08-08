@@ -8,7 +8,6 @@ import { petFindPetsByTags } from "../funcs/petFindPetsByTags.js";
 import { petGetPetByIDS } from "../funcs/petGetPetByIDS.js";
 import { petMCPTest } from "../funcs/petMCPTest.js";
 import { petPetsStoreMonday } from "../funcs/petPetsStoreMonday.js";
-import { petUploadFile } from "../funcs/petUploadFile.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
 import * as operations from "../models/operations/index.js";
@@ -108,20 +107,6 @@ export class Pet extends ClientSDK {
     options?: RequestOptions,
   ): Promise<components.Pet> {
     return unwrapAsync(petDeletePet(
-      this,
-      request,
-      options,
-    ));
-  }
-
-  /**
-   * uploads an image
-   */
-  async uploadFile(
-    request: operations.UploadFileRequest,
-    options?: RequestOptions,
-  ): Promise<components.ApiResponse> {
-    return unwrapAsync(petUploadFile(
       this,
       request,
       options,
