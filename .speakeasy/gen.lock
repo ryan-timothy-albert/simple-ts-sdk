@@ -5,8 +5,8 @@ management:
   docVersion: 4.0.0
   speakeasyVersion: 1.599.0
   generationVersion: 2.675.0
-  releaseVersion: 5.2.0-alpha.47
-  configChecksum: 82b56781bcfaf2544a1e4aa169792bc4
+  releaseVersion: 5.2.0-alpha.48
+  configChecksum: 56af3f9ed3e24d5d2c5e9109900cfb22
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -502,6 +502,4 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
-releaseNotes: |
-  ## Typescript SDK Changes Detected:
-  * petstore.pet.uploadFile(): **Deleted**
+releaseNotes: No changes detected.
