@@ -1,7 +1,7 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: b1010e980c068973abf7fda66c6e6cd1
+  docChecksum: ca9260c23e94faa6fca2ff074bd4f33c
   docVersion: 4.0.0
   speakeasyVersion: 1.599.0
   generationVersion: 2.675.0
@@ -94,7 +94,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/handler/pathgetpetfindbystatus.go
   - src/__tests__/mockserver/internal/handler/pathgetpetfindbytags.go
   - src/__tests__/mockserver/internal/handler/pathgetpetpetid.go
-  - src/__tests__/mockserver/internal/handler/pathgetstoreinventory.go
   - src/__tests__/mockserver/internal/handler/pathgetstoreorderorderid.go
   - src/__tests__/mockserver/internal/handler/pathgetuserusername.go
   - src/__tests__/mockserver/internal/handler/pathpostpet.go
@@ -125,7 +124,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/operations/deleteuser.go
   - src/__tests__/mockserver/internal/sdk/models/operations/findpetsbystatustypes.go
   - src/__tests__/mockserver/internal/sdk/models/operations/findpetsbytags.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/getinventory.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getorderbyid.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getpetbyids.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
@@ -168,7 +166,6 @@ generatedFiles:
   - src/funcs/petMCPTest.ts
   - src/funcs/petPetsStoreMonday.ts
   - src/funcs/storeDeleteOrder.ts
-  - src/funcs/storeGetInventory.ts
   - src/funcs/storeGetOrderById.ts
   - src/funcs/storePlaceOrder.ts
   - src/funcs/userCreateRahul.ts
@@ -216,7 +213,6 @@ generatedFiles:
   - src/mcp-server/tools/petMCPTest.ts
   - src/mcp-server/tools/petPetsStoreMonday.ts
   - src/mcp-server/tools/storeDeleteOrder.ts
-  - src/mcp-server/tools/storeGetInventory.ts
   - src/mcp-server/tools/storeGetOrderById.ts
   - src/mcp-server/tools/storePlaceOrder.ts
   - src/mcp-server/tools/userCreateRahul.ts
@@ -502,4 +498,6 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
-releaseNotes: No changes detected.
+releaseNotes: |
+  ## Typescript SDK Changes Detected:
+  * petstore.store.getInventory(): **Deleted**
