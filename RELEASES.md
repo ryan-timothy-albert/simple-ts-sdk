@@ -723,3 +723,13 @@ Based on:
 - [typescript v5.2.0-alpha.53] .
 ### Releases
 - [NPM v5.2.0-alpha.53] https://www.npmjs.com/package/meep-moop/v/5.2.0-alpha.53 - .
+
+## 2025-08-11 17:37:29
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.601.0 (2.680.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v5.2.0-alpha.56] .
+### Releases
+- [NPM v5.2.0-alpha.56] https://www.npmjs.com/package/meep-moop/v/5.2.0-alpha.56 - .
