@@ -132,8 +132,16 @@ test("User Delete User", async () => {
   });
 });
 
-it.skip("User Say Hello", async () => {
-  assert.fail(
-    "incomplete test found please make sure to address the following errors: [`workflow step sayHello.test referencing operation sayHello not found in document`]",
-  );
+test("User Say Hello", async () => {
+  const testHttpClient = createTestHTTPClient("sayHello");
+
+  const petstore = new Petstore({
+    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
+    httpClient: testHttpClient,
+    apiKey: "<YOUR_API_KEY_HERE>",
+  });
+
+  const result = await petstore.user.sayHello();
+  expect(result).toBeDefined();
+  expect(result).toEqual("hello");
 });

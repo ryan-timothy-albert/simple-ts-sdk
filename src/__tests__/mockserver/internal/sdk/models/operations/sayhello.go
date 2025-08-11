@@ -6,22 +6,10 @@ import (
 	"mockserver/internal/sdk/models/components"
 )
 
-// SayHelloResponseBody - successful operation
-type SayHelloResponseBody struct {
-	Message *string `json:"message,omitempty"`
-}
-
-func (o *SayHelloResponseBody) GetMessage() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Message
-}
-
 type SayHelloResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// successful operation
-	Object *SayHelloResponseBody
+	String *string
 }
 
 func (o *SayHelloResponse) GetHTTPMeta() components.HTTPMetadata {
@@ -31,9 +19,9 @@ func (o *SayHelloResponse) GetHTTPMeta() components.HTTPMetadata {
 	return o.HTTPMeta
 }
 
-func (o *SayHelloResponse) GetObject() *SayHelloResponseBody {
+func (o *SayHelloResponse) GetString() *string {
 	if o == nil {
 		return nil
 	}
-	return o.Object
+	return o.String
 }
