@@ -34,7 +34,7 @@ export const Status = {
 export type Status = ClosedEnum<typeof Status>;
 
 export type Pet = {
-  id?: number | undefined;
+  breed?: string | undefined;
   name: string;
   category?: Category | undefined;
   photoUrls: Array<string>;
@@ -67,7 +67,7 @@ export namespace Status$ {
 /** @internal */
 export const Pet$inboundSchema: z.ZodType<Pet, z.ZodTypeDef, unknown> = z
   .object({
-    id: z.number().int().optional(),
+    breed: z.string().optional(),
     name: z.string(),
     category: Category$inboundSchema.optional(),
     photoUrls: z.array(z.string()),
@@ -77,7 +77,7 @@ export const Pet$inboundSchema: z.ZodType<Pet, z.ZodTypeDef, unknown> = z
 
 /** @internal */
 export type Pet$Outbound = {
-  id?: number | undefined;
+  breed?: string | undefined;
   name: string;
   category?: Category$Outbound | undefined;
   photoUrls: Array<string>;
@@ -88,7 +88,7 @@ export type Pet$Outbound = {
 /** @internal */
 export const Pet$outboundSchema: z.ZodType<Pet$Outbound, z.ZodTypeDef, Pet> = z
   .object({
-    id: z.number().int().optional(),
+    breed: z.string().optional(),
     name: z.string(),
     category: Category$outboundSchema.optional(),
     photoUrls: z.array(z.string()),

@@ -19,12 +19,8 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: false
-  tests:
-    generateTests: false
-    generateNewTests: false
-    skipResponseBodyAssertions: false
 typescript:
-  version: 5.2.0-alpha.52
+  version: 5.2.0-alpha.53
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
