@@ -535,9 +535,7 @@ workflows:
           - condition: $response.header.Content-Type == application/json
           - context: $response.body
             condition: |
-              {
-                "message": "Hello, world!"
-              }
+              "hello"
             type: simple
     x-speakeasy-test-group: user
     x-speakeasy-test-rebuild: true
