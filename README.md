@@ -142,7 +142,6 @@ run();
 * [createRahul](docs/sdks/user/README.md#createrahul) - Create rahul
 * [createUsersWithListInput](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
 * [sayNewRandom](docs/sdks/user/README.md#saynewrandom) - Say new random
-* [sayHello](docs/sdks/user/README.md#sayhello) - Say hello
 * [getUserByName](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 * [updateUser](docs/sdks/user/README.md#updateuser) - Update user
 * [deleteUser](docs/sdks/user/README.md#deleteuser) - Delete user
@@ -177,7 +176,6 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`userCreateUsersWithListInput`](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
 - [`userDeleteUser`](docs/sdks/user/README.md#deleteuser) - Delete user
 - [`userGetUserByName`](docs/sdks/user/README.md#getuserbyname) - Get user by user name
-- [`userSayHello`](docs/sdks/user/README.md#sayhello) - Say hello
 - [`userSayNewRandom`](docs/sdks/user/README.md#saynewrandom) - Say new random
 - [`userUpdateUser`](docs/sdks/user/README.md#updateuser) - Update user
 
@@ -313,9 +311,9 @@ run();
 
 
 **Inherit from [`PetstoreError`](./src/models/errors/petstoreerror.ts)**:
-* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 11 of 15 methods.*
-* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 10 of 15 methods.*
-* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 10 of 15 methods.*
+* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 11 of 14 methods.*
+* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 10 of 14 methods.*
+* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 10 of 14 methods.*
 * [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
 
 </details>
