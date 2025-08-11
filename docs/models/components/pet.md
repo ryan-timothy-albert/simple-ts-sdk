@@ -6,7 +6,7 @@
 import { Pet } from "meep-moop/models/components";
 
 let value: Pet = {
-  id: 10,
+  breed: "something random",
   name: "doggie",
   category: {
     id: 1,
@@ -20,7 +20,7 @@ let value: Pet = {
 
 | Field                                                      | Type                                                       | Required                                                   | Description                                                | Example                                                    |
 | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| `id`                                                       | *number*                                                   | :heavy_minus_sign:                                         | N/A                                                        | 10                                                         |
+| `breed`                                                    | *string*                                                   | :heavy_minus_sign:                                         | N/A                                                        | something random                                           |
 | `name`                                                     | *string*                                                   | :heavy_check_mark:                                         | N/A                                                        | doggie                                                     |
 | `category`                                                 | [components.Category](../../models/components/category.md) | :heavy_minus_sign:                                         | N/A                                                        |                                                            |
 | `photoUrls`                                                | *string*[]                                                 | :heavy_check_mark:                                         | N/A                                                        |                                                            |
