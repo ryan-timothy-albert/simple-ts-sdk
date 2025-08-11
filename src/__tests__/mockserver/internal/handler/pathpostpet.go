@@ -52,7 +52,6 @@ func testMCPTestMCPTest0(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 	var respBody *components.Pet = &components.Pet{
-		ID:   types.Int64(10),
 		Name: "doggie",
 		Category: &components.Category{
 			ID:   types.Int64(1),

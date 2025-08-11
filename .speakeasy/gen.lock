@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 9e5b1a25829d3fd00d38313dea166784
+  docChecksum: 9eb29986fcb54c336c709ce2e91dc314
   docVersion: 4.0.0
-  speakeasyVersion: 1.601.0
-  generationVersion: 2.680.0
-  releaseVersion: 5.2.0-alpha.53
-  configChecksum: 50f4423fd1ab4653bf9f93da8d7a416f
+  speakeasyVersion: 1.599.0
+  generationVersion: 2.675.0
+  releaseVersion: 5.2.0-alpha.55
+  configChecksum: 4f13f186246b89612f92429e629a7a19
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -23,9 +23,11 @@ features:
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.5
+    mockServer: 0.1.1
     responseFormat: 0.2.3
     retries: 2.83.0
     sdkHooks: 0.3.0
+    tests: 0.17.1
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
@@ -57,6 +59,7 @@ generatedFiles:
   - docs/models/operations/getpetbyidsrequest.md
   - docs/models/operations/getplanbyidsrequest.md
   - docs/models/operations/getuserbynamerequest.md
+  - docs/models/operations/saynewrandomresponsebody.md
   - docs/models/operations/status.md
   - docs/models/operations/updateuserrequest.md
   - docs/sdks/pet/README.md
@@ -71,6 +74,88 @@ generatedFiles:
   - examples/petFindPetsByStatusTypes.example.ts
   - jsr.json
   - package.json
+  - src/__tests__/assertions.ts
+  - src/__tests__/files.ts
+  - src/__tests__/mockserver/.gitignore
+  - src/__tests__/mockserver/Dockerfile
+  - src/__tests__/mockserver/Makefile
+  - src/__tests__/mockserver/README.md
+  - src/__tests__/mockserver/go.mod
+  - src/__tests__/mockserver/go.sum
+  - src/__tests__/mockserver/internal/handler/assert/contenttype.go
+  - src/__tests__/mockserver/internal/handler/assert/header.go
+  - src/__tests__/mockserver/internal/handler/assert/parameter.go
+  - src/__tests__/mockserver/internal/handler/assert/pointer.go
+  - src/__tests__/mockserver/internal/handler/assert/security.go
+  - src/__tests__/mockserver/internal/handler/doc.go
+  - src/__tests__/mockserver/internal/handler/generated_handler.go
+  - src/__tests__/mockserver/internal/handler/generated_handlers.go
+  - src/__tests__/mockserver/internal/handler/pathdeletepetpetid.go
+  - src/__tests__/mockserver/internal/handler/pathdeletestoreorderorderid.go
+  - src/__tests__/mockserver/internal/handler/pathdeleteuserusername.go
+  - src/__tests__/mockserver/internal/handler/pathgetpetfindbystatus.go
+  - src/__tests__/mockserver/internal/handler/pathgetpetfindbytags.go
+  - src/__tests__/mockserver/internal/handler/pathgetpetpetid.go
+  - src/__tests__/mockserver/internal/handler/pathgetstoreorderorderid.go
+  - src/__tests__/mockserver/internal/handler/pathgetuserusername.go
+  - src/__tests__/mockserver/internal/handler/pathpostusercreatewithlist.go
+  - src/__tests__/mockserver/internal/handler/pathputuserusername.go
+  - src/__tests__/mockserver/internal/handler/values/files.go
+  - src/__tests__/mockserver/internal/logging/doc.go
+  - src/__tests__/mockserver/internal/logging/formats.go
+  - src/__tests__/mockserver/internal/logging/http_file.go
+  - src/__tests__/mockserver/internal/logging/http_logger.go
+  - src/__tests__/mockserver/internal/logging/levels.go
+  - src/__tests__/mockserver/internal/logging/logger.go
+  - src/__tests__/mockserver/internal/logging/oas_operation.go
+  - src/__tests__/mockserver/internal/logging/oas_operation_call.go
+  - src/__tests__/mockserver/internal/sdk/models/components/category.go
+  - src/__tests__/mockserver/internal/sdk/models/components/httpmetadata.go
+  - src/__tests__/mockserver/internal/sdk/models/components/order.go
+  - src/__tests__/mockserver/internal/sdk/models/components/pet.go
+  - src/__tests__/mockserver/internal/sdk/models/components/security.go
+  - src/__tests__/mockserver/internal/sdk/models/components/tag.go
+  - src/__tests__/mockserver/internal/sdk/models/components/user.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/createrahul.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/createuserswithlistinput.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/deleteorder.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/deletepet.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/deleteplan.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/deleteuser.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/findpetsbystatustypes.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/findpetsbytags.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/getorderbyid.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/getpetbyids.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/getplanbyids.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/saynewrandom.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
+  - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorinvalidinput.go
+  - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrornotfound.go
+  - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorunauthorized.go
+  - src/__tests__/mockserver/internal/sdk/types/bigint.go
+  - src/__tests__/mockserver/internal/sdk/types/date.go
+  - src/__tests__/mockserver/internal/sdk/types/datetime.go
+  - src/__tests__/mockserver/internal/sdk/types/decimal.go
+  - src/__tests__/mockserver/internal/sdk/types/jsonl/jsonl.go
+  - src/__tests__/mockserver/internal/sdk/types/pointers.go
+  - src/__tests__/mockserver/internal/sdk/utils/json.go
+  - src/__tests__/mockserver/internal/sdk/utils/reflect.go
+  - src/__tests__/mockserver/internal/sdk/utils/sort.go
+  - src/__tests__/mockserver/internal/server/doc.go
+  - src/__tests__/mockserver/internal/server/generated_handlers.go
+  - src/__tests__/mockserver/internal/server/internal_handlers.go
+  - src/__tests__/mockserver/internal/server/server.go
+  - src/__tests__/mockserver/internal/server/server_option.go
+  - src/__tests__/mockserver/internal/server/templates/log/index.html.tmpl
+  - src/__tests__/mockserver/internal/server/templates/log/operation.html.tmpl
+  - src/__tests__/mockserver/internal/server/templates/log/style.css.tmpl
+  - src/__tests__/mockserver/internal/tracking/requesttracker.go
+  - src/__tests__/mockserver/main.go
+  - src/__tests__/pet.test.ts
+  - src/__tests__/store.test.ts
+  - src/__tests__/testclient.ts
+  - src/__tests__/user.test.ts
   - src/core.ts
   - src/funcs/petDeletePet.ts
   - src/funcs/petFindPetsByStatusTypes.ts
@@ -84,6 +169,7 @@ generatedFiles:
   - src/funcs/userCreateUsersWithListInput.ts
   - src/funcs/userDeleteUser.ts
   - src/funcs/userGetUserByName.ts
+  - src/funcs/userSayNewRandom.ts
   - src/funcs/userUpdateUser.ts
   - src/hooks/hooks.ts
   - src/hooks/index.ts
@@ -131,6 +217,7 @@ generatedFiles:
   - src/models/operations/getplanbyids.ts
   - src/models/operations/getuserbyname.ts
   - src/models/operations/index.ts
+  - src/models/operations/saynewrandom.ts
   - src/models/operations/updateuser.ts
   - src/sdk/index.ts
   - src/sdk/pet.ts
@@ -411,12 +498,3 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
-releaseNotes: |
-  ## SDK Changes Detected:
-  * petstore.pet.findPetsByStatusTypes(): **Changed** response.[] [breaking]
-  * petstore.pet.findPetsByTags(): **Changed** response.[] [breaking]
-  * petstore.pet.getPetByIds(): **Changed** response [breaking]
-  * petstore.pet.deletePet(): **Changed** response [breaking]
-  * petstore.plan.getPlanByIds(): **Changed** response [breaking]
-  * petstore.plan.deletePlan(): **Changed** response [breaking]
-  * petstore.user.sayNewRandom(): **Deleted**

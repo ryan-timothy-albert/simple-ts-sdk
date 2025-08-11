@@ -31,7 +31,6 @@ test("Pet Find Pets By Status Types", async () => {
   expect(result).toBeDefined();
   expect(result).toEqual([
     {
-      id: 10,
       name: "doggie",
       category: {
         id: 1,
@@ -44,7 +43,6 @@ test("Pet Find Pets By Status Types", async () => {
       ],
     },
     {
-      id: 10,
       name: "doggie",
       category: {
         id: 1,
@@ -56,7 +54,6 @@ test("Pet Find Pets By Status Types", async () => {
       ],
     },
     {
-      id: 10,
       name: "doggie",
       category: {
         id: 1,
@@ -82,7 +79,6 @@ test("Pet Find Pets By Tags", async () => {
   expect(result).toBeDefined();
   expect(result).toEqual([
     {
-      id: 10,
       name: "doggie",
       category: {
         id: 1,
@@ -111,7 +107,6 @@ test("Pet Get Pet By Ids", async () => {
   });
   expect(result).toBeDefined();
   expect(result).toEqual({
-    id: 10,
     name: "doggie",
     category: {
       id: 1,
@@ -139,7 +134,6 @@ test("Pet Delete Pet", async () => {
   });
   expect(result).toBeDefined();
   expect(result).toEqual({
-    id: 10,
     name: "doggie",
     category: {
       id: 1,

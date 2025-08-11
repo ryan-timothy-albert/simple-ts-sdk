@@ -38,7 +38,7 @@ func (e *PetStatus) UnmarshalJSON(data []byte) error {
 }
 
 type Pet struct {
-	ID        *int64    `json:"id,omitempty"`
+	Breed     *string   `json:"breed,omitempty"`
 	Name      string    `json:"name"`
 	Category  *Category `json:"category,omitempty"`
 	PhotoUrls []string  `json:"photoUrls"`
@@ -47,11 +47,11 @@ type Pet struct {
 	Status *PetStatus `json:"status,omitempty"`
 }
 
-func (o *Pet) GetID() *int64 {
+func (o *Pet) GetBreed() *string {
 	if o == nil {
 		return nil
 	}
-	return o.ID
+	return o.Breed
 }
 
 func (o *Pet) GetName() string {

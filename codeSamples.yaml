@@ -3,6 +3,12 @@ info:
   title: CodeSamples overlay for typescript target
   version: 0.0.0
 actions:
+  - target: $["paths"]["/new_random"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "typescript"
+          "label": "Typescript"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.user.sayNewRandom();\n\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/pet/findByStatus"]["get"]
     update:
       "x-codeSamples":

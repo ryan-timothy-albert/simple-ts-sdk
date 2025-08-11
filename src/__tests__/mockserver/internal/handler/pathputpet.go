@@ -52,7 +52,6 @@ func testPetsStoreMondayPetsStoreMonday0(w http.ResponseWriter, req *http.Reques
 		return
 	}
 	var respBody *components.Pet = &components.Pet{
-		ID:   types.Int64(10),
 		Name: "doggie",
 		Category: &components.Category{
 			ID:   types.Int64(1),
