@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 9eb29986fcb54c336c709ce2e91dc314
+  docChecksum: e92187cfd11150fde5301713919cefa0
   docVersion: 4.0.0
   speakeasyVersion: 1.601.0
   generationVersion: 2.680.0
-  releaseVersion: 5.2.0-alpha.56
-  configChecksum: 070c322b3fc45d796766bcfda0c9719c
+  releaseVersion: 5.2.0-alpha.57
+  configChecksum: e3924385188f9fad7e09f53aa047867c
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -93,6 +93,7 @@ generatedFiles:
   - src/__tests__/mockserver/internal/handler/pathdeletepetpetid.go
   - src/__tests__/mockserver/internal/handler/pathdeletestoreorderorderid.go
   - src/__tests__/mockserver/internal/handler/pathdeleteuserusername.go
+  - src/__tests__/mockserver/internal/handler/pathgethi.go
   - src/__tests__/mockserver/internal/handler/pathgetpetfindbystatus.go
   - src/__tests__/mockserver/internal/handler/pathgetpetfindbytags.go
   - src/__tests__/mockserver/internal/handler/pathgetpetpetid.go
@@ -128,6 +129,7 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/operations/getpetbyids.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getplanbyids.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/sayhello.go
   - src/__tests__/mockserver/internal/sdk/models/operations/saynewrandom.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorinvalidinput.go
@@ -169,6 +171,7 @@ generatedFiles:
   - src/funcs/userCreateUsersWithListInput.ts
   - src/funcs/userDeleteUser.ts
   - src/funcs/userGetUserByName.ts
+  - src/funcs/userSayHello.ts
   - src/funcs/userSayNewRandom.ts
   - src/funcs/userUpdateUser.ts
   - src/hooks/hooks.ts
@@ -475,6 +478,11 @@ examples:
           application/json: {"status": 401, "error": "Unauthorized"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
+  sayHello:
+    speakeasy-default-say-hello:
+      responses:
+        "200":
+          application/json: "hello"
 examplesVersion: 1.0.2
 generatedTests:
   petsStoreMonday: "2025-02-13T16:15:08-08:00"
@@ -500,4 +508,4 @@ generatedTests:
   sayHello: "2025-08-06T11:57:50Z"
 releaseNotes: |
   ## SDK Changes Detected:
-  * petstore.user.sayNewRandom(): **Added**
+  * petstore.user.sayHello(): **Added**
