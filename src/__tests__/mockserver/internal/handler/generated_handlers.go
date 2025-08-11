@@ -15,7 +15,6 @@ func GeneratedHandlers(ctx context.Context, dir *logging.HTTPFileDirectory, rt *
 		NewGeneratedHandler(ctx, http.MethodDelete, "/pet/{petId}", pathDeletePetPetID(dir, rt)),
 		NewGeneratedHandler(ctx, http.MethodDelete, "/store/order/{orderId}", pathDeleteStoreOrderOrderID(dir, rt)),
 		NewGeneratedHandler(ctx, http.MethodDelete, "/user/{username}", pathDeleteUserUsername(dir, rt)),
-		NewGeneratedHandler(ctx, http.MethodGet, "/hi", pathGetHi(dir, rt)),
 		NewGeneratedHandler(ctx, http.MethodGet, "/pet/findByStatus", pathGetPetFindByStatus(dir, rt)),
 		NewGeneratedHandler(ctx, http.MethodGet, "/pet/findByTags", pathGetPetFindByTags(dir, rt)),
 		NewGeneratedHandler(ctx, http.MethodGet, "/pet/{petId}", pathGetPetPetID(dir, rt)),
