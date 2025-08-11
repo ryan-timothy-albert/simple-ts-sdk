@@ -3,10 +3,10 @@ id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
   docChecksum: 9eb29986fcb54c336c709ce2e91dc314
   docVersion: 4.0.0
-  speakeasyVersion: 1.599.0
-  generationVersion: 2.675.0
-  releaseVersion: 5.2.0-alpha.55
-  configChecksum: 4f13f186246b89612f92429e629a7a19
+  speakeasyVersion: 1.601.0
+  generationVersion: 2.680.0
+  releaseVersion: 5.2.0-alpha.56
+  configChecksum: 070c322b3fc45d796766bcfda0c9719c
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -498,3 +498,6 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
+releaseNotes: |
+  ## SDK Changes Detected:
+  * petstore.user.sayNewRandom(): **Added**
