@@ -18,7 +18,7 @@ permissions:
         type: string
 jobs:
   test:
-    uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-test.yaml@v15.48.0-pre2
+    uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-test.yaml@v15.48.0-pre3
     with:
       target: ${{ github.event.inputs.target }}
     secrets:
