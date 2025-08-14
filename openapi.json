@@ -433,38 +433,6 @@
                 }
             }
         },
-        "/rahul": {
-            "post": {
-                "tags": [
-                    "user"
-                ],
-                "summary": "Create rahul",
-                "description": "This can only be done by the logged in user.",
-                "operationId": "createRahul",
-                "requestBody": {
-                    "description": "Created rahul object",
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/User"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": "Successful operation",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/User"
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
         "/user/createWithList": {
             "post": {
                 "tags": [
@@ -499,14 +467,14 @@
                 }
             }
         },
-        "/new_random": {
+        "/new_random_random": {
             "get": {
                 "tags": [
-                    "user"
+                    "product"
                 ],
-                "summary": "Say new random",
-                "description": "Returns a new random message",
-                "operationId": "sayNewRandom",
+                "summary": "Say new random random",
+                "description": "Returns a new random random message",
+                "operationId": "sayNewRandomRandom",
                 "responses": {
                     "200": {
                         "description": "successful operation",
