@@ -5,6 +5,7 @@
 import { ClientSDK } from "../lib/sdks.js";
 import { Pet } from "./pet.js";
 import { Plan } from "./plan.js";
+import { Product } from "./product.js";
 import { Store } from "./store.js";
 import { User } from "./user.js";
 
@@ -27,5 +28,10 @@ export class Petstore extends ClientSDK {
   private _user?: User;
   get user(): User {
     return (this._user ??= new User(this._options));
+  }
+
+  private _product?: Product;
+  get product(): Product {
+    return (this._product ??= new Product(this._options));
   }
 }
