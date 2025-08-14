@@ -27,6 +27,7 @@ jobs:
       set_version: ${{ github.event.inputs.set_version }}
       target: petstore
       signed_commits: true
+      enable_sdk_changelog_july_2025: true
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_TOKEN }}
