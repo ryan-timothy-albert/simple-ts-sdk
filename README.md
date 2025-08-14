@@ -132,6 +132,10 @@ run();
 * [getPlanByIDS](docs/sdks/plan/README.md#getplanbyids) - Find plan by ID
 * [deletePlan](docs/sdks/plan/README.md#deleteplan) - Deletes a plan
 
+### [product](docs/sdks/product/README.md)
+
+* [sayNewRandomRandom](docs/sdks/product/README.md#saynewrandomrandom) - Say new random random
+
 ### [store](docs/sdks/store/README.md)
 
 * [getOrderById](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
@@ -139,9 +143,7 @@ run();
 
 ### [user](docs/sdks/user/README.md)
 
-* [createRahul](docs/sdks/user/README.md#createrahul) - Create rahul
 * [createUsersWithListInput](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
-* [sayNewRandom](docs/sdks/user/README.md#saynewrandom) - Say new random
 * [getUserByName](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 * [updateUser](docs/sdks/user/README.md#updateuser) - Update user
 * [deleteUser](docs/sdks/user/README.md#deleteuser) - Delete user
@@ -170,13 +172,12 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`petGetPetByIDS`](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
 - [`planDeletePlan`](docs/sdks/plan/README.md#deleteplan) - Deletes a plan
 - [`planGetPlanByIDS`](docs/sdks/plan/README.md#getplanbyids) - Find plan by ID
+- [`productSayNewRandomRandom`](docs/sdks/product/README.md#saynewrandomrandom) - Say new random random
 - [`storeDeleteOrder`](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
 - [`storeGetOrderById`](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
-- [`userCreateRahul`](docs/sdks/user/README.md#createrahul) - Create rahul
 - [`userCreateUsersWithListInput`](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
 - [`userDeleteUser`](docs/sdks/user/README.md#deleteuser) - Delete user
 - [`userGetUserByName`](docs/sdks/user/README.md#getuserbyname) - Get user by user name
-- [`userSayNewRandom`](docs/sdks/user/README.md#saynewrandom) - Say new random
 - [`userUpdateUser`](docs/sdks/user/README.md#updateuser) - Update user
 
 </details>
@@ -295,10 +296,11 @@ run();
 ```
 
 ### Error Classes
-**Primary error:**
+**Primary errors:**
 * [`PetstoreError`](./src/models/errors/petstoreerror.ts): The base class for HTTP error responses.
+  * [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. *
 
-<details><summary>Less common errors (9)</summary>
+<details><summary>Less common errors (8)</summary>
 
 <br />
 
@@ -311,9 +313,8 @@ run();
 
 
 **Inherit from [`PetstoreError`](./src/models/errors/petstoreerror.ts)**:
-* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 11 of 14 methods.*
-* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 10 of 14 methods.*
-* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 10 of 14 methods.*
+* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 10 of 13 methods.*
+* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 10 of 13 methods.*
 * [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
 
 </details>
