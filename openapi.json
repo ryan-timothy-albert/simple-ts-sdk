@@ -467,37 +467,6 @@
                 }
             }
         },
-        "/new_random_random": {
-            "get": {
-                "tags": [
-                    "product"
-                ],
-                "summary": "Say new random random",
-                "description": "Returns a new random random message",
-                "operationId": "sayNewRandomRandom",
-                "responses": {
-                    "200": {
-                        "description": "successful operation",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Hello, world!"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "404": {
-                        "$ref": "#/components/responses/NotFound"
-                    }
-                }
-            }
-        },
         "/user/{username}": {
             "get": {
                 "tags": [
