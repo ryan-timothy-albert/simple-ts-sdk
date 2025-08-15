@@ -33,6 +33,12 @@ actions:
         - "lang": "typescript"
           "label": "Typescript"
           "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.plan.getPlanByIDS({\n    planId: 722072,\n  });\n\n  console.log(result);\n}\n\nrun();"
+  - target: $["paths"]["/random"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "typescript"
+          "label": "Typescript"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.random.getRandomPet();\n\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/store/order/{orderId}"]["delete"]
     update:
       "x-codeSamples":
