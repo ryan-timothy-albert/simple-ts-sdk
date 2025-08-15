@@ -204,6 +204,37 @@
                 }
             }
         },
+        "/random": {
+            "get": {
+                "tags": [
+                    "random"
+                ],
+                "summary": "Get a random pet",
+                "description": "Returns a random pet",
+                "operationId": "getRandomPet",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Pet"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/InvalidInput"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    }
+                }
+            }
+        },
         "/plan/{planId}": {
             "get": {
                 "tags": [
