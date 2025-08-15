@@ -492,6 +492,7 @@ generatedTests:
   sayHello: "2025-08-06T11:57:50Z"
 releaseNotes: |
   ## SDK Changes Detected:
+  Add a custom message
   * `petstore.pet.findPetsByStatusTypes()`: **Deleted** **Breaking** :warning:
   * `petstore.user.createRahul()`: **Deleted** **Breaking** :warning:
   * `petstore.user.sayNewRandom()`: **Deleted** **Breaking** :warning:
