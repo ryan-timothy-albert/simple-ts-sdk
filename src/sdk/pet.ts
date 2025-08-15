@@ -3,7 +3,6 @@
  */
 
 import { petDeletePet } from "../funcs/petDeletePet.js";
-import { petFindPetsByStatusTypes } from "../funcs/petFindPetsByStatusTypes.js";
 import { petFindPetsByTags } from "../funcs/petFindPetsByTags.js";
 import { petGetPetByIDS } from "../funcs/petGetPetByIDS.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
@@ -12,23 +11,6 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Pet extends ClientSDK {
-  /**
-   * Finds Pets by status
-   *
-   * @remarks
-   * Multiple status values can be provided with comma separated strings
-   */
-  async findPetsByStatusTypes(
-    request: operations.FindPetsByStatusTypesRequest,
-    options?: RequestOptions,
-  ): Promise<Array<components.Pet>> {
-    return unwrapAsync(petFindPetsByStatusTypes(
-      this,
-      request,
-      options,
-    ));
-  }
-
   /**
    * Finds Pets by tags
    *

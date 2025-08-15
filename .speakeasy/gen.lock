@@ -1,19 +1,18 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 9eb29986fcb54c336c709ce2e91dc314
+  docChecksum: eb07fd93ae790e78e5da381be3f29f62
   docVersion: 4.0.0
-  speakeasyVersion: 1.601.0
-  generationVersion: 2.680.0
-  releaseVersion: 5.2.0-alpha.58
-  configChecksum: d8e41ea90caaef640ee8016237cfd05c
+  speakeasyVersion: 1.605.0
+  generationVersion: 2.684.0
+  releaseVersion: 5.2.0-alpha.59
+  configChecksum: fb003de8b1cabf613e0dbd877651376f
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.12
     core: 3.21.20
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
@@ -53,14 +52,11 @@ generatedFiles:
   - docs/models/operations/deletepetrequest.md
   - docs/models/operations/deleteplanrequest.md
   - docs/models/operations/deleteuserrequest.md
-  - docs/models/operations/findpetsbystatustypesrequest.md
   - docs/models/operations/findpetsbytagsrequest.md
   - docs/models/operations/getorderbyidrequest.md
   - docs/models/operations/getpetbyidsrequest.md
   - docs/models/operations/getplanbyidsrequest.md
   - docs/models/operations/getuserbynamerequest.md
-  - docs/models/operations/saynewrandomresponsebody.md
-  - docs/models/operations/status.md
   - docs/models/operations/updateuserrequest.md
   - docs/sdks/pet/README.md
   - docs/sdks/petstore/README.md
@@ -71,7 +67,7 @@ generatedFiles:
   - examples/.env.template
   - examples/README.md
   - examples/package.json
-  - examples/petFindPetsByStatusTypes.example.ts
+  - examples/petFindPetsByTags.example.ts
   - jsr.json
   - package.json
   - src/__tests__/assertions.ts
@@ -93,7 +89,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/handler/pathdeletepetpetid.go
   - src/__tests__/mockserver/internal/handler/pathdeletestoreorderorderid.go
   - src/__tests__/mockserver/internal/handler/pathdeleteuserusername.go
-  - src/__tests__/mockserver/internal/handler/pathgetpetfindbystatus.go
   - src/__tests__/mockserver/internal/handler/pathgetpetfindbytags.go
   - src/__tests__/mockserver/internal/handler/pathgetpetpetid.go
   - src/__tests__/mockserver/internal/handler/pathgetstoreorderorderid.go
@@ -116,19 +111,16 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/components/security.go
   - src/__tests__/mockserver/internal/sdk/models/components/tag.go
   - src/__tests__/mockserver/internal/sdk/models/components/user.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/createrahul.go
   - src/__tests__/mockserver/internal/sdk/models/operations/createuserswithlistinput.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deleteorder.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deletepet.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deleteplan.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deleteuser.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/findpetsbystatustypes.go
   - src/__tests__/mockserver/internal/sdk/models/operations/findpetsbytags.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getorderbyid.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getpetbyids.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getplanbyids.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/saynewrandom.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorinvalidinput.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrornotfound.go
@@ -158,18 +150,15 @@ generatedFiles:
   - src/__tests__/user.test.ts
   - src/core.ts
   - src/funcs/petDeletePet.ts
-  - src/funcs/petFindPetsByStatusTypes.ts
   - src/funcs/petFindPetsByTags.ts
   - src/funcs/petGetPetByIDS.ts
   - src/funcs/planDeletePlan.ts
   - src/funcs/planGetPlanByIDS.ts
   - src/funcs/storeDeleteOrder.ts
   - src/funcs/storeGetOrderById.ts
-  - src/funcs/userCreateRahul.ts
   - src/funcs/userCreateUsersWithListInput.ts
   - src/funcs/userDeleteUser.ts
   - src/funcs/userGetUserByName.ts
-  - src/funcs/userSayNewRandom.ts
   - src/funcs/userUpdateUser.ts
   - src/hooks/hooks.ts
   - src/hooks/index.ts
@@ -210,14 +199,12 @@ generatedFiles:
   - src/models/operations/deletepet.ts
   - src/models/operations/deleteplan.ts
   - src/models/operations/deleteuser.ts
-  - src/models/operations/findpetsbystatustypes.ts
   - src/models/operations/findpetsbytags.ts
   - src/models/operations/getorderbyid.ts
   - src/models/operations/getpetbyids.ts
   - src/models/operations/getplanbyids.ts
   - src/models/operations/getuserbyname.ts
   - src/models/operations/index.ts
-  - src/models/operations/saynewrandom.ts
   - src/models/operations/updateuser.ts
   - src/sdk/index.ts
   - src/sdk/pet.ts
@@ -505,4 +492,7 @@ generatedTests:
   sayHello: "2025-08-06T11:57:50Z"
 releaseNotes: |
   ## SDK Changes Detected:
-  * petstore.user.sayHello(): **Deleted**
+  Add a custom message
+  * `petstore.pet.findPetsByStatusTypes()`: **Deleted** **Breaking** :warning:
+  * `petstore.user.createRahul()`: **Deleted** **Breaking** :warning:
+  * `petstore.user.sayNewRandom()`: **Deleted** **Breaking** :warning:
