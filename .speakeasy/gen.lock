@@ -505,4 +505,5 @@ generatedTests:
   sayHello: "2025-08-06T11:57:50Z"
 releaseNotes: |
   ## SDK Changes Detected:
+  Adding a custom message to release notes
   * petstore.user.sayHello(): **Deleted**
