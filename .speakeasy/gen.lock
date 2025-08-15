@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: eb07fd93ae790e78e5da381be3f29f62
+  docChecksum: 2fbd59232b9c1b1383034c65adb0487d
   docVersion: 4.0.0
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 5.2.0-alpha.59
-  configChecksum: fb003de8b1cabf613e0dbd877651376f
+  releaseVersion: 5.2.0-alpha.60
+  configChecksum: 35fdd2d2bf7932a325821ced41f94193
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -61,6 +61,7 @@ generatedFiles:
   - docs/sdks/pet/README.md
   - docs/sdks/petstore/README.md
   - docs/sdks/plan/README.md
+  - docs/sdks/random/README.md
   - docs/sdks/store/README.md
   - docs/sdks/user/README.md
   - eslint.config.mjs
@@ -120,6 +121,7 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/operations/getorderbyid.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getpetbyids.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getplanbyids.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/getrandompet.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorinvalidinput.go
@@ -154,6 +156,7 @@ generatedFiles:
   - src/funcs/petGetPetByIDS.ts
   - src/funcs/planDeletePlan.ts
   - src/funcs/planGetPlanByIDS.ts
+  - src/funcs/randomGetRandomPet.ts
   - src/funcs/storeDeleteOrder.ts
   - src/funcs/storeGetOrderById.ts
   - src/funcs/userCreateUsersWithListInput.ts
@@ -209,6 +212,7 @@ generatedFiles:
   - src/sdk/index.ts
   - src/sdk/pet.ts
   - src/sdk/plan.ts
+  - src/sdk/random.ts
   - src/sdk/sdk.ts
   - src/sdk/store.ts
   - src/sdk/user.ts
@@ -467,6 +471,17 @@ examples:
       responses:
         "200":
           application/json: "hello"
+  getRandomPet:
+    speakeasy-default-get-random-pet:
+      responses:
+        "200":
+          application/json: {"breed": "something random", "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": ["<value 1>", "<value 2>"]}
+        "400":
+          application/json: {"status": 400, "error": "Bad request"}
+        "401":
+          application/json: {"status": 401, "error": "Unauthorized"}
+        "404":
+          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
 examplesVersion: 1.0.2
 generatedTests:
   petsStoreMonday: "2025-02-13T16:15:08-08:00"
@@ -492,7 +507,5 @@ generatedTests:
   sayHello: "2025-08-06T11:57:50Z"
 releaseNotes: |
   ## SDK Changes Detected:
-  Add a custom message
-  * `petstore.pet.findPetsByStatusTypes()`: **Deleted** **Breaking** :warning:
-  * `petstore.user.createRahul()`: **Deleted** **Breaking** :warning:
-  * `petstore.user.sayNewRandom()`: **Deleted** **Breaking** :warning:
+  Added custom message
+  * `petstore.random.getRandomPet()`: **Added**
