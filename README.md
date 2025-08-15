@@ -103,7 +103,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByStatusTypes({});
+  const result = await petstore.pet.findPetsByTags({});
 
   console.log(result);
 }
@@ -121,7 +121,6 @@ run();
 
 ### [pet](docs/sdks/pet/README.md)
 
-* [findPetsByStatusTypes](docs/sdks/pet/README.md#findpetsbystatustypes) - Finds Pets by status
 * [findPetsByTags](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
 * [getPetByIDS](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
 * [deletePet](docs/sdks/pet/README.md#deletepet) - Deletes a pet
@@ -139,9 +138,7 @@ run();
 
 ### [user](docs/sdks/user/README.md)
 
-* [createRahul](docs/sdks/user/README.md#createrahul) - Create rahul
 * [createUsersWithListInput](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
-* [sayNewRandom](docs/sdks/user/README.md#saynewrandom) - Say new random
 * [getUserByName](docs/sdks/user/README.md#getuserbyname) - Get user by user name
 * [updateUser](docs/sdks/user/README.md#updateuser) - Update user
 * [deleteUser](docs/sdks/user/README.md#deleteuser) - Delete user
@@ -165,18 +162,15 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 <summary>Available standalone functions</summary>
 
 - [`petDeletePet`](docs/sdks/pet/README.md#deletepet) - Deletes a pet
-- [`petFindPetsByStatusTypes`](docs/sdks/pet/README.md#findpetsbystatustypes) - Finds Pets by status
 - [`petFindPetsByTags`](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
 - [`petGetPetByIDS`](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
 - [`planDeletePlan`](docs/sdks/plan/README.md#deleteplan) - Deletes a plan
 - [`planGetPlanByIDS`](docs/sdks/plan/README.md#getplanbyids) - Find plan by ID
 - [`storeDeleteOrder`](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
 - [`storeGetOrderById`](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
-- [`userCreateRahul`](docs/sdks/user/README.md#createrahul) - Create rahul
 - [`userCreateUsersWithListInput`](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
 - [`userDeleteUser`](docs/sdks/user/README.md#deleteuser) - Delete user
 - [`userGetUserByName`](docs/sdks/user/README.md#getuserbyname) - Get user by user name
-- [`userSayNewRandom`](docs/sdks/user/README.md#saynewrandom) - Say new random
 - [`userUpdateUser`](docs/sdks/user/README.md#updateuser) - Update user
 
 </details>
@@ -196,7 +190,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByStatusTypes({}, {
+  const result = await petstore.pet.findPetsByTags({}, {
     retries: {
       strategy: "backoff",
       backoff: {
@@ -235,7 +229,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByStatusTypes({});
+  const result = await petstore.pet.findPetsByTags({});
 
   console.log(result);
 }
@@ -270,7 +264,7 @@ const petstore = new Petstore({
 
 async function run() {
   try {
-    const result = await petstore.pet.findPetsByStatusTypes({});
+    const result = await petstore.pet.findPetsByTags({});
 
     console.log(result);
   } catch (error) {
@@ -295,10 +289,13 @@ run();
 ```
 
 ### Error Classes
-**Primary error:**
+**Primary errors:**
 * [`PetstoreError`](./src/models/errors/petstoreerror.ts): The base class for HTTP error responses.
+  * [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. *
+  * [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. *
+  * [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. *
 
-<details><summary>Less common errors (9)</summary>
+<details><summary>Less common errors (6)</summary>
 
 <br />
 
@@ -311,9 +308,6 @@ run();
 
 
 **Inherit from [`PetstoreError`](./src/models/errors/petstoreerror.ts)**:
-* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 11 of 14 methods.*
-* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 10 of 14 methods.*
-* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 10 of 14 methods.*
 * [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
 
 </details>
@@ -343,7 +337,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByStatusTypes({});
+  const result = await petstore.pet.findPetsByTags({});
 
   console.log(result);
 }
@@ -364,7 +358,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByStatusTypes({});
+  const result = await petstore.pet.findPetsByTags({});
 
   console.log(result);
 }
@@ -443,7 +437,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByStatusTypes({});
+  const result = await petstore.pet.findPetsByTags({});
 
   console.log(result);
 }
