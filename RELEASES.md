@@ -774,11 +774,11 @@ Based on:
 ### Releases
 - [NPM v5.2.0-alpha.60] https://www.npmjs.com/package/meep-moop/v/5.2.0-alpha.60 - .
 
-## 2025-08-18 15:30:51
+## 2025-08-19 01:02:35
 ### Changes
 Based on:
 - OpenAPI Doc  
-- Speakeasy CLI 1.605.5 (2.684.0) https://github.com/speakeasy-api/speakeasy
+- Speakeasy CLI 1.606.0 (2.686.7) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [typescript v5.2.0-alpha.61] .
 ### Releases
