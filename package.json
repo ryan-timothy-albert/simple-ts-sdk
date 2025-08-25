@@ -1,6 +1,6 @@
 {
   "name": "meep-moop",
-  "version": "5.2.0-alpha.60",
+  "version": "5.2.0-alpha.61",
   "author": "ryan-timothy-albert",
   "main": "./index.js",
   "sideEffects": false,

@@ -131,10 +131,6 @@ run();
 * [getPlanByIDS](docs/sdks/plan/README.md#getplanbyids) - Find plan by ID
 * [deletePlan](docs/sdks/plan/README.md#deleteplan) - Deletes a plan
 
-### [random](docs/sdks/random/README.md)
-
-* [getRandomPet](docs/sdks/random/README.md#getrandompet) - Get a random pet
-
 ### [store](docs/sdks/store/README.md)
 
 * [getOrderById](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
@@ -170,7 +166,6 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`petGetPetByIDS`](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
 - [`planDeletePlan`](docs/sdks/plan/README.md#deleteplan) - Deletes a plan
 - [`planGetPlanByIDS`](docs/sdks/plan/README.md#getplanbyids) - Find plan by ID
-- [`randomGetRandomPet`](docs/sdks/random/README.md#getrandompet) - Get a random pet
 - [`storeDeleteOrder`](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
 - [`storeGetOrderById`](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
 - [`userCreateUsersWithListInput`](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
