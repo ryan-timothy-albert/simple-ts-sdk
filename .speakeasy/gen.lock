@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 2fbd59232b9c1b1383034c65adb0487d
+  docChecksum: eb07fd93ae790e78e5da381be3f29f62
   docVersion: 4.0.0
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 5.2.0-alpha.60
-  configChecksum: 35fdd2d2bf7932a325821ced41f94193
+  releaseVersion: 5.2.0-alpha.62
+  configChecksum: 941e3392960fc54b00410f6f64b85e20
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -61,7 +61,6 @@ generatedFiles:
   - docs/sdks/pet/README.md
   - docs/sdks/petstore/README.md
   - docs/sdks/plan/README.md
-  - docs/sdks/random/README.md
   - docs/sdks/store/README.md
   - docs/sdks/user/README.md
   - eslint.config.mjs
@@ -121,7 +120,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/operations/getorderbyid.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getpetbyids.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getplanbyids.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/getrandompet.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorinvalidinput.go
@@ -156,7 +154,6 @@ generatedFiles:
   - src/funcs/petGetPetByIDS.ts
   - src/funcs/planDeletePlan.ts
   - src/funcs/planGetPlanByIDS.ts
-  - src/funcs/randomGetRandomPet.ts
   - src/funcs/storeDeleteOrder.ts
   - src/funcs/storeGetOrderById.ts
   - src/funcs/userCreateUsersWithListInput.ts
@@ -212,7 +209,6 @@ generatedFiles:
   - src/sdk/index.ts
   - src/sdk/pet.ts
   - src/sdk/plan.ts
-  - src/sdk/random.ts
   - src/sdk/sdk.ts
   - src/sdk/store.ts
   - src/sdk/user.ts
@@ -505,7 +501,3 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
-releaseNotes: |
-  ## SDK Changes Detected:
-  Added custom message
-  * `petstore.random.getRandomPet()`: **Added**

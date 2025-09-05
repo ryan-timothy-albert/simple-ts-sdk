@@ -5,7 +5,6 @@
 import { ClientSDK } from "../lib/sdks.js";
 import { Pet } from "./pet.js";
 import { Plan } from "./plan.js";
-import { Random } from "./random.js";
 import { Store } from "./store.js";
 import { User } from "./user.js";
 
@@ -13,11 +12,6 @@ export class Petstore extends ClientSDK {
   private _pet?: Pet;
   get pet(): Pet {
     return (this._pet ??= new Pet(this._options));
-  }
-
-  private _random?: Random;
-  get random(): Random {
-    return (this._random ??= new Random(this._options));
   }
 
   private _plan?: Plan;
