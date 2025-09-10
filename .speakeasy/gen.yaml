@@ -58,6 +58,7 @@ typescript:
   outputModelSuffix: output
   packageName: meep-moop
   responseFormat: flat
+  sseFlatResponse: false
   templateVersion: v2
   usageSDKInitImports: []
   useIndexModules: true
