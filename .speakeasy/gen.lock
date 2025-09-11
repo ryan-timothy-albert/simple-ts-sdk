@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 2fbd59232b9c1b1383034c65adb0487d
+  docChecksum: 5f0c97aba30b30ae2efaf148e04cac22
   docVersion: 4.0.0
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 5.2.0-alpha.60
-  configChecksum: 35fdd2d2bf7932a325821ced41f94193
+  releaseVersion: 5.2.0-alpha.62
+  configChecksum: 65f92909dcdef78c8ba08127b8a994b3
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
@@ -50,18 +50,14 @@ generatedFiles:
   - docs/models/errors/apierrorunauthorized.md
   - docs/models/operations/deleteorderrequest.md
   - docs/models/operations/deletepetrequest.md
-  - docs/models/operations/deleteplanrequest.md
   - docs/models/operations/deleteuserrequest.md
   - docs/models/operations/findpetsbytagsrequest.md
   - docs/models/operations/getorderbyidrequest.md
   - docs/models/operations/getpetbyidsrequest.md
-  - docs/models/operations/getplanbyidsrequest.md
   - docs/models/operations/getuserbynamerequest.md
   - docs/models/operations/updateuserrequest.md
   - docs/sdks/pet/README.md
   - docs/sdks/petstore/README.md
-  - docs/sdks/plan/README.md
-  - docs/sdks/random/README.md
   - docs/sdks/store/README.md
   - docs/sdks/user/README.md
   - eslint.config.mjs
@@ -115,13 +111,10 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/operations/createuserswithlistinput.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deleteorder.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deletepet.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/deleteplan.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deleteuser.go
   - src/__tests__/mockserver/internal/sdk/models/operations/findpetsbytags.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getorderbyid.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getpetbyids.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/getplanbyids.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/getrandompet.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
   - src/__tests__/mockserver/internal/sdk/models/sdkerrors/apierrorinvalidinput.go
@@ -154,9 +147,6 @@ generatedFiles:
   - src/funcs/petDeletePet.ts
   - src/funcs/petFindPetsByTags.ts
   - src/funcs/petGetPetByIDS.ts
-  - src/funcs/planDeletePlan.ts
-  - src/funcs/planGetPlanByIDS.ts
-  - src/funcs/randomGetRandomPet.ts
   - src/funcs/storeDeleteOrder.ts
   - src/funcs/storeGetOrderById.ts
   - src/funcs/userCreateUsersWithListInput.ts
@@ -200,19 +190,15 @@ generatedFiles:
   - src/models/errors/sdkvalidationerror.ts
   - src/models/operations/deleteorder.ts
   - src/models/operations/deletepet.ts
-  - src/models/operations/deleteplan.ts
   - src/models/operations/deleteuser.ts
   - src/models/operations/findpetsbytags.ts
   - src/models/operations/getorderbyid.ts
   - src/models/operations/getpetbyids.ts
-  - src/models/operations/getplanbyids.ts
   - src/models/operations/getuserbyname.ts
   - src/models/operations/index.ts
   - src/models/operations/updateuser.ts
   - src/sdk/index.ts
   - src/sdk/pet.ts
-  - src/sdk/plan.ts
-  - src/sdk/random.ts
   - src/sdk/sdk.ts
   - src/sdk/store.ts
   - src/sdk/user.ts
@@ -505,7 +491,3 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
-releaseNotes: |
-  ## SDK Changes Detected:
-  Added custom message
-  * `petstore.random.getRandomPet()`: **Added**
