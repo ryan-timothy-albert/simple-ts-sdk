@@ -3,7 +3,6 @@
  */
 
 export * from "./category.js";
-export * from "./order.js";
 export * from "./pet.js";
 export * from "./security.js";
 export * from "./tag.js";

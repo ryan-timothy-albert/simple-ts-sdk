@@ -21,18 +21,6 @@ actions:
         - "lang": "typescript"
           "label": "Typescript"
           "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.getPetByIDS({\n    petId: 327430,\n  });\n\n  console.log(result);\n}\n\nrun();"
-  - target: $["paths"]["/store/order/{orderId}"]["delete"]
-    update:
-      "x-codeSamples":
-        - "lang": "typescript"
-          "label": "Typescript"
-          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.store.deleteOrder({\n    orderId: 690575,\n  });\n\n  console.log(result);\n}\n\nrun();"
-  - target: $["paths"]["/store/order/{orderId}"]["get"]
-    update:
-      "x-codeSamples":
-        - "lang": "typescript"
-          "label": "Typescript"
-          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.store.getOrderById({\n    orderId: 728529,\n  });\n\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/user/createWithList"]["post"]
     update:
       "x-codeSamples":
