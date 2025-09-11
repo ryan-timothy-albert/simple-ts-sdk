@@ -491,3 +491,9 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
+releaseNotes: |
+  ## SDK Changes Detected:
+  Added custom message
+  petstore.random.getRandomPet(): Deleted Breaking ⚠️
+  petstore.plan.getPlanByIds(): Deleted Breaking ⚠️
+  petstore.plan.deletePlan(): Deleted Breaking ⚠️
