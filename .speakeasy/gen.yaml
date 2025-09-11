@@ -24,7 +24,7 @@ generation:
     generateNewTests: false
     skipResponseBodyAssertions: false
 typescript:
-  version: 5.2.0-alpha.60
+  version: 5.2.0-alpha.62
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -58,6 +58,7 @@ typescript:
   outputModelSuffix: output
   packageName: meep-moop
   responseFormat: flat
+  sseFlatResponse: false
   templateVersion: v2
   usageSDKInitImports: []
   useIndexModules: true

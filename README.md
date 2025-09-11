@@ -126,15 +126,6 @@ run();
 * [deletePet](docs/sdks/pet/README.md#deletepet) - Deletes a pet
 
 
-### [plan](docs/sdks/plan/README.md)
-
-* [getPlanByIDS](docs/sdks/plan/README.md#getplanbyids) - Find plan by ID
-* [deletePlan](docs/sdks/plan/README.md#deleteplan) - Deletes a plan
-
-### [random](docs/sdks/random/README.md)
-
-* [getRandomPet](docs/sdks/random/README.md#getrandompet) - Get a random pet
-
 ### [store](docs/sdks/store/README.md)
 
 * [getOrderById](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
@@ -168,9 +159,6 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`petDeletePet`](docs/sdks/pet/README.md#deletepet) - Deletes a pet
 - [`petFindPetsByTags`](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
 - [`petGetPetByIDS`](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
-- [`planDeletePlan`](docs/sdks/plan/README.md#deleteplan) - Deletes a plan
-- [`planGetPlanByIDS`](docs/sdks/plan/README.md#getplanbyids) - Find plan by ID
-- [`randomGetRandomPet`](docs/sdks/random/README.md#getrandompet) - Get a random pet
 - [`storeDeleteOrder`](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
 - [`storeGetOrderById`](docs/sdks/store/README.md#getorderbyid) - Find purchase order by ID
 - [`userCreateUsersWithListInput`](docs/sdks/user/README.md#createuserswithlistinput) - Creates list of users with given input array
@@ -294,13 +282,10 @@ run();
 ```
 
 ### Error Classes
-**Primary errors:**
+**Primary error:**
 * [`PetstoreError`](./src/models/errors/petstoreerror.ts): The base class for HTTP error responses.
-  * [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. *
-  * [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. *
-  * [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. *
 
-<details><summary>Less common errors (6)</summary>
+<details><summary>Less common errors (9)</summary>
 
 <br />
 
@@ -313,6 +298,9 @@ run();
 
 
 **Inherit from [`PetstoreError`](./src/models/errors/petstoreerror.ts)**:
+* [`ApiErrorInvalidInput`](./src/models/errors/apierrorinvalidinput.ts): . Status code `400`. Applicable to 7 of 9 methods.*
+* [`ApiErrorUnauthorized`](./src/models/errors/apierrorunauthorized.ts): Unauthorized error. Status code `401`. Applicable to 7 of 9 methods.*
+* [`ApiErrorNotFound`](./src/models/errors/apierrornotfound.ts): Not Found error. Status code `404`. Applicable to 7 of 9 methods.*
 * [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
 
 </details>
