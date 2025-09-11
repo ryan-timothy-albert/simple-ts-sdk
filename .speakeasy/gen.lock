@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: 5f0c97aba30b30ae2efaf148e04cac22
+  docChecksum: b12dbe6ee52923deac342e8281c2f91f
   docVersion: 4.0.0
-  speakeasyVersion: 1.607.0
-  generationVersion: 2.690.1
-  releaseVersion: 5.2.0-alpha.65
-  configChecksum: 18aefe2454ca646ddecee9da596d0d85
+  speakeasyVersion: 1.615.2
+  generationVersion: 2.698.4
+  releaseVersion: 5.2.0-alpha.66
+  configChecksum: db29cac7f592ea5804f6765c17522050
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.21.21
+    core: 3.21.22
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.1.2
-    globalSecurity: 2.82.13
+    globalSecurity: 2.82.14
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.5
@@ -38,8 +38,6 @@ generatedFiles:
   - USAGE.md
   - docs/lib/utils/retryconfig.md
   - docs/models/components/category.md
-  - docs/models/components/order.md
-  - docs/models/components/orderstatus.md
   - docs/models/components/pet.md
   - docs/models/components/security.md
   - docs/models/components/status.md
@@ -48,17 +46,14 @@ generatedFiles:
   - docs/models/errors/apierrorinvalidinput.md
   - docs/models/errors/apierrornotfound.md
   - docs/models/errors/apierrorunauthorized.md
-  - docs/models/operations/deleteorderrequest.md
   - docs/models/operations/deletepetrequest.md
   - docs/models/operations/deleteuserrequest.md
   - docs/models/operations/findpetsbytagsrequest.md
-  - docs/models/operations/getorderbyidrequest.md
   - docs/models/operations/getpetbyidsrequest.md
   - docs/models/operations/getuserbynamerequest.md
   - docs/models/operations/updateuserrequest.md
   - docs/sdks/pet/README.md
   - docs/sdks/petstore/README.md
-  - docs/sdks/store/README.md
   - docs/sdks/user/README.md
   - eslint.config.mjs
   - examples/.env.template
@@ -84,11 +79,9 @@ generatedFiles:
   - src/__tests__/mockserver/internal/handler/generated_handler.go
   - src/__tests__/mockserver/internal/handler/generated_handlers.go
   - src/__tests__/mockserver/internal/handler/pathdeletepetpetid.go
-  - src/__tests__/mockserver/internal/handler/pathdeletestoreorderorderid.go
   - src/__tests__/mockserver/internal/handler/pathdeleteuserusername.go
   - src/__tests__/mockserver/internal/handler/pathgetpetfindbytags.go
   - src/__tests__/mockserver/internal/handler/pathgetpetpetid.go
-  - src/__tests__/mockserver/internal/handler/pathgetstoreorderorderid.go
   - src/__tests__/mockserver/internal/handler/pathgetuserusername.go
   - src/__tests__/mockserver/internal/handler/pathpostusercreatewithlist.go
   - src/__tests__/mockserver/internal/handler/pathputuserusername.go
@@ -103,17 +96,14 @@ generatedFiles:
   - src/__tests__/mockserver/internal/logging/oas_operation_call.go
   - src/__tests__/mockserver/internal/sdk/models/components/category.go
   - src/__tests__/mockserver/internal/sdk/models/components/httpmetadata.go
-  - src/__tests__/mockserver/internal/sdk/models/components/order.go
   - src/__tests__/mockserver/internal/sdk/models/components/pet.go
   - src/__tests__/mockserver/internal/sdk/models/components/security.go
   - src/__tests__/mockserver/internal/sdk/models/components/tag.go
   - src/__tests__/mockserver/internal/sdk/models/components/user.go
   - src/__tests__/mockserver/internal/sdk/models/operations/createuserswithlistinput.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/deleteorder.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deletepet.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deleteuser.go
   - src/__tests__/mockserver/internal/sdk/models/operations/findpetsbytags.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/getorderbyid.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getpetbyids.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
@@ -147,8 +137,6 @@ generatedFiles:
   - src/funcs/petDeletePet.ts
   - src/funcs/petFindPetsByTags.ts
   - src/funcs/petGetPetByIDS.ts
-  - src/funcs/storeDeleteOrder.ts
-  - src/funcs/storeGetOrderById.ts
   - src/funcs/userCreateUsersWithListInput.ts
   - src/funcs/userDeleteUser.ts
   - src/funcs/userGetUserByName.ts
@@ -174,7 +162,6 @@ generatedFiles:
   - src/lib/url.ts
   - src/models/components/category.ts
   - src/models/components/index.ts
-  - src/models/components/order.ts
   - src/models/components/pet.ts
   - src/models/components/security.ts
   - src/models/components/tag.ts
@@ -188,11 +175,9 @@ generatedFiles:
   - src/models/errors/responsevalidationerror.ts
   - src/models/errors/sdkerror.ts
   - src/models/errors/sdkvalidationerror.ts
-  - src/models/operations/deleteorder.ts
   - src/models/operations/deletepet.ts
   - src/models/operations/deleteuser.ts
   - src/models/operations/findpetsbytags.ts
-  - src/models/operations/getorderbyid.ts
   - src/models/operations/getpetbyids.ts
   - src/models/operations/getuserbyname.ts
   - src/models/operations/index.ts
@@ -200,7 +185,6 @@ generatedFiles:
   - src/sdk/index.ts
   - src/sdk/pet.ts
   - src/sdk/sdk.ts
-  - src/sdk/store.ts
   - src/sdk/user.ts
   - src/types/async.ts
   - src/types/blobs.ts
@@ -492,8 +476,6 @@ generatedTests:
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
 releaseNotes: |
-  ## SDK Changes Detected:
-  Added custom message
-  petstore.random.getRandomPet(): Deleted Breaking ⚠️
-  petstore.plan.getPlanByIds(): Deleted Breaking ⚠️
-  petstore.plan.deletePlan(): Deleted Breaking ⚠️
+  ## Typescript SDK Changes Detected:
+  * `petstore.store.getOrderById()`: **Deleted** **Breaking** :warning:
+  * `petstore.store.deleteOrder()`: **Deleted** **Breaking** :warning:
