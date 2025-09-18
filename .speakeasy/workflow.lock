@@ -1,4 +1,4 @@
-speakeasyVersion: 1.615.2
+speakeasyVersion: 1.607.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
@@ -14,8 +14,6 @@ targets:
         sourceNamespace: petstore-oas
         sourceRevisionDigest: sha256:b33e67c164a87923564cec421a50efd93200540549df431c997795ace0e87338
         sourceBlobDigest: sha256:5ddd9bd7c8572f741823a5dcaf453cf84a1687ce15ff9a22bf4b07c99495ce82
-        codeSamplesNamespace: petstore-oas-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:4320740235a5c15f6b5ac035f2b0fc9f3def23d1ed509e7b9e359e7107249dd7
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

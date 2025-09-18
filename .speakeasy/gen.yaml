@@ -19,13 +19,12 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: false
-    hoistGlobalSecurity: true
   tests:
-    generateTests: false
+    generateTests: true
     generateNewTests: false
     skipResponseBodyAssertions: false
 typescript:
-  version: 5.2.0-alpha.66
+  version: 5.2.0-alpha.68
   additionalDependencies:
     dependencies: {}
     devDependencies: {}

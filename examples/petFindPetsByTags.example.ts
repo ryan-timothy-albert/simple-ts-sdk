@@ -18,7 +18,7 @@ const petstore = new Petstore({
 });
 
 async function main() {
-  const result = await petstore.pet.findPetsByTags({});
+  const result = await petstore.findPetsByTags({});
 
   console.log(result);
 }

@@ -12,38 +12,10 @@ it.skip("User Create User", async () => {
   );
 });
 
-test("User Create Users With List Input", async () => {
-  const testHttpClient = createTestHTTPClient("createUsersWithListInput");
-
-  const petstore = new Petstore({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-    apiKey: "<YOUR_API_KEY_HERE>",
-  });
-
-  const result = await petstore.user.createUsersWithListInput([
-    {
-      id: 10,
-      username: "theUser",
-      firstName: "John",
-      lastName: "James",
-      email: "john@email.com",
-      password: "12345",
-      phone: "12345",
-      userStatus: 1,
-    },
-  ]);
-  expect(result).toBeDefined();
-  expect(result).toEqual({
-    id: 10,
-    username: "theUser",
-    firstName: "John",
-    lastName: "James",
-    email: "john@email.com",
-    password: "12345",
-    phone: "12345",
-    userStatus: 1,
-  });
+it.skip("User Create Users With List Input", async () => {
+  assert.fail(
+    "incomplete test found please make sure to address the following errors: [`workflow step createUsersWithListInput.test referencing operation createUsersWithListInput not found in document`]",
+  );
 });
 
 it.skip("User Login User", async () => {
