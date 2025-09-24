@@ -77,10 +77,7 @@ bun add meep-moop
 ### Yarn
 
 ```bash
-yarn add meep-moop zod
-
-# Note that Yarn does not install peer dependencies automatically. You will need
-# to install zod as shown above.
+yarn add meep-moop
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -397,7 +394,7 @@ httpClient.addHook("requestError", (error, request) => {
   console.groupEnd();
 });
 
-const sdk = new Petstore({ httpClient });
+const sdk = new Petstore({ httpClient: httpClient });
 ```
 <!-- End Custom HTTP Client [http-client] -->
 
