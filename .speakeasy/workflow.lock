@@ -1,21 +1,21 @@
-speakeasyVersion: 1.620.0
+speakeasyVersion: 1.625.0
 sources:
     petstore-oas:
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:f159bb6196f229568369e6213bdca1ed56f708556b91ac219bbe2c66176ef5ff
-        sourceBlobDigest: sha256:010abc1e3a345a232714ed22f7ddaffb4c1ee27aae286aca90177b3996edb4a9
+        sourceRevisionDigest: sha256:5b51755919fbd2d1dd8797593e73e89fe57ac1058e3e067d46e725f648043a00
+        sourceBlobDigest: sha256:1e9fd2536ee0c2489d31c7fef58f234d65f38440379a8bfd70d6fcdf07bdea95
         tags:
             - latest
-            - speakeasy-sdk-regen-1758215666
+            - feature-branch
             - 4.0.0
 targets:
     petstore:
         source: petstore-oas
         sourceNamespace: petstore-oas
-        sourceRevisionDigest: sha256:f159bb6196f229568369e6213bdca1ed56f708556b91ac219bbe2c66176ef5ff
-        sourceBlobDigest: sha256:010abc1e3a345a232714ed22f7ddaffb4c1ee27aae286aca90177b3996edb4a9
+        sourceRevisionDigest: sha256:5b51755919fbd2d1dd8797593e73e89fe57ac1058e3e067d46e725f648043a00
+        sourceBlobDigest: sha256:1e9fd2536ee0c2489d31c7fef58f234d65f38440379a8bfd70d6fcdf07bdea95
         codeSamplesNamespace: petstore-oas-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:aa925d2064e19211afda2bc6b99100220b696a933488173b3b5242f2484d1bec
+        codeSamplesRevisionDigest: sha256:6040b34f292b5da47dd47edcce57af2b22eedb7b0dfb900723df5215fed186e0
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

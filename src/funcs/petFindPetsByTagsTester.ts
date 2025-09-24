@@ -33,9 +33,9 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
  */
-export function petFindPetsByTags(
+export function petFindPetsByTagsTester(
   client: PetstoreCore,
-  request: operations.FindPetsByTagsRequest,
+  request: operations.FindPetsByTagsTesterRequest,
   options?: RequestOptions,
 ): APIPromise<
   Result<
@@ -62,7 +62,7 @@ export function petFindPetsByTags(
 
 async function $do(
   client: PetstoreCore,
-  request: operations.FindPetsByTagsRequest,
+  request: operations.FindPetsByTagsTesterRequest,
   options?: RequestOptions,
 ): Promise<
   [
@@ -85,7 +85,8 @@ async function $do(
 > {
   const parsed = safeParse(
     request,
-    (value) => operations.FindPetsByTagsRequest$outboundSchema.parse(value),
+    (value) =>
+      operations.FindPetsByTagsTesterRequest$outboundSchema.parse(value),
     "Input validation failed",
   );
   if (!parsed.ok) {
@@ -111,7 +112,7 @@ async function $do(
   const context = {
     options: client._options,
     baseURL: options?.serverURL ?? client._baseURL ?? "",
-    operationID: "findPetsByTags",
+    operationID: "findPetsByTagsTester",
     oAuth2Scopes: [],
 
     resolvedSecurity: requestSecurity,
