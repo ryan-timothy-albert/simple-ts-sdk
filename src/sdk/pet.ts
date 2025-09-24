@@ -3,7 +3,7 @@
  */
 
 import { petDeletePet } from "../funcs/petDeletePet.js";
-import { petFindPetsByTags } from "../funcs/petFindPetsByTags.js";
+import { petFindPetsByTagsTester } from "../funcs/petFindPetsByTagsTester.js";
 import { petGetPetByIDS } from "../funcs/petGetPetByIDS.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
@@ -17,11 +17,11 @@ export class Pet extends ClientSDK {
    * @remarks
    * Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
    */
-  async findPetsByTags(
-    request: operations.FindPetsByTagsRequest,
+  async findPetsByTagsTester(
+    request: operations.FindPetsByTagsTesterRequest,
     options?: RequestOptions,
   ): Promise<Array<components.Pet>> {
-    return unwrapAsync(petFindPetsByTags(
+    return unwrapAsync(petFindPetsByTagsTester(
       this,
       request,
       options,

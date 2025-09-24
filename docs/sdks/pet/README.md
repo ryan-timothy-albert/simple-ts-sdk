@@ -10,17 +10,17 @@ Find out more dfdsiojfidjs
 
 ### Available Operations
 
-* [findPetsByTags](#findpetsbytags) - Finds Pets by tags
+* [findPetsByTagsTester](#findpetsbytagstester) - Finds Pets by tags
 * [getPetByIDS](#getpetbyids) - Find pet by ID
 * [deletePet](#deletepet) - Deletes a pet
 
-## findPetsByTags
+## findPetsByTagsTester
 
 Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
 
 ### Example Usage
 
-<!-- UsageSnippet language="typescript" operationID="findPetsByTags" method="get" path="/pet/findByTags" -->
+<!-- UsageSnippet language="typescript" operationID="findPetsByTagsTester" method="get" path="/pet/findByTags" -->
 ```typescript
 import { Petstore } from "meep-moop";
 
@@ -29,7 +29,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByTags({});
+  const result = await petstore.pet.findPetsByTagsTester({});
 
   console.log(result);
 }
@@ -43,7 +43,7 @@ The standalone function version of this method:
 
 ```typescript
 import { PetstoreCore } from "meep-moop/core.js";
-import { petFindPetsByTags } from "meep-moop/funcs/petFindPetsByTags.js";
+import { petFindPetsByTagsTester } from "meep-moop/funcs/petFindPetsByTagsTester.js";
 
 // Use `PetstoreCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -52,12 +52,12 @@ const petstore = new PetstoreCore({
 });
 
 async function run() {
-  const res = await petFindPetsByTags(petstore, {});
+  const res = await petFindPetsByTagsTester(petstore, {});
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("petFindPetsByTags failed:", res.error);
+    console.log("petFindPetsByTagsTester failed:", res.error);
   }
 }
 
@@ -68,7 +68,7 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.FindPetsByTagsRequest](../../models/operations/findpetsbytagsrequest.md)                                                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [operations.FindPetsByTagsTesterRequest](../../models/operations/findpetsbytagstesterrequest.md)                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
