@@ -3,17 +3,17 @@ id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
   docChecksum: b1399841204d7bd2c13dc651c77b7d98
   docVersion: 4.0.0
-  speakeasyVersion: 1.620.0
-  generationVersion: 2.706.1
-  releaseVersion: 5.2.0-alpha.69
-  configChecksum: d6644b3c915d83e3fcc80155faba7e63
+  speakeasyVersion: 1.624.0
+  generationVersion: 2.714.0
+  releaseVersion: 5.2.0-alpha.70
+  configChecksum: d1e227d90881a10fc3d26bc2566793e3
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.21.22
+    core: 3.21.25
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.1
     enumUnions: 0.1.0
@@ -26,7 +26,7 @@ features:
     responseFormat: 0.2.3
     retries: 2.83.0
     sdkHooks: 0.3.0
-    tests: 0.17.1
+    tests: 0.17.2
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
@@ -472,6 +472,3 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
-releaseNotes: |
-  ## Typescript SDK Changes Detected:
-  * `petstore.user.createUsersWithListInput()`: **Deleted** **Breaking** :warning:
