@@ -4,7 +4,7 @@
 
 export * from "./deletepet.js";
 export * from "./deleteuser.js";
-export * from "./findpetsbytags.js";
+export * from "./findpetsbytagstester.js";
 export * from "./getpetbyids.js";
 export * from "./getuserbyname.js";
 export * from "./updateuser.js";

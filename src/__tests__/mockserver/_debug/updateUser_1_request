@@ -9,8 +9,8 @@ Content-Length: 143
 Content-Type: application/json
 Cookie: 
 Sec-Fetch-Mode: cors
-User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.65 2.690.1 4.0.0 meep-moop
-X-Speakeasy-Test-Instance-Id: 01DBFDA8-3245-082F-0AC1-70852ECC93DA
+User-Agent: speakeasy-sdk/typescript 5.2.0-alpha.70 2.715.0 4.0.0 meep-moop
+X-Speakeasy-Test-Instance-Id: C0D7EC90-C8A0-8336-4287-D571D13DD30F
 X-Speakeasy-Test-Name: updateUser
 
 {"id":10,"username":"theUser","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}

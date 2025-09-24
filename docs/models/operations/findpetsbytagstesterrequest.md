@@ -1,11 +1,11 @@
-# FindPetsByTagsRequest
+# FindPetsByTagsTesterRequest
 
 ## Example Usage
 
 ```typescript
-import { FindPetsByTagsRequest } from "meep-moop/models/operations";
+import { FindPetsByTagsTesterRequest } from "meep-moop/models/operations";
 
-let value: FindPetsByTagsRequest = {};
+let value: FindPetsByTagsTesterRequest = {};
 ```
 
 ## Fields

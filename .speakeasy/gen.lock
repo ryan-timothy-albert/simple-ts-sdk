@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: ede0e8e6-5a63-4cc3-bd29-551cf1036a60
 management:
-  docChecksum: b1399841204d7bd2c13dc651c77b7d98
+  docChecksum: 86a84dcb0fc83c612d0b8d805e1bffe8
   docVersion: 4.0.0
-  speakeasyVersion: 1.620.0
-  generationVersion: 2.706.1
-  releaseVersion: 5.2.0-alpha.69
-  configChecksum: d6644b3c915d83e3fcc80155faba7e63
+  speakeasyVersion: 1.625.0
+  generationVersion: 2.715.0
+  releaseVersion: 5.2.0-alpha.70
+  configChecksum: d1e227d90881a10fc3d26bc2566793e3
   repoURL: https://github.com/ryan-timothy-albert/simple-ts-sdk.git
   installationURL: https://github.com/ryan-timothy-albert/simple-ts-sdk
   published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.21.22
+    core: 3.21.25
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.1
     enumUnions: 0.1.0
@@ -26,7 +26,7 @@ features:
     responseFormat: 0.2.3
     retries: 2.83.0
     sdkHooks: 0.3.0
-    tests: 0.17.1
+    tests: 0.17.2
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
@@ -48,7 +48,7 @@ generatedFiles:
   - docs/models/errors/apierrorunauthorized.md
   - docs/models/operations/deletepetrequest.md
   - docs/models/operations/deleteuserrequest.md
-  - docs/models/operations/findpetsbytagsrequest.md
+  - docs/models/operations/findpetsbytagstesterrequest.md
   - docs/models/operations/getpetbyidsrequest.md
   - docs/models/operations/getuserbynamerequest.md
   - docs/models/operations/updateuserrequest.md
@@ -59,7 +59,7 @@ generatedFiles:
   - examples/.env.template
   - examples/README.md
   - examples/package.json
-  - examples/petFindPetsByTags.example.ts
+  - examples/petFindPetsByTagsTester.example.ts
   - jsr.json
   - package.json
   - src/__tests__/assertions.ts
@@ -80,7 +80,6 @@ generatedFiles:
   - src/__tests__/mockserver/internal/handler/generated_handlers.go
   - src/__tests__/mockserver/internal/handler/pathdeletepetpetid.go
   - src/__tests__/mockserver/internal/handler/pathdeleteuserusername.go
-  - src/__tests__/mockserver/internal/handler/pathgetpetfindbytags.go
   - src/__tests__/mockserver/internal/handler/pathgetpetpetid.go
   - src/__tests__/mockserver/internal/handler/pathgetuserusername.go
   - src/__tests__/mockserver/internal/handler/pathputuserusername.go
@@ -101,7 +100,7 @@ generatedFiles:
   - src/__tests__/mockserver/internal/sdk/models/components/user.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deletepet.go
   - src/__tests__/mockserver/internal/sdk/models/operations/deleteuser.go
-  - src/__tests__/mockserver/internal/sdk/models/operations/findpetsbytags.go
+  - src/__tests__/mockserver/internal/sdk/models/operations/findpetsbytagstester.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getpetbyids.go
   - src/__tests__/mockserver/internal/sdk/models/operations/getuserbyname.go
   - src/__tests__/mockserver/internal/sdk/models/operations/updateuser.go
@@ -133,7 +132,7 @@ generatedFiles:
   - src/__tests__/user.test.ts
   - src/core.ts
   - src/funcs/petDeletePet.ts
-  - src/funcs/petFindPetsByTags.ts
+  - src/funcs/petFindPetsByTagsTester.ts
   - src/funcs/petGetPetByIDS.ts
   - src/funcs/userDeleteUser.ts
   - src/funcs/userGetUserByName.ts
@@ -174,7 +173,7 @@ generatedFiles:
   - src/models/errors/sdkvalidationerror.ts
   - src/models/operations/deletepet.ts
   - src/models/operations/deleteuser.ts
-  - src/models/operations/findpetsbytags.ts
+  - src/models/operations/findpetsbytagstester.ts
   - src/models/operations/getpetbyids.ts
   - src/models/operations/getuserbyname.ts
   - src/models/operations/index.ts
@@ -449,6 +448,17 @@ examples:
           application/json: {"status": 401, "error": "Unauthorized"}
         "404":
           application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
+  findPetsByTagsTester:
+    speakeasy-default-find-pets-by-tags-tester:
+      responses:
+        "200":
+          application/json: [{"breed": "something random", "name": "doggie", "category": {"id": 1, "name": "Dogs"}, "photoUrls": []}]
+        "400":
+          application/json: {"status": 400, "error": "Bad request"}
+        "401":
+          application/json: {"status": 401, "error": "Unauthorized"}
+        "404":
+          application/json: {"status": 404, "error": "Not Found", "code": "object_not_found"}
 examplesVersion: 1.0.2
 generatedTests:
   petsStoreMonday: "2025-02-13T16:15:08-08:00"
@@ -472,6 +482,3 @@ generatedTests:
   MCP: "2025-02-28T00:57:37Z"
   MCPTest: "2025-03-03T17:28:36Z"
   sayHello: "2025-08-06T11:57:50Z"
-releaseNotes: |
-  ## Typescript SDK Changes Detected:
-  * `petstore.user.createUsersWithListInput()`: **Deleted** **Breaking** :warning:
