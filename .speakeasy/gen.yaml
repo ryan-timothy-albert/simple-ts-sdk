@@ -25,7 +25,7 @@ generation:
     generateNewTests: false
     skipResponseBodyAssertions: false
 typescript:
-  version: 5.2.0-alpha.69
+  version: 5.2.0-alpha.71
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -34,6 +34,9 @@ typescript:
   author: ryan-timothy-albert
   baseErrorName: PetstoreError
   clientServerStatusCodesAsErrors: true
+  compileCommand:
+    - bash
+    - exit 1
   constFieldsAlwaysOptional: true
   defaultErrorName: SDKError
   enableCustomCodeRegions: false
@@ -43,9 +46,6 @@ typescript:
   flattenGlobalSecurity: true
   flatteningOrder: body-first
   generateExamples: true
-  compileCommand:
-    - bash
-    - exit 1
   imports:
     option: openapi
     paths:
@@ -58,6 +58,7 @@ typescript:
   jsonpath: legacy
   maxMethodParams: 0
   methodArguments: require-security-and-request
+  modelPropertyCasing: camel
   moduleFormat: commonjs
   outputModelSuffix: output
   packageName: meep-moop
