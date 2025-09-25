@@ -23,7 +23,7 @@ permissions:
         type: string
 jobs:
   generate:
-    uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15
+    uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15.51.5
     with:
       force: ${{ github.event.inputs.force }}
       feature_branch: ${{ github.event.inputs.feature_branch }}
