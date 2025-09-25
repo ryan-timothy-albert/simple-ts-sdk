@@ -43,9 +43,6 @@ typescript:
   flattenGlobalSecurity: true
   flatteningOrder: body-first
   generateExamples: true
-  compileCommand:
-    - bash
-    - exit 1
   imports:
     option: openapi
     paths:
