@@ -8,7 +8,7 @@ dotenv.config();
  * Example usage of the meep-moop SDK
  *
  * To run this example from the examples directory:
- * npm run build && npx tsx petFindPetsByTags.example.ts
+ * npm run build && npx tsx petFindPetsByTagsTester.example.ts
  */
 
 import { Petstore } from "meep-moop";
@@ -18,7 +18,7 @@ const petstore = new Petstore({
 });
 
 async function main() {
-  const result = await petstore.pet.findPetsByTags({});
+  const result = await petstore.pet.findPetsByTagsTester({});
 
   console.log(result);
 }

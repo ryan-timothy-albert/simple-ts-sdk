@@ -8,7 +8,7 @@ actions:
       "x-codeSamples":
         - "lang": "typescript"
           "label": "Typescript"
-          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.findPetsByTags({});\n\n  console.log(result);\n}\n\nrun();"
+          "source": "import { Petstore } from \"meep-moop\";\n\nconst petstore = new Petstore({\n  apiKey: \"<YOUR_API_KEY_HERE>\",\n});\n\nasync function run() {\n  const result = await petstore.pet.findPetsByTagsTester({});\n\n  console.log(result);\n}\n\nrun();"
   - target: $["paths"]["/pet/{petId}"]["delete"]
     update:
       "x-codeSamples":
