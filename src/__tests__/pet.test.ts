@@ -24,31 +24,10 @@ it.skip("Pet Find Pets By Status Types", async () => {
   );
 });
 
-test("Pet Find Pets By Tags", async () => {
-  const testHttpClient = createTestHTTPClient("findPetsByTags");
-
-  const petstore = new Petstore({
-    serverURL: process.env["TEST_SERVER_URL"] ?? "http://localhost:18080",
-    httpClient: testHttpClient,
-    apiKey: "<YOUR_API_KEY_HERE>",
-  });
-
-  const result = await petstore.pet.findPetsByTags({});
-  expect(result).toBeDefined();
-  expect(result).toEqual([
-    {
-      name: "doggie",
-      category: {
-        id: 1,
-        name: "Dogs",
-      },
-      photoUrls: [
-        "<value>",
-        "<value>",
-        "<value>",
-      ],
-    },
-  ]);
+it.skip("Pet Find Pets By Tags", async () => {
+  assert.fail(
+    "incomplete test found please make sure to address the following errors: [`workflow step findPetsByTags.test referencing operation findPetsByTags not found in document`]",
+  );
 });
 
 test("Pet Get Pet By Ids", async () => {

@@ -6,32 +6,32 @@ import (
 	"mockserver/internal/sdk/models/components"
 )
 
-type FindPetsByTagsRequest struct {
+type FindPetsByTagsTesterRequest struct {
 	// Tags to filter by
 	Tags []string `queryParam:"style=form,explode=true,name=tags"`
 }
 
-func (o *FindPetsByTagsRequest) GetTags() []string {
+func (o *FindPetsByTagsTesterRequest) GetTags() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Tags
 }
 
-type FindPetsByTagsResponse struct {
+type FindPetsByTagsTesterResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// successful operation
 	Pets []components.Pet
 }
 
-func (o *FindPetsByTagsResponse) GetHTTPMeta() components.HTTPMetadata {
+func (o *FindPetsByTagsTesterResponse) GetHTTPMeta() components.HTTPMetadata {
 	if o == nil {
 		return components.HTTPMetadata{}
 	}
 	return o.HTTPMeta
 }
 
-func (o *FindPetsByTagsResponse) GetPets() []components.Pet {
+func (o *FindPetsByTagsTesterResponse) GetPets() []components.Pet {
 	if o == nil {
 		return nil
 	}
