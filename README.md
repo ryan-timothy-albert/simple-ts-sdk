@@ -77,10 +77,7 @@ bun add meep-moop
 ### Yarn
 
 ```bash
-yarn add meep-moop zod
-
-# Note that Yarn does not install peer dependencies automatically. You will need
-# to install zod as shown above.
+yarn add meep-moop
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -103,7 +100,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByTags({});
+  const result = await petstore.pet.findPetsByTagsTester({});
 
   console.log(result);
 }
@@ -121,7 +118,7 @@ run();
 
 ### [pet](docs/sdks/pet/README.md)
 
-* [findPetsByTags](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
+* [findPetsByTagsTester](docs/sdks/pet/README.md#findpetsbytagstester) - Finds Pets by tags
 * [getPetByIDS](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
 * [deletePet](docs/sdks/pet/README.md#deletepet) - Deletes a pet
 
@@ -151,7 +148,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 <summary>Available standalone functions</summary>
 
 - [`petDeletePet`](docs/sdks/pet/README.md#deletepet) - Deletes a pet
-- [`petFindPetsByTags`](docs/sdks/pet/README.md#findpetsbytags) - Finds Pets by tags
+- [`petFindPetsByTagsTester`](docs/sdks/pet/README.md#findpetsbytagstester) - Finds Pets by tags
 - [`petGetPetByIDS`](docs/sdks/pet/README.md#getpetbyids) - Find pet by ID
 - [`userDeleteUser`](docs/sdks/user/README.md#deleteuser) - Delete user
 - [`userGetUserByName`](docs/sdks/user/README.md#getuserbyname) - Get user by user name
@@ -174,7 +171,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByTags({}, {
+  const result = await petstore.pet.findPetsByTagsTester({}, {
     retries: {
       strategy: "backoff",
       backoff: {
@@ -213,7 +210,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByTags({});
+  const result = await petstore.pet.findPetsByTagsTester({});
 
   console.log(result);
 }
@@ -248,7 +245,7 @@ const petstore = new Petstore({
 
 async function run() {
   try {
-    const result = await petstore.pet.findPetsByTags({});
+    const result = await petstore.pet.findPetsByTagsTester({});
 
     console.log(result);
   } catch (error) {
@@ -321,7 +318,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByTags({});
+  const result = await petstore.pet.findPetsByTagsTester({});
 
   console.log(result);
 }
@@ -342,7 +339,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByTags({});
+  const result = await petstore.pet.findPetsByTagsTester({});
 
   console.log(result);
 }
@@ -397,7 +394,7 @@ httpClient.addHook("requestError", (error, request) => {
   console.groupEnd();
 });
 
-const sdk = new Petstore({ httpClient });
+const sdk = new Petstore({ httpClient: httpClient });
 ```
 <!-- End Custom HTTP Client [http-client] -->
 
@@ -421,7 +418,7 @@ const petstore = new Petstore({
 });
 
 async function run() {
-  const result = await petstore.pet.findPetsByTags({});
+  const result = await petstore.pet.findPetsByTagsTester({});
 
   console.log(result);
 }
